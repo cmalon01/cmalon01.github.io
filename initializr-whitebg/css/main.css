@@ -267,6 +267,14 @@ img.full-width {
 .para.green {
   background: #0FAA4B; }
 
+.html-box {
+  background: black;
+  margin: 1em auto;
+  padding: 1em;
+  max-width: 200px; }
+  .html-box pre {
+    color: white; }
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

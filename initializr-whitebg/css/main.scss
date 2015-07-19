@@ -281,6 +281,16 @@ img.full-width
     &.green { background: $para-green; }
 }
 
+.html-box
+{
+    pre{color:white;}
+    background: black;
+    margin: 1em auto;
+    padding:1em;
+    max-width:200px;
+
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

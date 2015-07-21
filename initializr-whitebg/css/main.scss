@@ -8,10 +8,11 @@ $lightblue : #C9DADE;
 $quotecolor: black;
 $text-color : black;
 
-$header-color : $text-color;
+$header-color : #4A4A4A;
 
 // setting the paralax colors
 $para-blue: #0F12AA;
+$para-light-blue : #50BEE3;
 $para-purple: #AA0F9D;
 $para-green: #0FAA4B;
 //$serif: 'Kadwa', serif;
@@ -118,6 +119,22 @@ h1,h2,h3,h4
     font-weight: 300;
     text-align: center;
     letter-spacing: .15em;
+}
+.seperator
+{
+    margin:2em 0;
+    background:#4A4A4A;
+
+    height: 1px;
+    max-width: 800px;
+    margin-left:auto;
+    margin-right: auto;
+}
+p
+{
+    max-width: 600px;
+    margin-left:auto;
+    margin-right: auto;
 }
 .title {
     //color: white;
@@ -231,12 +248,8 @@ nav a:hover {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-.blob-tags
+.blob
 {
-    @extend .clearfix;
-    span
-    {
         -webkit-box-shadow: 1px 1px 0px 0px rgba(3,3,3,.2);
         -moz-box-shadow: 1px 1px 0px 0px rgba(3,3,3,.2);
         box-shadow: 1px 1px 0px 0px rgba(3,3,3,.2);
@@ -247,9 +260,24 @@ nav a:hover {
         border-radius: 10px;
         margin:1em 1.5em;
         float:left;
-        color:$lightblue;
-
+        background:black;
+        color:white;
+}
+.blob-tags
+{
+    @extend .clearfix;
+    span
+    {
+ 
+        @extend .blob;
     }
+}
+
+.blob-links 
+{
+    @extend .clearfix;
+    text-align: center;
+    a {@extend .blob; text-decoration: none;display: inline-block;float:none;}
 }
 
 
@@ -277,8 +305,31 @@ img.full-width
         color:white;
     }
     &.blue   { background: $para-blue; }
+    &.light-blue   { background: $para-light-blue; }
     &.purple { background: $para-purple; }
     &.green { background: $para-green; }
+}
+
+.img-bg
+{
+    @extend .para;
+    position: relative;
+    background: no-repeat center center scroll; 
+    background-size: auto 100%;
+    &.hk
+    {
+        background-image: url(../img/hk.jpg);
+        padding-bottom: 40%;
+    }
+    .caption
+    {
+        position: absolute;
+        color: transparentize(white, .5);;
+        font-size:.75em;
+        font-weight: 300;
+        left:4px;
+        bottom: 2px;
+    }
 }
 
 .html-box

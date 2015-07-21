@@ -151,9 +151,12 @@ h1, h2, h3, h4 {
   color: #4A4A4A;
   font-weight: normal; }
 
-h1, h2, h3, h4 {
+h1, h2 {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 300; }
+
+h1, h2, h3, h4 {
+  font-weight: normal;
   text-align: center;
   letter-spacing: .15em; }
 
@@ -171,7 +174,8 @@ p {
   margin-right: auto; }
 
 .footer-container h1 {
-  font-weight: normal; }
+  font-weight: normal;
+  margin-top: 0; }
 .footer-container h2 {
   letter-spacing: 2px;
   font-size: 1em;
@@ -297,6 +301,12 @@ img.full-width {
   .img-bg.hk {
     background-image: url(../img/hk.jpg);
     padding-bottom: 40%; }
+  .img-bg.ga-1 {
+    background-image: url(../img/lookingboard.jpg);
+    padding-bottom: 40%; }
+    .img-bg.ga-1 h1, .img-bg.ga-1 h2, .img-bg.ga-1 h3, .img-bg.ga-1 h4, .img-bg.ga-1 h5, .img-bg.ga-1 p {
+      color: black;
+      font-weight: bold; }
   .img-bg .caption {
     position: absolute;
     color: rgba(255, 255, 255, 0.5);

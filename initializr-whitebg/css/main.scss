@@ -113,10 +113,14 @@ h1,h2,h3,h4
     font-weight: normal;
 
 }
+h1,h2
+{
+  font-style: italic;
+ font-weight: 300;
+}
 h1,h2,h3,h4
 {
-    font-style: italic;
-    font-weight: 300;
+   font-weight: normal;
     text-align: center;
     letter-spacing: .15em;
 }
@@ -142,7 +146,7 @@ p
 .footer-container
 {
     //color:white;
-    h1 {font-weight: normal;}
+    h1 {font-weight: normal; margin-top:0;}
     h2{letter-spacing: 2px; font-size: 1em; font-weight: normal;}
     .social-media-links 
     {
@@ -321,6 +325,12 @@ img.full-width
         background-image: url(../img/hk.jpg);
         padding-bottom: 40%;
     }
+    &.ga-1
+    {
+        background-image: url(../img/lookingboard.jpg);
+        h1,h2,h3,h4,h5,p {color:black; font-weight: bold;}
+        padding-bottom: 40%;
+    }    
     .caption
     {
         position: absolute;

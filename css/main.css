@@ -144,6 +144,29 @@ body {
 /* ===================
     ALL: Orange Theme
    =================== */
+.site-header {
+  padding: 1em 0;
+  background: #F1F1F7; }
+  .site-header .brand {
+    max-width: 400px;
+    margin: 1em auto;
+    position: relative; }
+    .site-header .brand .sub-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "museo-sans", sans-serif;
+      font-weight: 100;
+      margin: 0 auto;
+      text-align: left; }
+    .site-header .brand .my-name {
+      margin: 0 auto;
+      text-align: left; }
+    .site-header .brand img.avatar {
+      float: left;
+      margin-right: 2em;
+      height: auto;
+      width: 80px; }
+
 h1, h2, h3, h4 {
   margin: 1.15em auto;
   margin-top: 1.35em;
@@ -328,6 +351,8 @@ img.full-width {
     .img-bg.ga-1 h1, .img-bg.ga-1 h2, .img-bg.ga-1 h3, .img-bg.ga-1 h4, .img-bg.ga-1 h5, .img-bg.ga-1 p {
       color: black;
       font-weight: bold; }
+    .img-bg.ga-1 h3 {
+      text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5); }
   .img-bg .caption {
     position: absolute;
     color: rgba(255, 255, 255, 0.5);
@@ -482,17 +507,18 @@ nav li:last-child a {
 .invisible {
   visibility: hidden; }
 
-.clearfix:before, .blob-tags:before, .blob-links:before,
+.clearfix:before, .site-header .brand:before, .blob-tags:before, .blob-links:before,
 .clearfix:after,
+.site-header .brand:after,
 .blob-tags:after,
 .blob-links:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .blob-tags:after, .blob-links:after {
+.clearfix:after, .site-header .brand:after, .blob-tags:after, .blob-links:after {
   clear: both; }
 
-.clearfix, .blob-tags, .blob-links {
+.clearfix, .site-header .brand, .blob-tags, .blob-links {
   *zoom: 1; }
 
 /* ==========================================================================

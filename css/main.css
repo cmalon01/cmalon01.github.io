@@ -187,7 +187,7 @@ h1, h2 {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   text-align: center;
-  letter-spacing: .15em;
+  letter-spacing: .02em;
   font-family: "museo-sans", sans-serif; }
 
 .seperator {
@@ -351,10 +351,10 @@ img.full-width {
     background-image: url(../img/hk.jpg);
     padding-bottom: 40%; }
   .img-bg.ga-1 {
-    background-image: url(../img/lookingboard.jpg);
+    background-image: url(../img/ga-2.jpg);
     padding-bottom: 40%; }
     .img-bg.ga-1 h1, .img-bg.ga-1 h2, .img-bg.ga-1 h3, .img-bg.ga-1 h4, .img-bg.ga-1 h5, .img-bg.ga-1 p {
-      color: black;
+      color: gray;
       font-weight: bold; }
     .img-bg.ga-1 h3 {
       text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5); }

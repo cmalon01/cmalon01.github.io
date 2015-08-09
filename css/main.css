@@ -147,7 +147,7 @@ textarea {
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 body {
-  font: 16px/26px "avertaextrathin", sans-serif; }
+  font: 16px/26px "avertaregular", sans-serif; }
 
 .wrapper {
   width: 90%;
@@ -166,7 +166,7 @@ body {
     .site-header .brand .sub-title {
       text-align: center;
       text-transform: uppercase;
-      font-family: "avertaregular", sans-serif;
+      font-family: "avertaextrathin", sans-serif;
       font-weight: 100;
       margin: 0 auto;
       text-align: left; }
@@ -183,7 +183,7 @@ h1, h2, h3, h4 {
   margin: 1.15em auto;
   margin-top: 1.35em;
   max-width: 800px;
-  font-family: "avertaextrathin", sans-serif;
+  font-family: "avertaregular", sans-serif;
   color: #4A4A4A;
   font-weight: normal; }
   h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited {
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   text-align: center;
   letter-spacing: .02em;
-  font-family: "avertaregular", sans-serif; }
+  font-family: "avertaextrathin", sans-serif; }
 
 .seperator {
   margin: 2em 0;
@@ -238,7 +238,7 @@ p {
   float: none; }
 
 blockquote {
-  font-family: "avertaextrathin", sans-serif;
+  font-family: "avertaregular", sans-serif;
   font-size: 2em;
   letter-spacing: .18em;
   font-weight: bold;

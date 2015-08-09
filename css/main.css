@@ -87,6 +87,18 @@ blockquote {
     /* 24px / 16px = */
     line-height: 1.45833333;
     /* 35px / 24px */ } }
+/*
+$para-blue: #0F12AA;
+$para-light-blue : #50BEE3;
+$para-purple: #AA0F9D;
+$para-green: #0FAA4B;
+*/
+/*
+$para-blue: #0F12AA;
+$para-light-blue : #4139ef;
+$para-purple: #4A4E9F;
+$para-green: #3A8627;
+*/
 html {
   color: #222;
   background: white;
@@ -135,7 +147,7 @@ textarea {
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 body {
-  font: 16px/26px "Open Sans", sans-serif; }
+  font: 16px/26px "avertalight", sans-serif; }
 
 .wrapper {
   width: 90%;
@@ -154,7 +166,7 @@ body {
     .site-header .brand .sub-title {
       text-align: center;
       text-transform: uppercase;
-      font-family: "museo-sans", sans-serif;
+      font-family: "avertablack", sans-serif;
       font-weight: 100;
       margin: 0 auto;
       text-align: left; }
@@ -171,7 +183,7 @@ h1, h2, h3, h4 {
   margin: 1.15em auto;
   margin-top: 1.35em;
   max-width: 800px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "avertalight", sans-serif;
   color: #4A4A4A;
   font-weight: normal; }
   h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited {
@@ -180,15 +192,11 @@ h1, h2, h3, h4 {
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
     color: #0F12AA; }
 
-h1, h2 {
-  font-style: italic;
-  font-weight: 100; }
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   text-align: center;
   letter-spacing: .02em;
-  font-family: "museo-sans", sans-serif; }
+  font-family: "avertablack", sans-serif; }
 
 .seperator {
   margin: 2em 0;
@@ -209,10 +217,12 @@ p {
     color: black;
     font-size: 2em; }
   .social-media-links a:hover {
-    color: blue; }
+    color: #536d12; }
 
 .interests .social-media-links {
   padding-bottom: 2em; }
+.interests .inspirations h4 {
+  color: #96C421; }
 
 .footer-container h1 {
   font-weight: normal;
@@ -228,7 +238,7 @@ p {
   float: none; }
 
 blockquote {
-  font-family: "Open Sans", sans-serif;
+  font-family: "avertalight", sans-serif;
   font-size: 2em;
   letter-spacing: .18em;
   font-weight: bold;
@@ -335,13 +345,13 @@ img.full-width {
 .para h1, .img-bg h1, .para h2, .img-bg h2, .para h3, .img-bg h3, .para h4, .img-bg h4, .para h5, .img-bg h5, .para p, .img-bg p {
   color: white; }
 .para.blue, .blue.img-bg {
-  background: #0F12AA; }
+  background: #2CA1A3; }
 .para.light-blue, .light-blue.img-bg {
-  background: #50BEE3; }
+  background: #38C4C7; }
 .para.purple, .purple.img-bg {
-  background: #AA0F9D; }
+  background: #9930BB; }
 .para.green, .green.img-bg {
-  background: #0FAA4B; }
+  background: #96C421; }
 
 .img-bg {
   position: relative;
@@ -396,8 +406,7 @@ nav {
 
 nav a {
   float: left;
-  width: 43%;
-  margin: 0 1.7%;
+  width: 29.33333%;
   padding: 5px 2%;
   margin-bottom: 0;
   min-width: 4em; }

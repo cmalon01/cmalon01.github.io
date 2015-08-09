@@ -105,7 +105,7 @@
 
 
 @font-face {
-    font-family: 'avertabold';
+    font-family: 'avertabold_italic';
     src: url('averta-bolditalic-webfont.eot');
     src: url('averta-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('averta-bolditalic-webfont.woff2') format('woff2'),
@@ -165,7 +165,7 @@
 
 
 @font-face {
-    font-family: 'avertaregular';
+    font-family: 'avertaregular_italic';
     src: url('averta-regularitalic-webfont.eot');
     src: url('averta-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('averta-regularitalic-webfont.woff2') format('woff2'),

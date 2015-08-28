@@ -46,15 +46,99 @@
   <link rel="canonical" href="http://yourdomain.com/">
   <link rel="alternate" type="application/rss+xml" title="Corey Malone - Empathetic User Experience Designer" href="http://yourdomain.com/feed.xml" />
 
-
-  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
-           -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         
 
-
         <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+// Hide Header on on scroll down
+
+// Thanks to : http://jsfiddle.net/mariusc23/s6mLJ/31/
+// https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c
+
+ var $header;
+var $contactbar;
+
+$(document).ready (function() {
+
+ $header = $('header');
+ $contactbar= $('#contact-bar');
+
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+if ($("body").height() < 1000)
+{
+  $header.addClass('stay-there');
+}
+
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+
+
+var stayThere = false;
+function hasScrolled() 
+{
+    if ($("body").height() < 1000)
+    {
+        $header.removeClass('nav-up').removeClass('nav-down');
+        $contactbar.removeClass('up');
+        $header.addClass('stay-there');
+        stayThere = true;
+        //alert('ya');
+        return;
+    }
+    if (stayThere)  
+    {
+        $header.removeClass('stay-there');
+        stayThere = false;
+    }
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $header.removeClass('nav-down').addClass('nav-up');
+        $contactbar.removeClass('up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $header.removeClass('nav-up').addClass('nav-down');
+            $contactbar.addClass('up');
+        }
+    }
+
+    if (st == 0)
+    {
+        $header.removeClass('nav-down');
+        $contactbar.removeClass('up');
+    }
+    
+    lastScrollTop = st;
+}
+});
+</script>
+
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
 </head>
 
 
@@ -98,8 +182,19 @@
 
 </header>
 
+<div id="contact-bar">
+           <div class="social-media-links">
+                    <a href="http://twitter.com/devtoux"><span class="fa fa-fw fa-twitter"></span></a>
+                    <a href="https://www.linkedin.com/in/coreymalone"><span class="fa fa-fw fa-linkedin"></span></a>
+                    <a href="https://medium.com/@devtoux"><span class="fa fa-fw fa-medium"></span></a>
+                       <a class="typeform-share" href="https://corey17.typeform.com/to/A6t9zd" data-mode="2" target="_blank">  <span class="fa fw fa-envelope-o"></span></a>
+                </div>
 
-    <div class="page-content clearfix">
+  </div>
+
+
+    <div class="page-content">
+      <div class="clear"></div>
         <div class="para light-red">
     <div class="wrapper">
 
@@ -135,10 +230,6 @@
                        <a class="typeform-share" href="https://corey17.typeform.com/to/A6t9zd" data-mode="2" target="_blank">  <span class="fa fw fa-envelope-o"></span></a>
                 </div>
 
-                <div class="typeform-container center">
-             
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
-    </div>
 
     
             </footer>

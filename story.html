@@ -46,15 +46,99 @@
   <link rel="canonical" href="http://yourdomain.com/story.html">
   <link rel="alternate" type="application/rss+xml" title="Corey Malone - Empathetic User Experience Designer" href="http://yourdomain.com/feed.xml" />
 
-
-  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
-           -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         
 
-
         <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+// Hide Header on on scroll down
+
+// Thanks to : http://jsfiddle.net/mariusc23/s6mLJ/31/
+// https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c
+
+ var $header;
+var $contactbar;
+
+$(document).ready (function() {
+
+ $header = $('header');
+ $contactbar= $('#contact-bar');
+
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+if ($("body").height() < 1000)
+{
+  $header.addClass('stay-there');
+}
+
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+
+
+var stayThere = false;
+function hasScrolled() 
+{
+    if ($("body").height() < 1000)
+    {
+        $header.removeClass('nav-up').removeClass('nav-down');
+        $contactbar.removeClass('up');
+        $header.addClass('stay-there');
+        stayThere = true;
+        //alert('ya');
+        return;
+    }
+    if (stayThere)  
+    {
+        $header.removeClass('stay-there');
+        stayThere = false;
+    }
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $header.removeClass('nav-down').addClass('nav-up');
+        $contactbar.removeClass('up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $header.removeClass('nav-up').addClass('nav-down');
+            $contactbar.addClass('up');
+        }
+    }
+
+    if (st == 0)
+    {
+        $header.removeClass('nav-down');
+        $contactbar.removeClass('up');
+    }
+    
+    lastScrollTop = st;
+}
+});
+</script>
+
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
 </head>
 
 
@@ -98,16 +182,22 @@
 
 </header>
 
+<div id="contact-bar">
+           <div class="social-media-links">
+                    <a href="http://twitter.com/devtoux"><span class="fa fa-fw fa-twitter"></span></a>
+                    <a href="https://www.linkedin.com/in/coreymalone"><span class="fa fa-fw fa-linkedin"></span></a>
+                    <a href="https://medium.com/@devtoux"><span class="fa fa-fw fa-medium"></span></a>
+                       <a class="typeform-share" href="https://corey17.typeform.com/to/A6t9zd" data-mode="2" target="_blank">  <span class="fa fw fa-envelope-o"></span></a>
+                </div>
 
-    <div class="page-content clearfix">
+  </div>
+
+
+    <div class="page-content">
+      <div class="clear"></div>
         <div class="story">
             <div class=" wrapper">
-
-               <!--  <h1>Header 1</h1>
-                <h2>Header 2</h2>
-                <h3>Header 3</h3>
-                <h4>Header 4</h4> -->
-                <h2>Back in middle school…</h2>
+                <h2 class="center">Back in middle school…</h2>
             </div>
             <div class="para light-blue">
                 <div class="wrapper">
@@ -217,58 +307,52 @@ Just do it…
      
                 <p></p>
 
-                <div class="side">       
-                    <h4><a href="">Denise Jacobs</a></h4>
+                    <h4><a href="">Denise Jacobs →</a></h4>
                     <p>Denise is SOOO passionate and loves to talk about how creative people work and think. She also has some great advice for making us our higher selves.</p>
          
                     <h4>
-                    <a href="">Brendon Buchard</a></h4>
+                    <a href="">Brendon Buchard →</a></h4>
                     <p>His motivational videos are inspiring, in fact without him I might not have had the courage or the self awareness to know I needed to leave the PhD program and get into UX. I recommend you watch at least this video. I had to watch it again and again to finally believe that I could have (many) perfect days.</p>
-                </div>                
+                               
 
                 <h3>Empathy</h3>
      
                 <p>Empathy is so important because what we create is used by humans not computers. Empathy not only applies to the users but to everyone involved in the design process. You have to have empathy for the marketing and business side of things just as much as the user. These people inspired me to really explore even deeper the meaning of empathy and what it means for design.</p>
 
-                <div class="side">       
-                    <h4><a href="http://realizingempathy.com"><span>Seung Chan Lim (Slim)</h4>
+                    <h4><a href="http://realizingempathy.com"><span>Seung Chan Lim (Slim) →</h4>
                     <p><a href="https://www.youtube.com/watch?v=CGLUzYUKhTs">Slim's Ted Talk</a> really inspired me, I love philosophy, so hearing him speak about design and empathy together really got me thinking. We always hear that empathy is required for design, but what does that mean besides trying to empathize with people you interview? <a href="http://books.realizingempathy.com/">His book</a> gets you thinking about empathy in a more general sense and I even applied to my current friends and family.</p>
          
                     <h4>
-                    <a href="http://www.jonkolko.com/">Jon Kolko</a></h4>
+                    <a href="http://www.jonkolko.com/">Jon Kolko →</a></h4>
                     <p>I read his book "Well Designed" and I was amazed by how he talked about design. He really put it into perspective from a project management point of view and talks about the powerfulness and the emotional value proposition.</p>
-                </div>
+             
 
                 <h3>Psychology</h3>
                 <p>Like I said we are dealing with humans right? It is so important to understand the psychology of people, not only for the design the product but for bringing people together. These people have some really good ideas about how people work.</p>
-                <div class="side"> 
-                    <h4><a href="http://www.blog.theteamw.com/">The Team W</a></h4>
+             
+                    <h4><a href="http://www.blog.theteamw.com/">The Team W →</a></h4>
                     <p>Team W has some great UX introductory classes online, this is UX from the perspective of a psychologist. I really like thier course <a href="https://www.udemy.com/designing-for-engagement/">Designing for Engagment</a>, where you learn about how people behave. You can also get a lot of the same ideas in her book, <a href="http://www.amazon.com/Things-Designer-People-Voices-Matter/dp/0321767535">100 Things Every Designer Needs to Know About People</a>.</p>
                     <h4>            
-                        <a href="http://www.princeton.edu/~kahneman/">Daniel Kahneman</a>
+                        <a href="http://www.princeton.edu/~kahneman/">Daniel Kahneman →</a>
                     </h4>
                     <p>Kahneman's book <a href="http://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555">"Thinking, Fast and Slow"</a> explains how the human mind works about the subconscious vs conscious. The understanding of human bias is a really important part of understanding how people make decisions. A major part of experience design is helping people make the decisions that are best for them to get the optimal experience.</p>
-                </div>
+                
 
 
             </div>
 
            <div class="wrapper">
-            <h2>Still reading?</h2>
-            <h3>Reach out...send me a note I'd love to chat with you.</h3>
+            <h2 class="center">Still reading?</h2>
+            <h3 class="center">Reach out...send me a note I'd love to chat with you.</h3>
 
-                <div class="social-media-links">
+          <div class="social-media-links">
                     <a href="http://twitter.com/devtoux"><span class="fa fa-fw fa-twitter"></span></a>
                     <a href="https://www.linkedin.com/in/coreymalone"><span class="fa fa-fw fa-linkedin"></span></a>
                     <a href="https://medium.com/@devtoux"><span class="fa fa-fw fa-medium"></span></a>
-
-                    <a class="typeform-share" href="https://corey17.typeform.com/to/A6t9zd" data-mode="2" target="_blank">  <span class="fa fw fa-envelope-o"></span></a>
+                       <a class="typeform-share" href="https://corey17.typeform.com/to/A6t9zd" data-mode="2" target="_blank">  <span class="fa fw fa-envelope-o"></span></a>
                 </div>
 
-                <div class="typeform-container center">
-             
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
-    </div>
+
    
 
     

@@ -106,8 +106,21 @@ $averta-regular : 'avertaregular', 'avenir', $restofstack ;
 $averta-light : 'avertalight', 'avenir', $restofstack ;
 $averta-light-italic : 'avertalight_italic', 'avenir', $restofstack ;
 */
+.clearfix:before, .blob-tags:before, .blob-links:before,
+.clearfix:after,
+.blob-tags:after,
+.blob-links:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after, .blob-tags:after, .blob-links:after {
+  clear: both; }
+
+.clearfix, .blob-tags, .blob-links {
+  *zoom: 1; }
+
 html {
-  color: #222;
+  color: #444444;
   background: #F9F9F9;
   font-size: 1em;
   line-height: 1.4; }
@@ -151,11 +164,11 @@ textarea {
   padding: 0.2em 0; }
 
 a, a:visited {
-  color: #0F12AA;
+  color: #18E04F;
   text-decoration: none; }
 
 a:hover {
-  color: #3236ed; }
+  color: #6ef092; }
 
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
@@ -172,32 +185,18 @@ body {
     ALL: Orange Theme
    =================== */
 .header-container {
-  padding: .5em; }
-
-.header-container {
-  padding: .5em 0; }
+  padding: 0;
+  width: 100%; }
+  .header-container .wrapper {
+    padding: 8px 0; }
   .header-container .brand {
-    max-width: 400px;
+    height: 100%;
+    width: auto;
     margin: 0 auto;
     position: relative; }
-    .header-container .brand .sub-title {
-      text-align: center;
-      text-transform: uppercase;
-      font-family: "averta", "avenir", sans-serif;
-      font-weight: 100;
-      margin: 0 auto;
-      text-align: left; }
-    .header-container .brand .my-name {
-      margin: 0 auto;
-      text-align: left; }
-    .header-container .brand img.avatar {
-      float: left;
-      margin-right: 2em;
-      height: auto;
-      width: 80px; }
-    .header-container .brand img.logo {
-      width: 300px;
+    .header-container .brand .logo {
       display: block;
+      max-width: 200px;
       margin: 0 auto; }
 
 p {
@@ -229,9 +228,6 @@ a.button-white:hover {
   color: black; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  margin: 1.15em auto;
-  margin-top: 1.35em;
-  max-width: 800px;
   font-family: "averta", "avenir", sans-serif;
   color: #4A4A4A;
   font-weight: normal; }
@@ -239,12 +235,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     color: inherit;
     text-decoration: none; }
   h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
-    color: #0F12AA; }
+    color: #18E04F; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
-  font-weight: normal;
-  text-align: center;
-  letter-spacing: .02em; }
+  font-weight: normal; }
 
 h3, .h3 {
   font-weight: 800;
@@ -286,6 +280,8 @@ h4, .h4 {
   letter-spacing: 2px;
   font-size: 1em;
   font-weight: normal; }
+.footer-container .social-media-links {
+  padding-bottom: 50px; }
 
 .wrapper .typeform-share.button {
   display: inline-block;
@@ -320,7 +316,8 @@ nav ul {
   list-style-type: none; }
 
 nav li.active a {
-  color: #961F25; }
+  color: #FF7172;
+  font-weight: 500; }
 
 nav a, nav a:visited {
   display: block;
@@ -371,6 +368,9 @@ nav li:not(.active) a:hover {
    ========================================================================== */
 .story-page p {
   font-size: 1.5em; }
+
+#contact-bar {
+  display: none; }
 
 .blob, .blob-tags span, .blob-links a {
   box-shadow: 1px 1px 0px 0px rgba(3, 3, 3, 0.2);
@@ -476,7 +476,7 @@ img.full-width {
    ========================================================================== */
 nav {
   margin: .5em 0;
-  max-width: 700px;
+  max-width: 200px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -513,11 +513,69 @@ nav li:last-child a {
 ==================================================================================================================
 */
 @media only screen and (min-width: 768px) {
-  /* ==========f==========
+  /* ====================
       WIDE: CSS3 Effects
      ==================== */
-  .header-container .brand {
-    float: left; }
+  nav {
+    max-width: 700px; }
+
+  #contact-bar {
+    position: fixed;
+    bottom: -31px;
+    height: 30px;
+    width: 100%;
+    -webkit-transition: top .2s ease-in-out, box-shadow .2s;
+            transition: top .2s ease-in-out, box-shadow .2s;
+    display: block; }
+    #contact-bar .social-media-links {
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 5px 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto; }
+      #contact-bar .social-media-links a {
+        font-size: 20px;
+        color: #444444; }
+      #contact-bar .social-media-links a:hover {
+        color: #FF7172; }
+      #contact-bar .social-media-links span {
+        height: 20px; }
+
+  #contact-bar.up {
+    bottom: 0;
+    display: block; }
+
+  body {
+    padding-top: 50px; }
+
+  .nav-up {
+    top: -69px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); }
+
+  .nav-down {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); }
+
+  .stay-there {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+  header {
+    z-index: 1000;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    -webkit-transition: top .2s ease-in-out, box-shadow .2s;
+            transition: top .2s ease-in-out, box-shadow .2s;
+    width: 100%; }
+    header .brand {
+      float: left;
+      height: 100%;
+      width: auto; }
+    header .wrapper {
+      height: 50px; }
 
   /* ============
       WIDE: Menu
@@ -533,6 +591,9 @@ nav li:last-child a {
 
   .header-container .wrapper {
     position: relative; }
+
+  .header-container .brand .logo {
+    max-width: 300px; }
 
   /* ============
       WIDE: Main
@@ -598,20 +659,6 @@ nav li:last-child a {
 
 .invisible {
   visibility: hidden; }
-
-.clearfix:before, .header-container .brand:before, .blob-tags:before, .blob-links:before,
-.clearfix:after,
-.header-container .brand:after,
-.blob-tags:after,
-.blob-links:after {
-  content: " ";
-  display: table; }
-
-.clearfix:after, .header-container .brand:after, .blob-tags:after, .blob-links:after {
-  clear: both; }
-
-.clearfix, .header-container .brand, .blob-tags, .blob-links {
-  *zoom: 1; }
 
 /* ==========================================================================
    Print styles

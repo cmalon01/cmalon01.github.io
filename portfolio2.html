@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- <script src="//use.typekit.net/ztm1yvn.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script> -->
+
+  <title>Corey Malone - Empathetic User Experience Designer</title>
+  <meta name="description" content="Corey Malone | Empathetic User Designer Developer turned Experience Designer
+">
+
+
+ <!--  FAV ICONS -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+ <!--  END - FAV ICONS -->
+
+  <link rel="stylesheet" href="/css/normalize.min.css">
+  
+  <link rel="stylesheet" href="/css/averta/stylesheet.css">
+
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/portfolio2.html">
+  <link rel="alternate" type="application/rss+xml" title="Corey Malone - Empathetic User Experience Designer" href="http://yourdomain.com/feed.xml" />
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        
+
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+// Hide Header on on scroll down
+
+// Thanks to : http://jsfiddle.net/mariusc23/s6mLJ/31/
+// https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c
+
+ var $header;
+var $contactbar;
+
+$(document).ready (function() {
+
+ $header = $('header');
+ $contactbar= $('#contact-bar');
+
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+if ($("body").height() < 1000)
+{
+  $header.addClass('stay-there');
+}
+
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+
+
+var stayThere = false;
+function hasScrolled() 
+{
+    if ($("body").height() < 1000)
+    {
+        $header.removeClass('nav-up').removeClass('nav-down');
+        $contactbar.removeClass('up');
+        $header.addClass('stay-there');
+        stayThere = true;
+        //alert('ya');
+        return;
+    }
+    if (stayThere)  
+    {
+        $header.removeClass('stay-there');
+        stayThere = false;
+    }
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $header.removeClass('nav-down').addClass('nav-up');
+        $contactbar.removeClass('up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $header.removeClass('nav-up').addClass('nav-down');
+            $contactbar.addClass('up');
+        }
+    }
+
+    if (st == 0)
+    {
+        $header.removeClass('nav-down');
+        $contactbar.removeClass('up');
+    }
+    
+    lastScrollTop = st;
+}
+});
+</script>
+
+<!--TYPE FORM EMBED -->
+<!-- 
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script> -->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67002037-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+
+
+
+
+  <body class="portfolio">
+
+    <header class="header-container">
+  <div class="wrapper clearfix">
+ 
+
+   <!-- <a class="site-title" href="/">Corey Malone - Empathetic User Experience Designer</a> -->
+   <div class="brand">
+  <a href="/"> <img src="./img/corey-logo.svg" class="logo" alt="Corey Malone - Empathetcic User Experience Designer"></a>
+  
+   </div>  
+
+    <nav class="site-nav">
+
+    	
+
+                        <ul class="clearfix">
+
+
+
+
+                            <li  >
+                              <a href="portfolio.html">portfolio</a> 
+                            </li>
+
+                            <!-- <li    >
+                            	<a href="/">story</a>
+                            </li> -->
+
+                            <li  >
+                              <a href="story.html">story</a>
+                            </li>
+
+                  	</ul>
+                     </nav>
+
+  </div>
+
+</header>
+
+<div id="contact-bar">
+           <div class="social-media-links">
+                    <a href="http://twitter.com/devtoux"><span class="fa fa-fw fa-twitter"></span></a>
+                    <a href="https://www.linkedin.com/in/coreymalone"><span class="fa fa-fw fa-linkedin"></span></a>
+                    <a href="https://medium.com/@devtoux"><span class="fa fa-fw fa-medium"></span></a>
+                       <a class="typeform-share" href="/contact.html" data-mode="2">  <span class="fa fw fa-envelope-o"></span></a>
+                </div>
+
+  </div>
+
+
+    <div class="page-content">
+      <div class="clear"></div>
+        <div class="wrapper">
+    <h1>
+	  Portfolio
+    </h1>
+    <img src="/img/portfolio/venndiagram.png">
+    <p>
+	  I am inspired by both amazing experiences. I am motivated by bad ones.
+    </p>
+    <p>
+	  My background web development amp; computer security helps me think of user experiences in different dimensions:
+    </p>
+    <ul>
+	  <li>Technical feasibility of features
+	  </li>
+	  <li>Ability to work with the dev team
+	  </li>
+    </ul>
+    <h2>
+	  UX Process &amp; Tools
+    </h2><img src="/img/portfolio/process.png">
+    <h3>
+	  Discover
+    </h3>
+    <p>
+	  Discover possibilities and explore the problem space without limits.
+    </p>
+    <div class="side-header">
+    <h4>TECHNIQUES</h4>
+    <ul>
+	  <li>User Interviews
+	  </li>
+	  <li>Contextual Inquiry
+	  </li>
+	  <li>Problem Exploration
+	  </li>
+	  <li>Competitive Analysis
+	  </li>
+	  	    <div class="clear"></div>
+    </ul>
+	</div>
+  
+    <h3>Define</h3>
+    <p>Apply constraints to the possibilities to determine which matter the most and are the most feasible.</p>
+    <div class="side-header">
+    <h4>TECHNIQUES</h4>
+	    <ul>
+		  <li>Feature Prioritization
+		  </li>
+		  <li>Feasibility Analysis
+		  </li>
+		  <li>Tech Feasibility Analysis
+		  </li>
+		  <li>Feature Prioritization
+		  </li>
+		  <li>Gut check
+		  </li>
+		  <li>Personas
+		  </li>
+	    </ul>
+	    <div class="clear"></div>
+	</div>
+
+
+    <h3>Develop</h3>
+    <p>Explore opportunities, make design decisions taking into consideration previous research &amp; business goals.</p>
+    <div class="side-header">
+    <h4>TECHNIQUES</h4>
+	    <ul>
+	    	<li>Sketching</li>
+		<li>Design Studio</li>
+		<li>Prototyping</li>
+		<li>Usability Testing</li>
+		<li>Co-Designing</li>
+	    </ul>
+	    	<div class="clear"></div>
+	</div>
+
+
+
+    <h3>Deliver</h3>
+    <p>Finalize deliverables,  re-validate assumptions, final testing.</p>
+    <div class="side-header">
+    <h4>TECHNIQUES</h4>
+	    <ul>
+	    	<li>High fidelity mockups</li>
+		<li>Final testing</li>
+	    </ul>
+	    	<div class="clear"></div>
+	</div>
+    <h3>Tools</h3>
+    
+    <ul class="icons">
+    <li><img src="/img/portfolio/icon-sketch.png"> Sketch</li>
+  <li><img src="/img/portfolio/icon-ps.png"> Photoshop</li>
+  <li><img src="/img/portfolio/icon-invision.png"> Invision</li>
+  <li><img src="/img/portfolio/icon-axure.png"> Axure</li>
+  <li><img src="/img/portfolio/icon-ai.png"> Illustrator</li>
+  <li><img src="/img/portfolio/icon-omnig.png"> OmniGraffle</li>
+  <li><img src="/img/portfolio/icon-pop.png"> Pop</li>
+  <li><img src="/img/portfolio/icon-html.png"> Web Dev</li>
+</ul>
+ </div>
+<div class="clear"></div>
+           <div class="img-bg hk-2">
+           
+    
+                </div>
+
+<div class="wrapper">
+    <h2 class="clear">
+	  Competitive Analysis
+    </h2>
+    <p>
+	  I analyze the competitors to understand the market trends, how the product differers, and potential opportunities. This analysis helps me understand where the product stands in the market and how people are currently solving the problem at hand.
+    </p>
+    <h3>
+	  Navigation
+    </h3>
+    <p>
+	  If a site is designed correctly, the navigation should resemble the assumed <i>user mental model</i> of site. In the example below, Walmart assumes that people group together dairy, eggs and cheese as they would be physically close in the supermarket.
+    </p>
+    <h3>
+	  Features
+    </h3>
+    <p>
+	  See what elements competitors gives an idea what we are lacking and what we are doing differently. This sets a baseline for what features people expect.
+    </p>
+    <h3>
+	  User Flows
+    </h3>
+    <p>
+	  Gives insight into customer behavior. The flow also gives an idea of how the company operates and what it thinks is important.
+    </p>
+    <h2>
+	  User Research
+    </h2>
+    <p>
+	  I am not the user. <i>I am not the user.</i>
+    </p>
+    <p>
+	  Great user research is the key to great UX. It is the one thing you cannot afford to cut. Conducting user interviews and ethnographic research is the only true way to empathize with users. Yes, the stakeholders are users too, they use the product in a different way. It is really enjoyable to learn about people and how they think.
+    </p>
+    <h3>
+	  Problem Exploration
+    </h3>
+    <p>
+	  Before doing user research we need to explore the problem/ brief in its various dimensions using Mona Patel’s problem exploration method. This allows me to think about the problem in different ways, why the problem is there, what it means to solve the problem, what is stopping us from solving the problem. This exploration provides some guidance into what areas should be explored during user research.
+    </p>
+    <h3>
+	  User Interviewing
+    </h3>
+    <p>
+	  After creating an interview outline I create a list of questions to ask about their behavior. I also inquiry about <b>the context of these behaviors. I pay attention to the tone of voice and body language, and I make sure to empathize with them.</b>
+    </p>
+    <ul class="cards">
+	  <li>General Behaviors
+	  </li>
+	  <li>Good &amp; Bad Networking Experiences
+	  </li>
+	  <li>meet new friends &amp; stay in touch
+	  </li>
+	  <li>Mentoring &amp; Career Growth
+	  </li>
+    </ul>
+    <h3>
+	  Synthesizing Research
+    </h3>
+    <p>
+	  I use affinity mapping to cluster similar behaviors and attitudes. These trends become the basis for the personas.
+    </p>
+    <p>
+	  EMPATHETIC EXPERIENCE DESIGNER
+    </p>
+    <p>
+	  Intro &gt; Process &gt; Discover &gt; Define &gt; Develop &gt; Deliver &gt; Client Work
+    </p>
+    <h3>
+	  DEFINE: USER RESEARCH
+    </h3>
+    <p>
+	  Personas are a great tool to help create empathy for the user for all parties invovled.
+    </p>
+    <p>
+	  Feature selection is used to decide what to sketch and prototype. It is based on:
+    </p>
+    <ul>
+	  <li>User
+	  </li>
+	  <li>Research
+	  </li>
+	  <li>Business
+	  </li>
+	  <li>Goals
+	  </li>
+	  <li>Competitive
+	  </li>
+	  <li>Analysis
+	  </li>
+	  <li>Technical
+	  </li>
+	  <li>Feasibility
+	  </li>
+	  <li>MoSCoW Method
+	  </li>
+    </ul>
+    <p>
+	  This method groups features into clearly defined decisions. It is subject to change throughout the design process
+    </p>
+    <h2>
+	  Sketching &amp; Wireframing
+    </h2>
+    <p>
+	  Where the user research, business goals, empathy collide into creative possibilities.
+    </p>
+    <h3>
+	  Sketching
+    </h3>
+    <p>
+	  Sketching get my ideas out and make design decisions. Design studio focuses the team on the users and goals. Design studio collapses the ideas of the team into one design (for that screen). Any critique given must address the problem or the user goals. Visual preferences have no place during sketching.
+    </p>
+    <h3>
+	  Wireframing
+    </h3>
+    <p>
+	  Wireframing helps people understand the design better for usability testing. I stay in low fidelity until it passes enough usability tests.
+    </p>
+    <h3>
+	  Usability Testing
+    </h3>
+    <ul>
+	  <li>Make users feel welcome and comfortable.
+	  </li>
+	  <li>Pay close attention to the language used and stick the script.
+	  </li>
+	  <li>
+		<b>Wording matters in scripts.</b> The wrong wording can lead a user to complete a task easily. The right wording doesn't give away the task.
+	  </li>
+    </ul>
+    <h2>
+	  Client Work
+    </h2>
+    <p>
+	  Clients are not the problem. The problem we are solving is the problem. It is our job as designers to help the client understand the reasoning behind design decisions. It is also our job to build empathy for the client and help them build empathy for the users.
+    </p>
+    <h3>
+	  CLIENT : GLOBALFEST - SITE REDESIGN
+    </h3>
+    <h4>
+	  Brief
+    </h4>
+    <p>
+	  globalFEST’s website needs to reflect the prestige, industry credibility and the growing role it plays in supporting and exposing the world music community.
+    </p>
+    <h4>
+	  Goal
+    </h4>
+    <p>
+	  Get more users, infiltrate the market.
+    </p>
+    <h3>
+	  ANALYSIS OF CURRENT SITE
+    </h3>
+    <h4>
+	  Content Strategy
+    </h4>
+    <ul>
+	  <li>Only 3 of 9 non-industry users could correctly identify what globalFEST was based on the site.
+	  </li>
+	  <li>globalFEST was explained differently on different pages, in more than 5 different ways.
+	  </li>
+    </ul>
+    <h4>
+	  Usability Testing
+    </h4>
+    <p>
+	  “Imagine you went to globalFEST in 2014, go back and find which artists were at that event.” “Imagine you are an artist..looking to join globalFEST, where would you go.” “Imagine you are a promoter and are looking for an artist to book for an upcoming event at your venue.”
+    </p>
+    <h3>
+	  CO-DESIGN
+    </h3>
+    <p>
+	  We met with the globalFEST team to figure out the Information Architecture and the journey of a globalFEST artist.
+    </p>
+    <h3>
+	  USER RESEARCH
+    </h3>
+    <p>
+	  We researched users in and outside of the globalFEST community, we wanted to make sure people's praise and appreciation of globalFEST did not bias them to minimize their pain points, especially when it came to the artists.
+    </p>
+    <h3>
+	  ITERATIONS - HOME PAGE
+    </h3>
+    <p>
+	  Iteration 0 -&gt; Iteration 2
+    </p>
+    <ol>
+	  <li>Explain what globalFEST is
+	  </li>
+	  <li>Find out more about gF
+	  </li>
+	  <li>Explain what else gF does
+	  </li>
+	  <li>More of what gF does &amp;
+	  </li>
+	  <li>Media from artists
+	  </li>
+	  <li>Footer navigation
+	  </li>
+	  <li>Strategy change, we show what gF is through content/images, not words so users can better understand what gF is.
+	  </li>
+	  <li>Most recent event, keeping the home page fresh.
+	  </li>
+	  <li>Featured artists of the week
+	  </li>
+	  <li>Credibility
+	  </li>
+	  <li>Link to artists added
+	  </li>
+    </ol>
+    <h3>
+	  ITERATIONS - EVENTS PAGE
+    </h3>
+    <p>
+	  Iteration 0
+    </p>
+    <p>
+	  Iteration 2
+    </p>
+    <ol>
+	  <li>Ununsed navigation items moved to footer to keep users focused and reduce choices presented
+	  </li>
+	  <li>Elements re-ordered to represent the core of gF. Also “EVENTS” now goes to a landing page
+	  </li>
+	  <li>Left aligned for consistency
+	  </li>
+	  <li>Upcoming events keep the page fresh
+	  </li>
+	  <li>Explanation of different events
+	  </li>
+    </ol>
+    <h3>
+	  FINAL SITE MAP
+    </h3>
+    <h3>
+	  FINAL RESULTS
+    </h3>
+    <h4>
+	  Usability Tests Improvement
+    </h4>
+    <h4>
+	  Final Recommendations
+    </h4>
+    <ul>
+	  <li>Create a visual brand. Then take that brand and apply to the website.
+	  </li>
+	  <li>Create the content first. Try to create a consistent message about what gF is.
+	  </li>
+	  <li>Keep using WordPress as it’s easy to update content.
+	  </li>
+    </ul>
+    <h3>
+	  CLIENT : KAVITA J PATEL
+    </h3>
+    <h4>
+	  My Role Launches
+    </h4>
+    <ul>
+	  <li>Full stack web developer
+	  </li>
+	  <li>Re-design I coded
+	  </li>
+	  <li>User Advocate
+	  </li>
+	  <li>Visual Designer
+	  </li>
+	  <li>User flows
+	  </li>
+    </ul>
+    <h3>
+	  Accomplishments
+    </h3>
+    <ul>
+	  <li>Improved form interactions
+	  </li>
+	  <li>
+		<b>Consistent branding across platforms</b>, services and documents
+	  </li>
+	  <li>Responsive Websites for a consistent experience
+	  </li>
+	  <li>Removal of popups and video autoplays
+	  </li>
+	  <li>Base design decisions on what is best for the user and the goals, not on feeling. Asking why.
+	  </li>
+    </ul>
+    <h3>
+	  CLIENT : KAVITA J PATEL
+    </h3>
+    <h2>
+	  Let's talk
+    </h2>
+    <p>
+	  Design should help people engage with themselves at a deeper level and enable them therefore to engage with others in a meaningful way. I don’t consider user engagement to be clicks on a page or the number of times a user opens app, that’s just usage. I dare say true engagement may actually only be measured through self experience, contextual inquiry or deep shifts in culture. In other words through empathy.
+    </p>
+    
+</div>
+    </div>
+
+    
+    <div class="footer-container">
+            <footer class="wrapper">
+          
+                
+                <div class="social-media-links">
+                    <a href="http://twitter.com/devtoux"><span class="fa fa-fw fa-twitter"></span></a>
+                    <a href="https://www.linkedin.com/in/coreymalone"><span class="fa fa-fw fa-linkedin"></span></a>
+                    <a href="https://medium.com/@devtoux"><span class="fa fa-fw fa-medium"></span></a>
+                       <a class="typeform-share" href="/contact.html" data-mode="2">  <span class="fa fw fa-envelope-o"></span></a>
+                </div>
+
+
+    
+            </footer>
+
+
+
+</div>
+    
+
+  </body>
+
+</html>

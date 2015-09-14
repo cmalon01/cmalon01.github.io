@@ -119,10 +119,11 @@ $averta-light-italic : 'avertalight_italic', 'avenir', $restofstack ;
 .clearfix, .blob-tags, .blob-links {
   *zoom: 1; }
 
+.clear {
+  clear: both; }
+
 html {
   color: #444444;
-  background: #F9F9F9;
-  font-size: 1em;
   line-height: 1.4; }
 
 ::-moz-selection {
@@ -199,10 +200,11 @@ body {
       max-width: 200px;
       margin: 0 auto; }
 
+.page-content p, .page-content ul, .page-content ol {
+  font-size: 1.3em; }
+
 p {
-  font-size: 1.3em;
   line-height: 1.5;
-  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 300; }
@@ -248,6 +250,32 @@ h4, .h4 {
   font-weight: 300;
   font-style: italic;
   color: #FF7172; }
+
+.side-header {
+  position: relative;
+  padding-left: 10em; }
+  .side-header h4, .side-header .h4 {
+    position: absolute;
+    width: 10em;
+    top: 0;
+    left: 0;
+    margin-top: 0; }
+  .side-header li {
+    float: left;
+    width: 50%;
+    display: block; }
+
+ul.icons {
+  list-style-type: none; }
+  ul.icons li img {
+    height: 2em;
+    line-height: 2em;
+    margin-right: .5em; }
+  ul.icons li {
+    width: 25%;
+    display: block;
+    float: left;
+    padding: .5em 0; }
 
 .seperator {
   margin: 2em 0;
@@ -367,7 +395,7 @@ nav li:not(.active) a:hover {
 /* ==========================================================================
     Story Page
    ========================================================================== */
-.story-page p {
+.story-page p, .story-page ul, .story-page ol {
   font-size: 1.5em; }
 
 #contact-bar {
@@ -436,6 +464,8 @@ img.full-width {
   background-size: cover; }
   .img-bg.hk {
     background-image: url(../img/hk.jpg); }
+  .img-bg.hk-2 {
+    background-image: url(../img/portfolio/h-competitive.jpg); }
   .img-bg.ga-1 {
     background-image: url(../img/ga-2.jpg);
     padding-bottom: 40%; }

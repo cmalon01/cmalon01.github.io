@@ -49,9 +49,9 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         
-
-   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="/js/featherlight.min.js"></script>
 
 <script>
 // Hide Header on on scroll down
@@ -93,7 +93,7 @@ setInterval(function() {
 var stayThere = false;
 function hasScrolled() 
 {
-    if ($("body").height() < 1000)
+    if ($("body").height() < 1300)
     {
         $header.removeClass('nav-up').removeClass('nav-down');
         $contactbar.removeClass('up');
@@ -237,7 +237,16 @@ function hasScrolled()
     <h3>
 	  My Role &amp; Products Launched
     </h3>
-     <div class=""><img src="/img/portfolio/kavita-role.jpg" class="max-full center"></div>
+
+        <div class="wrap-grid">
+        <div class="d-1of2">
+        <p>As I worked on web development with Kavita, I started to realize potential opportunities with the  the user experience. Soon enough I strategized and implemented technical changes resulting in better UX. </p>
+        </div>
+        <div class="d-1of2">
+             <div class=""><img src="/img/portfolio/kavita-role.jpg" class="max-700"></div>
+        </div>
+        </div>
+
 
     <h3>
 	  Accomplishments
@@ -268,9 +277,13 @@ function hasScrolled()
     <p>
     	Besides explaining the general experience, user flows help plan for the launch by brining up questions and issues related to the "steps" that users take. 
     </p>
-
+    <blockquote>By analyzing and improving the user flow for enrollment we were able to improve success of this step from 50% to 100%, getting users to the content more quickly.</blockquote>
     <div class="wrap-grid">
- 		<div class="d-1of2"><img src="/img/portfolio/kavita-userflow1.jpg" class="max-full center"></div>
+ 		<div class="d-1of2">
+            <a href="#" data-featherlight="/img/portfolio/kavita-userflow1.jpg">
+                <img src="/img/portfolio/kavita-userflow1.jpg" class="max-full center">
+            </a>
+        </div>
  		<div class="d-1of2"><img src="/img/portfolio/kavita-userflow2.jpg" class="max-full center"></div>
 	</div>
 
@@ -278,7 +291,7 @@ function hasScrolled()
  		<div class="d-1of2"><img src="/img/portfolio/kavita-userflow3.jpg" class="max-full center"></div>
  		<div class="d-1of2"><img src="/img/portfolio/kavita-userflow4.jpg" class="max-full center"></div>
 	</div>
-    <p class="center"><strong>By analyzing and improving the user flow for enrollment we were able to improve success of this step from 50% to 100%, getting users to the content more quickly.</p>
+
  	</div>
 
     <div class="wrapper">
@@ -290,22 +303,28 @@ function hasScrolled()
 
 		 
  		<div class="d-1of2">
- 		 <h2 class="h4"> Client: globalFEST </h2>
+ 		 <a class="thumb" href="/portfolio/globalfest.html"><img src="/img/portfolio/thumb-globalfest.jpg"></a>
+
+ 		 <a href="/portfolio/globalfest.html"><h2 class="h4">globalFEST—Redesign</h2></a>
  
  		 <p style="font-size:1rem;">globalFEST has become one of the most dynamic global music platforms in North America. See how we redesigned their site to give it the prestige it deserves. <a href="/portfolio/globalfest.html">Read more &rarr;</a></p>
- 		 <a class="thumb" href="/portfolio/globalfest.html"><img src="/img/portfolio/thumb-globalfest.jpg"></a>
+
 		
 		</div>
 		
 
 		 		
  		<div class="d-1of2">
- 		 <h2 class="h4"> My Process</h2>
+ 	 		 <a class="thumb" href="/portfolio/process.html"><img src="/img/portfolio/thumb-process.jpg"></a>
+ 		 <a href="/portfolio/process.html"><h2 class="h4"> My Process</h2></a>
  
  		 <p style="font-size:1rem;">I strong believe in empathetic design. This empathy extends to both stakeholders and users, in effect aligning the business and user goals. <a href="/portfolio/process.html">Read more &rarr;</a></p>
- 		 <a class="thumb" href="/portfolio/process.html"><img src="/img/portfolio/thumb-process.jpg"></a>
+
 		
 		</div>
+		
+
+
 		
 </div>  
     </div>   

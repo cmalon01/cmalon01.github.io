@@ -49,9 +49,9 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         
-
-   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="/js/featherlight.min.js"></script>
 
 <script>
 // Hide Header on on scroll down
@@ -93,7 +93,7 @@ setInterval(function() {
 var stayThere = false;
 function hasScrolled() 
 {
-    if ($("body").height() < 1000)
+    if ($("body").height() < 1300)
     {
         $header.removeClass('nav-up').removeClass('nav-down');
         $contactbar.removeClass('up');
@@ -246,16 +246,16 @@ function hasScrolled()
     	 <p class="caption">Team: Me, Keith, Andres</p>
     	 </div>
     </div>
-
+     <h4 class="center">Final Mockup: Home Page</p>
      <div class=""><img src="/img/portfolio/globalfest-final.jpg" class="max-full center"></div>
 
     <h3>
 	  ANALYSIS OF CURRENT SITE
     </h3>
-         <div class=""><img src="/img/portfolio/globalfest-original.jpg" class="max-full center"></div>
+
     <div class="wrap-grid">
-    	<div class="d-1of2">
-		    <h4>
+	    <div class="d-1of2">  
+	    	<h4>
 			  Content Strategy
 		    </h4>
 		    <ul>
@@ -264,13 +264,14 @@ function hasScrolled()
 			  <li>globalFEST was explained differently on different pages, in more than 5 different ways.
 			  </li>
 		    </ul>
-	    </div>
-	    <div class="d-1of2">  
 		    <h4>
 			  Usability Testing
 		    </h4>
 		  	<div class=""><img src="/img/portfolio/globalfest-usability-1.jpg" class="max-500 center"></div>
 	  	</div>
+	  	    	<div class="d-1of2">
+         <div class=""><img src="/img/portfolio/globalfest-original.jpg" class="max-full center"></div>
+	    </div>
   	</div>
     <h3>
 	  CO-DESIGN
@@ -278,9 +279,18 @@ function hasScrolled()
     <p>
 	  We met with the globalFEST team to figure out the Information Architecture and the journey of a globalFEST artist.
     </p>
-    	<div class=""><img src="/img/portfolio/globalfest-codesign.jpg" class="max-500 center"></div>
+       <div class="wrap-grid">
+	    <div class="d-1of2">  
+<div class=""><img src="/img/portfolio/globalfest-codesign.jpg" class="max-500 center"></div>
+	    </div>
+	    <div class="d-1of2">  
+<div class=""><img src="/img/portfolio/globalfest-codesign-2.jpg" class="max-full center"></div>
+	    </div>
+	   </div>
+
+    	
     		<div class=""><img src="/img/portfolio/globalfest-story.jpg" class="border max-full center"></div>
-    			<div class=""><img src="/img/portfolio/globalfest-codesign-2.jpg" class="max-full center"></div>
+    			
     <h3>
 	  USER RESEARCH
     </h3>
@@ -368,12 +378,14 @@ function hasScrolled()
 
 		 
  		<div class="d-1of2">
- 		<h2 class="h4"> Client: Kavita J. Patel </h2>
+ 		<a class="thumb" href="/portfolio/kavita.html"><img src="/img/portfolio/thumb-kavita.jpg"></a>
+ 		 
+ 		<a href="/portfolio/kavita.html"><h2 class="h4">Kavita J. Patel—Dev &amp; UX </h2></a>
 
  		<p style="font-size:1rem;">As I did front end web development I fixed usability issues and strategized on the fly. See the latest website redesign and how I used user flows to improve the user experience. <a href="/portfolio/kavita.html">Read more &rarr;</a>
  		</p>
- 		 <a class="thumb" href="/portfolio/kavita.html"><img src="/img/portfolio/thumb-kavita.jpg"></a>
  		 
+
  		</div>
  		
 
@@ -382,12 +394,16 @@ function hasScrolled()
 
 		 		
  		<div class="d-1of2">
- 		 <h2 class="h4"> My Process</h2>
+ 	 		 <a class="thumb" href="/portfolio/process.html"><img src="/img/portfolio/thumb-process.jpg"></a>
+ 		 <a href="/portfolio/process.html"><h2 class="h4"> My Process</h2></a>
  
  		 <p style="font-size:1rem;">I strong believe in empathetic design. This empathy extends to both stakeholders and users, in effect aligning the business and user goals. <a href="/portfolio/process.html">Read more &rarr;</a></p>
- 		 <a class="thumb" href="/portfolio/process.html"><img src="/img/portfolio/thumb-process.jpg"></a>
+
 		
 		</div>
+		
+
+
 		
 </div>  
     </div>   

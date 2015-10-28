@@ -1614,7 +1614,8 @@ p.caption {
       margin-right: auto; }
       #contact-bar .social-media-links a {
         font-size: 36px;
-        color: #444444; }
+        color: #444444;
+        line-height: 1; }
       #contact-bar .social-media-links a:hover {
         color: #FF7172; }
       #contact-bar .social-media-links span {
@@ -1673,8 +1674,8 @@ p.caption {
     .site-nav li a {
       width: 6.25em; }
 
-  .portfolio-nav li a {
-    float: left; }
+  .portfolio-nav ul {
+    margin: 0 auto; }
 
   .header-container .wrapper {
     position: relative; }

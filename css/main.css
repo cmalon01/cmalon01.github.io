@@ -1211,7 +1211,7 @@ blockquote {
   font-size: 2em;
   letter-spacing: .09em;
   font-weight: 200;
-  color: #FF7172;
+  color: #1FB7AF;
   line-height: 150%;
   text-align: left;
   max-width: 800px;
@@ -1280,7 +1280,7 @@ nav a, nav a:visited {
   .portfolio-nav li.active a {
     color: #FF7172; }
   .portfolio-nav ul {
-    max-width: 600px; }
+    max-width: 500px; }
 
 /* ==============
     MOBILE: Main

@@ -1123,7 +1123,7 @@ ul.icons {
 
 img.center {
   display: block;
-  margin: 0 auto; }
+  margin: 1rem auto; }
 
 img.border {
   border: 1px solid #c4c4c4; }

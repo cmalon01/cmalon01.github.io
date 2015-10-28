@@ -91,6 +91,32 @@ blockquote {
 h1.no-margin-top, .no-margin-top.h1, h2.no-margin-top, .no-margin-top.h2, h3.no-margin-top, .no-margin-top.h3, h4.no-margin-top, .no-margin-top.h4, h5.no-margin-top, .no-margin-top.h5, h6.no-margin-top {
   margin-top: 0; }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "averta", "avenir", sans-serif;
+  color: #4A4A4A;
+  font-weight: normal; }
+  h1 a, .h1 a, h1 a:visited, .h1 a:visited, h2 a, .h2 a, h2 a:visited, .h2 a:visited, h3 a, .h3 a, h3 a:visited, .h3 a:visited, h4 a, .h4 a, h4 a:visited, .h4 a:visited {
+    color: inherit;
+    text-decoration: none; }
+  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
+    color: #1FB7AF; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
+  font-weight: normal; }
+
+h1, .h1, h2, .h2 {
+  font-weight: 100; }
+
+h3, .h3 {
+  font-weight: 300;
+  color: #FF7172; }
+
+h4, .h4 {
+  font-weight: 300;
+  font-style: italic;
+  color: #444444;
+  font-weight: 500; }
+
 html {
   box-sizing: border-box; }
 
@@ -927,25 +953,6 @@ stretchRight
     -webkit-transform: scaleX(1.01); }
   100% {
     -webkit-transform: scaleX(1); } }
-/*
-$para-blue: #0F12AA;
-$para-light-blue : #50BEE3;
-$para-purple: #AA0F9D;
-$para-green: #0FAA4B;
-*/
-/*
-$para-blue: #0F12AA;
-$para-light-blue : #4139ef;
-$para-purple: #4A4E9F;
-$para-green: #3A8627;
-*/
-/*
-$averta-extrabold : 'avertaextrabold','avenir', $restofstack ;
-$averta-bold : 'avertabold', 'avenir', $restofstack ;
-$averta-regular : 'avertaregular', 'avenir', $restofstack ;
-$averta-light : 'avertalight', 'avenir', $restofstack ;
-$averta-light-italic : 'avertalight_italic', 'avenir', $restofstack ;
-*/
 .clearfix:before, .side-header ul:before, ul.icons:before, ul.cards:before, .blob-tags:before, .blob-links:before,
 .clearfix:after,
 .side-header ul:after,
@@ -1075,29 +1082,6 @@ a.button-white:hover {
   background: white;
   color: black; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: "averta", "avenir", sans-serif;
-  color: #4A4A4A;
-  font-weight: normal; }
-  h1 a, .h1 a, h1 a:visited, .h1 a:visited, h2 a, .h2 a, h2 a:visited, .h2 a:visited, h3 a, .h3 a, h3 a:visited, .h3 a:visited, h4 a, .h4 a, h4 a:visited, .h4 a:visited {
-    color: inherit;
-    text-decoration: none; }
-  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
-    color: #1FB7AF; }
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
-  font-weight: normal; }
-
-h3, .h3 {
-  font-weight: 600;
-  color: #FF7172; }
-
-h4, .h4 {
-  font-weight: 300;
-  font-style: italic;
-  color: #444444;
-  font-weight: 500; }
-
 .side-header {
   position: relative; }
   .side-header ul {
@@ -1138,7 +1122,7 @@ ul.icons {
 
 img.center {
   display: block;
-  margin: 1rem auto; }
+  margin: 0 auto; }
 
 img.border {
   border: 1px solid #c4c4c4; }
@@ -1147,10 +1131,9 @@ img.border {
   overflow-y: scroll; }
 
 .seperator {
-  margin: 2em 0;
-  background: #4A4A4A;
+  margin: 2em 2em;
+  background: #919191;
   height: 1px;
-  max-width: 800px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -1280,7 +1263,7 @@ nav a, nav a:visited {
   border-bottom: 2px solid #1FB7AF; }
 
 .portfolio-nav {
-  padding: .5em .5em;
+  padding: .5em 0;
   border-top: 1px solid #DADADA;
   border-bottom: 1px solid #DADADA;
   background: #FBFBFB;
@@ -1289,10 +1272,12 @@ nav a, nav a:visited {
     width: 33.33%;
     float: left; }
   .portfolio-nav li a {
-    color: #111111;
+    color: #444444;
+    font-weight: 600;
+    text-transform: uppercase;
     text-align: center; }
   .portfolio-nav li.active a {
-    color: #1DCCC4; }
+    color: #FF7172; }
   .portfolio-nav ul {
     max-width: 600px; }
 
@@ -1491,6 +1476,9 @@ p.caption {
      ======================== */
   .oldie .site-nav a {
     margin: 0 0.7%; } }
+@media only screen and (max-width: 768px) {
+  .thumb {
+    margin-top: 2rem; } }
 /* 
 ==================================================================================================================
 768+
@@ -1910,3 +1898,29 @@ blockquote {
     /* 35px / 24px */ } }
 h1.no-margin-top, .no-margin-top.h1, h2.no-margin-top, .no-margin-top.h2, h3.no-margin-top, .no-margin-top.h3, h4.no-margin-top, .no-margin-top.h4, h5.no-margin-top, .no-margin-top.h5, h6.no-margin-top {
   margin-top: 0; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "averta", "avenir", sans-serif;
+  color: #4A4A4A;
+  font-weight: normal; }
+  h1 a, .h1 a, h1 a:visited, .h1 a:visited, h2 a, .h2 a, h2 a:visited, .h2 a:visited, h3 a, .h3 a, h3 a:visited, .h3 a:visited, h4 a, .h4 a, h4 a:visited, .h4 a:visited {
+    color: inherit;
+    text-decoration: none; }
+  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
+    color: #1FB7AF; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
+  font-weight: normal; }
+
+h1, .h1, h2, .h2 {
+  font-weight: 100; }
+
+h3, .h3 {
+  font-weight: 300;
+  color: #FF7172; }
+
+h4, .h4 {
+  font-weight: 300;
+  font-style: italic;
+  color: #444444;
+  font-weight: 500; }

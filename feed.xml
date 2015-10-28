@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Corey Malone - Empathetic User Experience Designer</title>
-    <description>Corey Malone | Empathetic User Designer Developer turned Experience Designer
+    <description>Corey Malone | Empathetic User Designer. New York, New York.
 </description>
     <link>http://coreyux.com/</link>
     <atom:link href="http://coreyux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Oct 2015 23:00:05 -0400</pubDate>
-    <lastBuildDate>Mon, 26 Oct 2015 23:00:05 -0400</lastBuildDate>
+    <pubDate>Tue, 27 Oct 2015 21:43:50 -0400</pubDate>
+    <lastBuildDate>Tue, 27 Oct 2015 21:43:50 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
   </channel>

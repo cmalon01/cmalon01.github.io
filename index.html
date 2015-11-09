@@ -210,33 +210,66 @@ function hasScrolled()
 
     <div class="page-content">
       <div class="clear"></div>
-        <div class="para light-red">
+        <section class="para light-red">
     <div class="wrapper">
 
 
-<!--<h4 style="text-align:left;"><strong>A thought on user engagement</strong><br>Products should help people engage with themselves at a deeper level and therefore engage with others in a more meaningful way. I don’t consider user engagement as clicks on a page or the number of times a user opens app, that’s  usage. I dare say true engagement may actually only be measured through self experience, contextual inquiry or deep shifts in culture.</h4> 
+<!--<h4 style="text-align:left;"><em>A thought on user engagement</em><br>Products should help people engage with themselves at a deeper level and therefore engage with others in a more meaningful way. I don’t consider user engagement as clicks on a page or the number of times a user opens app, that’s  usage. I dare say true engagement may actually only be measured through self experience, contextual inquiry or deep shifts in culture.</h4> 
 -->
 
 <!-- <h2 style="font-weight:100;">With all the distractions technology brings, we need more humanity, the ability to sit down and be with one another. Ironically designed technology is the best way to do it.</h2> -->
 
 
- <h2 style="font-weight:100;">Empathy not only applies to users, but stakeholders too. Doing so enables alignment between the user and business goals.</h2>
+ <h2 style="font-weight:100;">Having empathy not only applies to users, but stakeholders too. Doing so enables alignment between user and business goals.</h2>
+   
 
 </div>
-</div>
+</section>
 
-   <div class="wrapper">
 
+<section class="wrapper what-i-like">
+<h2 class="no-margin-bottom">A bit about what I like...</h2>
+  <div class="wrap-grid">
+    <div class="d-1of3">
+        
+    <h2 class="h3 center">Design</h2>    
+    <img class="icon" src="/img/icons-make.svg">
+    <p>I have been programming since I was <em>11 years old</em>. Creating, building and designing are my specialties. With the UX Process, I can designing things that <em>solve real human problems.</em></p> 
+
+    </div>
+
+    <div class="d-1of3">
+            <h2 class="h3 center">Innovating</h2>
+            <img class="icon" src="/img/icons-idea.svg">
+
+    <p>I have a security patent with <em>Intel, </em>and I greatly improved system deployment times <em>West Point</em>, saving labor costs. I have a strong passion to improve things.</p>
+
+    </div>
+    <div class="d-1of3">
+   
+    <h2 class="h3 center">Teaching</h2>
+         <img class="icon" src="/img/icons-teach.svg">
+    <p>I have taught Computer Architecture at <em>NYU Engineering</em>. I taught nurses how to use medical record systems at <em>Mount Sinai St. Luke’s Hospital</em>. I love reading and discussing UX and technology.</p>
+
+    </div>
+
+
+    </div>
+
+</section>
+
+   <section class="wrapper">
+   <h2 class="">A bit about my work...</h2>
     	
 
-<div class="wrap-grid">
+<div class="wrap-grid related-posts">
 	
 
 		 
  		<div class="d-1of2">
  		<a class="thumb" href="/portfolio/kavita.html"><img src="/img/portfolio/thumb-kavita.jpg"></a>
  		 
- 		<a href="/portfolio/kavita.html"><h2 class="h4">Kavita J. Patel—Dev &amp; UX </h2></a>
+ 		<h2 class="h4"><a href="/portfolio/kavita.html">Kavita J. Patel—Dev &amp; UX</a></h2>
 
  		<p style="font-size:1rem;">As I did front end web development I fixed usability issues and strategized on the fly. See the latest website redesign and how I used user flows to improve the user experience. <a href="/portfolio/kavita.html">Read more &rarr;</a>
  		</p>
@@ -250,7 +283,7 @@ function hasScrolled()
  		<div class="d-1of2">
  		 <a class="thumb" href="/portfolio/globalfest.html"><img src="/img/portfolio/thumb-globalfest.jpg"></a>
 
- 		 <a href="/portfolio/globalfest.html"><h2 class="h4">globalFEST—Redesign</h2></a>
+ 		 <h2 class="h4"><a href="/portfolio/globalfest.html">globalFEST—UX</a></h2>
  
  		 <p style="font-size:1rem;">globalFEST has become one of the most dynamic global music platforms in North America. See how we redesigned their site to give it the prestige it deserves. <a href="/portfolio/globalfest.html">Read more &rarr;</a></p>
 
@@ -261,7 +294,7 @@ function hasScrolled()
 		 		
  		<div class="d-1of2">
  	 		 <a class="thumb" href="/portfolio/process.html"><img src="/img/portfolio/thumb-process.jpg"></a>
- 		 <a href="/portfolio/process.html"><h2 class="h4"> My Process</h2></a>
+ 		 <h2 class="h4"><a href="/portfolio/process.html">My Process</a></h2>
  
  		 <p style="font-size:1rem;">I strongly believe in empathetic design. This empathy extends to both stakeholders and users, in effect aligning the business and user goals. <a href="/portfolio/process.html">Read more &rarr;</a></p>
 
@@ -274,7 +307,7 @@ function hasScrolled()
  		<div class="d-1of2">
  		 <a class="thumb" href="/story.html"><img src="/img/thumb-story.jpg"></a>
 
- 		 <a href="/story.html"><h2 class="h4">My Story</h2></a>
+ 		 <h2 class="h4"><a href="/story.html">My Story</a></h2>
  
  		 <p style="font-size:1rem;">I started coding in 5th grade, now I'm considering the people who use the code. <a href="/story.html">Read more &rarr;</a></p>
 
@@ -282,7 +315,7 @@ function hasScrolled()
 		</div>
 		
 </div>  
-    </div> 
+    </section> 
 
 <!-- <div class="wrapper">
 
@@ -301,13 +334,145 @@ function hasScrolled()
        <!-- <img class="full-width" src="./img/ga-2.jpg">  -->
             
 
+
+<script>
+
+
+// animation type 1 - looks bad because they all happen at the same time
+/*
+ani_1_inside = false;
+ani_1_waiting = false;
+
+function stopWaiting()
+{
+  ani_1_waiting = false; 
+}
+
+function stopAnimating()
+{
+  $(".icon").removeClass("floating");
+  ani_1_waiting = true; 
+  setTimeout(stopWaiting, 10000);
+}
+
+
+$( document ).ready(function() {
+
+  $(window).scroll(function() {
+      var scrollPos = $(window).scrollTop();
+      var imagePos = $(".icon").first().offset().top;
+      var inside = (scrollPos < imagePos) && (scrollPos < imagePos + 400);
+
+      if (inside && ani_1_inside)
+      {
+        // we are already inside so do nothing.
+      }
+      else if (!ani_1_waiting)
+      {
+        // we are inside and we aren't waiting
+          $(".icon").addClass("floating");
+         ani_1_inside = true;
+         ani_1_waiting = true;
+         setTimeout(stopAnimating, 1500); // stop animating after 3 seconds
+      }
+      else if (!inside)
+      {
+         ani_1_inside = false;
+      }
+  });
+
+ });
+*/
+
+
+
+// animation type 2 
+
+var loopCounter = 0;
+var loopLength = 0;
+var $loopObjects = null;
+var effect = "fadeIn";
+ani_1_inside = false;
+ani_1_waiting = false;
+
+
+function animateLoop()
+{
+    $($loopObjects[loopCounter]).addClass(effect);
+    loopCounter = loopCounter + 1;
+    if (loopCounter >= loopLength)
+    {
+     //setTimeout(animateFinishLoop, 600);
+     loopCounter = 0;
+         ani_1_waiting = false;
+    }
+    else
+    {
+      setTimeout(animateLoop, 600);
+    }
+}
+
+
+function animateFinishLoop()
+{
+    $($loopObjects[loopCounter]).removeClass(effect);
+    loopCounter = loopCounter + 1;
+    if (loopCounter >= loopLength )
+    {
+       ani_1_waiting = false;
+     
+    }
+    else
+    {
+       setTimeout(animateFinishLoop, 600);
+      // all done stop waiting
+    }
+}
+
+
+$( document ).ready(function() {
+  $loopObjects = $(".icon");
+   $(".icon").css("visibility","hidden");
+  loopLength = $loopObjects.length;
+
+
+  $(window).scroll(function() {
+      var scrollPos = $(window).scrollTop();
+      var imagePos = $(".icon").first().offset().top;
+      var inside = (scrollPos < imagePos) && (scrollPos < imagePos + 400);
+
+      if (inside && ani_1_inside)
+      {
+        // we are already inside so do nothing.
+      }
+      else if (!ani_1_waiting)
+      {
+        // we are inside and we aren't waiting
+          //$(".icon").addClass("floating");
+         ani_1_inside = true;
+         ani_1_waiting = true;
+         loopCounter = 0;
+         animateLoop();
+      }
+      else if (!inside)
+      {
+         ani_1_inside = false;
+      }
+  });
+
+ });
+
+
+
+
+</script>
     </div>
 
-    
-    <div class="footer-container">
+<div class="footer-container">
             <footer class="wrapper">
           
-                
+ 
+    
                 <div class="social-media-links">
                     <a href="http://twitter.com/devtoux"><span class="fa fa-fw fa-twitter"></span></a>
                     <a href="https://www.linkedin.com/in/coreymalone"><span class="fa fa-fw fa-linkedin"></span></a>
@@ -316,13 +481,17 @@ function hasScrolled()
 
 
     
+
+    <p class="center"><small>Design and coded by me. Font is <a href="http://www.thedesignersfoundry.com/products/averta">Averta</a>.</small></p>
+
+
+    
+    
             </footer>
 
 
 
 </div>
-    
-
   </body>
 
 </html>

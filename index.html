@@ -429,15 +429,9 @@ function animateFinishLoop()
     }
 }
 
-
-$( document ).ready(function() {
-  $loopObjects = $(".icon");
-   $(".icon").css("visibility","hidden");
-  loopLength = $loopObjects.length;
-
-
-  $(window).scroll(function() {
-      var scrollPos = $(window).scrollTop();
+function scrollAnimate()
+{
+        var scrollPos = $(window).scrollTop();
       var imagePos = $(".icon").first().offset().top;
       var inside = (scrollPos < imagePos) && (scrollPos < imagePos + 400);
 
@@ -458,8 +452,23 @@ $( document ).ready(function() {
       {
          ani_1_inside = false;
       }
+}
+
+$( document ).ready(function() {
+  $loopObjects = $(".icon");
+   $(".icon").css("visibility","hidden");
+  loopLength = $loopObjects.length;
+
+
+  $(window).scroll(function() {
+
+    scrollAnimate();
+
+
   });
 
+  scrollAnimate();
+  
  });
 
 

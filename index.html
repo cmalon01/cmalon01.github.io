@@ -431,15 +431,17 @@ function animateFinishLoop()
 
 function scrollAnimate()
 {
-        var scrollPos = $(window).scrollTop();
-      var imagePos = $(".icon").first().offset().top;
-      var inside = (scrollPos < imagePos) && (scrollPos < imagePos + 400);
-
+      var scrollPos = $(window).scrollTop();
+      var imagePos = $(".icon").first().offset().top;// + $(".icon").first().height();
+      var winHeight = $(window).height();
+      //var inside = (scrollPos > (imagePos -  $(window).height() )) && (scrollPos < ( imagePos) 
+      var inside = (scrollPos + winHeight > imagePos + 20); // see if it below the image
+      var inside = inside && (  imagePos + winHeight > scrollPos     );
       if (inside && ani_1_inside)
       {
         // we are already inside so do nothing.
       }
-      else if (!ani_1_waiting)
+      else if (!ani_1_waiting && inside)
       {
         // we are inside and we aren't waiting
           //$(".icon").addClass("floating");
@@ -468,7 +470,7 @@ $( document ).ready(function() {
   });
 
   scrollAnimate();
-  
+
  });
 
 

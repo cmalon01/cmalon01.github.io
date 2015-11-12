@@ -132,6 +132,9 @@ h4, .h4 {
 a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
   display: b; }
 
+span.cyan {
+  color: #1FB7AF; }
+
 /* 
 .page-title
 {
@@ -1239,14 +1242,13 @@ blockquote {
   color: #1FB7AF;
   line-height: 150%;
   text-align: left;
-  border-left: 5px solid #b6b6b6;
-  padding-left: 1em;
   font-style: italic;
   margin: 2em auto; }
 
-.para blockquote, .img-bg blockquote {
-  padding-left: 0;
-  border-left: none; }
+blockquote.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1FB7AF), to(#40D4CD));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 blockquote.small {
   font-size: 1.5em;
@@ -1298,7 +1300,7 @@ nav a, nav a:visited {
   background: #FBFBFB;
   font-size: 1.5rem; }
   .portfolio-nav li {
-    width: 33.33%;
+    width: 25%;
     float: left; }
   .portfolio-nav li a {
     color: #444444;
@@ -1455,6 +1457,8 @@ p.caption {
     background-image: url(../img/portfolio/h-competitive.jpg); }
   .img-bg.client-work {
     background-image: url(../img/h-client-work.jpg); }
+  .img-bg.espresso {
+    background-image: url(../img/h-espresso.jpeg); }
   .img-bg.ga-1 {
     background-image: url(../img/ga-2.jpg);
     padding-bottom: 40%; }
@@ -1537,6 +1541,12 @@ p.caption {
       clear: both;
       content: "";
       display: table; }
+
+  .wrap-grid ul {
+    padding-left: 1em;
+    margin-right: 2em; }
+    .wrap-grid ul li {
+      margin-bottom: 1em; }
 
   .d-1of2 {
     float: left;
@@ -1994,6 +2004,9 @@ h4, .h4 {
 
 a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
   display: b; }
+
+span.cyan {
+  color: #1FB7AF; }
 
 /* 
 .page-title

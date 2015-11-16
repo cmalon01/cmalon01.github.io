@@ -1141,6 +1141,10 @@ ul.icons {
     float: left;
     padding: .5em 0; }
 
+.max-200 {
+  width: 200px;
+  max-width: 100%; }
+
 .max-300 {
   width: 300px;
   max-width: 100%; }
@@ -1441,17 +1445,25 @@ p.caption {
   min-height: 500px;
   margin-bottom: 1em; }
 
-.what-i-like p {
-  font-size: 1rem; }
-.what-i-like em {
-  color: #1CBDB6;
-  font-style: normal;
-  font-weight: 500; }
-.what-i-like .icon {
+.icon {
   max-width: 90%;
   width: 7em;
   margin: 1rem auto;
   display: block; }
+
+.what-i-like p {
+  font-size: 1.2rem; }
+.what-i-like em {
+  color: #1CBDB6;
+  font-style: normal;
+  font-weight: 500; }
+
+.value h4, .value .h4 {
+  text-transform: none;
+  font-style: normal; }
+.value p {
+  text-align: center;
+  margin-bottom: 3.5em; }
 
 .img-bg {
   position: relative;
@@ -1683,30 +1695,15 @@ p.caption {
       .problem-exploration-2 > div:nth-child(2):last-child {
         margin-right: 0; }
 
-  .value {
-    position: relative;
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto; }
-    .value::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .value > div:nth-child(1) {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%; }
-      .value > div:nth-child(1):last-child {
-        margin-right: 0; }
-    .value > div:nth-child(2) {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 74.41059%; }
-      .value > div:nth-child(2):last-child {
-        margin-right: 0; }
-
+  /*
+   .value
+  {
+      position:relative;
+      @include outer-container;
+      & > div:nth-child(1)  {@include span-columns(3); }
+      & > div:nth-child(2)  {@include span-columns(12 - 3);}
+  }  
+   */
   ul.cards li {
     width: 23%; }
 

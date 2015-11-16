@@ -74,6 +74,7 @@ var navbarHeight = $('header').outerHeight();
 if ($("body").height() < 1000)
 {
   $header.addClass('stay-there');
+    //alert('hi');
 }
 
 
@@ -93,6 +94,7 @@ setInterval(function() {
 var stayThere = false;
 function hasScrolled() 
 {
+
     if ($("body").height() < 1300)
     {
         $header.removeClass('nav-up').removeClass('nav-down');
@@ -143,7 +145,7 @@ function hasScrolled()
 <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script> -->
 
 
-<script>
+ <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -153,6 +155,7 @@ function hasScrolled()
   ga('send', 'pageview');
 
 </script>
+
 </head>
 
 
@@ -274,6 +277,7 @@ function hasScrolled()
 			  Usability Testing
 		    </h4>
 		  	<div class=""><img src="/img/portfolio/globalfest-usability-1.jpg" class="max-500 center"></div>
+        <blockquote class="gradient">Users had a lot of trouble finding basic information on the site.</blockquote>
 	  	</div>
 	  	    	<div class="d-1of2">
          <div class=""><img src="/img/portfolio/globalfest-original.jpg" class="max-full center"></div>
@@ -398,7 +402,7 @@ function hasScrolled()
 	  <li>Keep using WordPress as it’s easy to update content.
 	  </li>
     </ul>
-  <blockquote class="gradient">The usability of the site was greatly increased. Users understood what globalFEST is about and how to find the information they need.</blockquote>
+  <blockquote class="gradient">The usability of the site was greatly increased. Users understood what globalFEST is and how to find the information they need.</blockquote>
     </section>
     </div>
 

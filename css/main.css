@@ -1089,6 +1089,8 @@ p {
   margin-right: auto;
   font-weight: 300; }
 
+.related-posts .d-1of2 {
+  margin-bottom: .5em; }
 .related-posts a {
   white-space: nowrap; }
 
@@ -1138,6 +1140,10 @@ ul.icons {
     display: block;
     float: left;
     padding: .5em 0; }
+
+.max-300 {
+  width: 300px;
+  max-width: 100%; }
 
 .max-500 {
   width: 500px;
@@ -1298,19 +1304,20 @@ nav a, nav a:visited {
   border-top: 1px solid #DADADA;
   border-bottom: 1px solid #DADADA;
   background: #FBFBFB;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  overflow: scroll; }
   .portfolio-nav li {
     width: 25%;
     float: left; }
   .portfolio-nav li a {
     color: #444444;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: title;
     text-align: center; }
   .portfolio-nav li.active a {
     color: #FF7172; }
   .portfolio-nav ul {
-    max-width: 500px; }
+    min-width: 300px; }
 
 /* ==============
     MOBILE: Main
@@ -1534,7 +1541,7 @@ p.caption {
     margin-bottom: 4rem; }
 
   .wrap-grid {
-    max-width: 68em;
+    max-width: none;
     margin-left: auto;
     margin-right: auto; }
     .wrap-grid::after {
@@ -1555,9 +1562,10 @@ p.caption {
     width: 48.82117%; }
     .d-1of2:last-child {
       margin-right: 0; }
-
-  .d-1of2:nth-child(even) {
-    margin-right: 0; }
+    .d-1of2:nth-child(2n) {
+      margin-right: 0; }
+    .d-1of2:nth-child(2n+1) {
+      clear: left; }
 
   .d-1of3 {
     float: left;
@@ -1566,6 +1574,10 @@ p.caption {
     width: 31.76157%; }
     .d-1of3:last-child {
       margin-right: 0; }
+    .d-1of3:nth-child(3n) {
+      margin-right: 0; }
+    .d-1of3:nth-child(3n+1) {
+      clear: left; }
 
   .portfolio .wireframes {
     max-width: 68em;
@@ -1645,6 +1657,54 @@ p.caption {
       width: 57.35098%;
       float: right; }
       .portfolio .problem-exportation > div:nth-child(2):last-child {
+        margin-right: 0; }
+
+  .problem-exploration-2 {
+    position: relative;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .problem-exploration-2::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .problem-exploration-2 > div:nth-child(1) {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      .problem-exploration-2 > div:nth-child(1):last-child {
+        margin-right: 0; }
+    .problem-exploration-2 > div:nth-child(2) {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .problem-exploration-2 > div:nth-child(2):last-child {
+        margin-right: 0; }
+
+  .value {
+    position: relative;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .value::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .value > div:nth-child(1) {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .value > div:nth-child(1):last-child {
+        margin-right: 0; }
+    .value > div:nth-child(2) {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      .value > div:nth-child(2):last-child {
         margin-right: 0; }
 
   ul.cards li {
@@ -1734,7 +1794,8 @@ p.caption {
       width: 6.25em; }
 
   .portfolio-nav ul {
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 500px; }
 
   .header-container .wrapper {
     position: relative; }

@@ -1185,15 +1185,10 @@ img.border {
   display: block; }
   .social-media-links a, .social-media-links a:visited {
     color: #444444;
-    -webkit-transition: color 0.5s;
-    -moz-transition: color 0.5s;
-    transition: color 0.5s;
-    font-size: 2em;
-    display: inline-block; }
-    .social-media-links a span, .social-media-links a:visited span {
-      width: 2em; }
+    display: inline-block;
+    margin: 0 .75em; }
     .social-media-links a img, .social-media-links a:visited img {
-      width: 2em;
+      width: 2.5em;
       height: auto;
       fill: currentColor; }
   .social-media-links a:hover {
@@ -1746,15 +1741,10 @@ p.caption {
       max-width: 500px;
       margin-left: auto;
       margin-right: auto; }
-      #contact-bar .social-media-links a {
-        font-size: 36px;
-        color: #FF7172;
-        line-height: 1; }
-      #contact-bar .social-media-links a:hover {
-        color: #961F25; }
-      #contact-bar .social-media-links span {
-        height: 40px;
-        width: 70px; }
+      #contact-bar .social-media-links a img {
+        height: 36px;
+        width: auto;
+        margin-bottom: 30px; }
 
   #contact-bar.up {
     bottom: 0;

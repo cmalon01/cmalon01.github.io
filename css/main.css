@@ -746,7 +746,7 @@ pulse
 floating
 ==============================================
 */
-.floating {
+.floating, .social-media-links a:hover {
   animation-name: floating;
   -webkit-animation-name: floating;
   animation-duration: 1.5s;
@@ -1179,13 +1179,23 @@ img.border {
   margin-right: auto; }
 
 .social-media-links {
+  z-index: 9999;
+  position: relative;
   text-align: center;
   display: block; }
   .social-media-links a, .social-media-links a:visited {
-    color: black;
-    font-size: 2em; }
+    color: #444444;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    transition: color 0.5s;
+    font-size: 2em;
+    display: inline-block; }
     .social-media-links a span, .social-media-links a:visited span {
       width: 2em; }
+    .social-media-links a img, .social-media-links a:visited img {
+      width: 2em;
+      height: auto;
+      fill: currentColor; }
   .social-media-links a:hover {
     color: #1FB7AF; }
 
@@ -1291,9 +1301,6 @@ nav a, nav a:visited {
   font-size: .85rem;
   border-bottom: 2px solid transparent;
   transition: border,color .5s; }
-
-.site-nav a {
-  text-transform: uppercase; }
 
 .site-nav li.active a {
   color: #FF7172; }
@@ -1509,21 +1516,32 @@ p.caption {
   margin: 0 auto;
   margin-top: .5em;
   max-width: 200px; }
+  .site-nav ul {
+    display: block; }
+  .site-nav li {
+    float: left;
+    width: 33.33333%;
+    padding: 0 2%;
+    margin-bottom: 0; }
+    .site-nav li.contact {
+      width: -4%; }
 
-.site-nav ul li {
-  float: left;
-  width: 50%;
-  padding: 0 2%;
-  margin-bottom: 0;
-  min-width: 4rem; }
+/*
+    .site-nav li:first-child 
+    {
 
-.site-nav li:first-child a {
-  margin-left: 0; }
+        a 
+        {
+        margin-left: 0;
+        }
+    }
 
-.site-nav li:last-child a {
-  margin-right: 0; }
-
+    .site-nav li:last-child a {
+        margin-right: 0;
+    }
+*/
 /* 
+
 ==================================================================================================================
 480+
 ==================================================================================================================
@@ -1730,10 +1748,10 @@ p.caption {
       margin-right: auto; }
       #contact-bar .social-media-links a {
         font-size: 36px;
-        color: #444444;
+        color: #FF7172;
         line-height: 1; }
       #contact-bar .social-media-links a:hover {
-        color: #FF7172; }
+        color: #961F25; }
       #contact-bar .social-media-links span {
         height: 40px;
         width: 70px; }
@@ -1781,15 +1799,21 @@ p.caption {
       WIDE: Menu
      ============ */
   .site-nav {
-    max-width: 700px;
-    float: right;
-    margin: 0;
-    position: absolute;
-    right: 0;
-    bottom: 12px; }
-    .site-nav li a {
-      width: 6.25em; }
+    margin-left: auto;
+    margin-right: 0; }
 
+  /*
+   
+      .site-nav {
+          max-width: 700px;
+          float:right;
+          margin:0;
+          position: absolute;
+          right:0;
+          bottom: 12px; // want it aligned with the bottom of COREY MALONE in the logo
+          li a {width: 6.25em; }
+      }
+      */
   .portfolio-nav ul {
     margin: 0 auto;
     max-width: 500px; }

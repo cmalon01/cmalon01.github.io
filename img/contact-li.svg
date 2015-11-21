@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="151px" height="151px" viewBox="0 0 151 151" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15857) - http://www.bohemiancoding.com/sketch -->
+    <title>contact-li</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-12" sketch:type="MSArtboardGroup" transform="translate(-482.000000, -447.000000)">
+            <g id="contact-li" sketch:type="MSLayerGroup" transform="translate(482.000000, 447.000000)">
+                <g id="linkedin" sketch:type="MSShapeGroup">
+                    <circle id="Oval" fill="#FF7172" cx="75.5" cy="75.5" r="75.5"></circle>
+                    <path d="M63.6341146,99.1705729 L54,99.1705729 L54,65.4511719 L63.6341146,65.4511719 L63.6341146,99.1705729 L63.6341146,99.1705729 Z M58.8170573,60.6341146 C56.1564688,60.6341146 54,58.4776458 54,55.8170573 C54,53.1564688 56.1564688,51 58.8170573,51 C61.4776458,51 63.6341146,53.1564688 63.6341146,55.8170573 C63.6341146,58.4776458 61.4776458,60.6341146 58.8170573,60.6341146 L58.8170573,60.6341146 Z M97.3535156,99.1705729 L87.719401,99.1705729 L87.719401,79.9023438 C87.719401,77.2417552 85.5629323,75.0852865 82.9023438,75.0852865 C80.2417552,75.0852865 78.0852865,77.2417552 78.0852865,79.9023438 L78.0852865,99.1705729 L68.4511719,99.1705729 L68.4511719,65.4511719 L78.0852865,65.4511719 L78.0852865,71.432974 C80.0718802,68.7039635 83.1099688,65.4511719 86.5153333,65.4511719 C92.5018542,65.4511719 97.3543021,70.8431302 97.3543021,77.4934219 L97.3535156,99.1705729 L97.3535156,99.1705729 L97.3535156,99.1705729 Z" id="Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

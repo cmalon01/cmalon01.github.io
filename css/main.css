@@ -1314,7 +1314,7 @@ nav a, nav a:visited {
   border-bottom: 1px solid #DADADA;
   background: #FBFBFB;
   font-size: 1.5rem;
-  overflow: scroll; }
+  overflow-x: auto; }
   .portfolio-nav li {
     width: 25%;
     float: left; }

@@ -1096,6 +1096,8 @@ p {
   margin-bottom: .5em; }
 .related-posts a {
   white-space: nowrap; }
+.related-posts h2 a, .related-posts .h2 a {
+  white-space: normal; }
 
 a.button, a.button-white {
   border: 1px solid #6A6969;

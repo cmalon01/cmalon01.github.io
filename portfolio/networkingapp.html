@@ -50,6 +50,8 @@
 
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/js/jquery.swipebox.js"></script>
+
 
 <!-- <script src="/js/featherlight.min.js"></script> -->
 
@@ -64,6 +66,18 @@ var $contactbar;
 
 $(document).ready (function() {
   
+$(".swipebox:not(.swipebox-custom)").swipebox({hideBarsDelay : 1500});
+
+
+$( '#personasEspresso' ).click( function( e ) {
+  e.preventDefault();
+  $.swipebox(   [ 
+    { href:'/img/portfolio/persona-1.jpg'}, 
+    { href:'/img/portfolio/persona-2.jpg'}
+  ] );
+} );
+
+
  $header = $('header');
  $contactbar= $('#contact-bar');
 
@@ -278,7 +292,10 @@ function hasScrolled()
     <p><strong>I led the team through the problem exploration exercise,</strong> aligning the team on the problem we were solving. The dimensions we explored gave us insight into the surveys and user interviews.</p>
      </div>
      <div class="">
+       <a href="/img/portfolio/problem-exploration-2.jpg" class="swipebox center">
+		
      <img src="/img/portfolio/problem-exploration-2.jpg" class="max-full center">
+     </a>
      </div>
      </div>
     	
@@ -346,21 +363,30 @@ function hasScrolled()
 
 <h4>Personas</h4>
 <p>Based on our goals and the user research, we selected 2 primary personas and 1 secondary persona to focus on.</p>
- <img src="/img/portfolio/net-personas.jpeg" class="max-full center">
-</section>
+ <a href="#" class="swipebox swipebox-custom">
+ <img id="personasEspresso" src="/img/portfolio/net-personas.jpeg" class="max-full center">
+ </a>
+
+ </section>
 
 <section>
 <h4>Sketching</h4>
 <p>After prioritizing features based on the personas, we sketched together. We took into account common design patterns in other messaging apps to make the app intuitive to use.</p>
 	<div class="wrap-grid">
 		<div class="d-1of2">
+		   <a href="/img/portfolio/net-sketching1.jpg" class="swipebox center">
 			<img src="/img/portfolio/net-sketching1.jpg" class="max-full center">
+			</a>
 			<p class="caption">Profile Screen Sketches</p>
 		</div>
 		<div class="d-1of2">
+		  <a href="/img/portfolio/net-sketching2.jpg" class="swipebox center">
 			<img src="/img/portfolio/net-sketching2.jpg" class="max-full center">
+			</a>
 			<p class="caption">Tabbed Navigation Sketches</p>
-			<img src="/img/portfolio/net-sketching3.jpeg" class="max-full center">
+			<a href="/img/portfolio/net-sketching3.jpeg" class="swipebox center">
+				<img src="/img/portfolio/net-sketching3.jpeg" class="max-full center">
+			</a>
 			<p class="caption">People Nearby Sketches</p>
 			
 			
@@ -387,23 +413,33 @@ function hasScrolled()
 	<div class="wrap-grid">
 
 		<div class="d-1of2">
+		  <a href="/img/portfolio/net-wf1.jpeg" class="swipebox center">
 			<img src="/img/portfolio/net-wf1.jpeg" class="max-full center">
+		  </a>
 	
 		</div>
 		<div class="d-1of2">
-			<img src="/img/portfolio/net-wf2.jpeg" class="max-full center">
+		  <a href="/img/portfolio/net-wf2.jpeg" class="swipebox center">
 		
+			<img src="/img/portfolio/net-wf2.jpeg" class="max-full center">
+		</a>
 			
 				
 		</div>
 	</div>
 	<div class="wrap-grid">
 		<div class="d-1of2">
+		  <a href="/img/portfolio/net-wf3.jpeg" class="swipebox center">
+		
 			<img src="/img/portfolio/net-wf3.jpeg" class="max-full center">
+			</a>
 	
 		</div>
 		<div class="d-1of2">
+		  <a href="/img/portfolio/net-wf4.jpeg" class="swipebox center">
+		
 			<img src="/img/portfolio/net-wf4.jpeg" class="max-full center">
+		  </a>
 		
 			
 				

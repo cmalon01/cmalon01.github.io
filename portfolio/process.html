@@ -50,6 +50,8 @@
 
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/js/jquery.swipebox.js"></script>
+
 
 <!-- <script src="/js/featherlight.min.js"></script> -->
 
@@ -64,6 +66,18 @@ var $contactbar;
 
 $(document).ready (function() {
   
+$(".swipebox:not(.swipebox-custom)").swipebox({hideBarsDelay : 1500});
+
+
+$( '#personasEspresso' ).click( function( e ) {
+  e.preventDefault();
+  $.swipebox(   [ 
+    { href:'/img/portfolio/persona-1.jpg'}, 
+    { href:'/img/portfolio/persona-2.jpg'}
+  ] );
+} );
+
+
  $header = $('header');
  $contactbar= $('#contact-bar');
 
@@ -384,11 +398,14 @@ function hasScrolled()
 	  Gives insight into customer behavior. The flow also gives an idea of how the company operates and what it thinks is important.
     </p>
     
-    <div class="img-scroll"><img src="/img/portfolio/compeitive-userflow1.jpg" class="max-700 center"></div>
+    <a href="/img/portfolio/compeitive-userflow1.jpg" class="swipebox center" title="Buying A Product Online - D’Agostino">
+        <img src="/img/portfolio/compeitive-userflow1.jpg" class="max-700 center">
+        </a>
     <p class="caption">Buying A Product Online - D’Agostino</p>
      
-
-     <div class="img-scroll"><img src="/img/portfolio/compeitive-userflow2.jpg" class="max-700 center"></div>
+    <a href="/img/portfolio/compeitive-userflow2.jpg" class="swipebox center" title="Buying A Product Online - Whole Foods">
+     <img src="/img/portfolio/compeitive-userflow2.jpg" class="max-700 center">
+     </a>
     <p class="caption">Buying A Product Online - Whole Foods</p>
      
 
@@ -422,8 +439,8 @@ function hasScrolled()
 	  Before doing user research we need to explore the problem/ brief in its various dimensions using Mona Patel’s problem exploration method. This allows me to think about the problem in different ways, why the problem is there, what it means to solve the problem, what is stopping us from solving the problem. This exploration provides some guidance into what areas should be explored during user research.
     </p>
     <div class="problem-exportation">
-         <div class="img-scroll"><img src="/img/portfolio/problem-exploration.jpg" class="max-full center"></div>
-    	 <div class="img-scroll"><img src="/img/portfolio/problem-exploration-2.jpg" class="max-full center"></div>
+         <div class=""><img src="/img/portfolio/problem-exploration.jpg" class="max-full center"></div>
+    	 <div class=""><img src="/img/portfolio/problem-exploration-2.jpg" class="max-full center"></div>
     </div>
     <h3>
 	  User Interviewing
@@ -453,8 +470,16 @@ function hasScrolled()
 	  Personas are a great tool to help create empathy for the user for all parties invovled.
     </p>
         <div class="wrap-grid">
-      <div class="d-1of2"><img src="/img/portfolio/persona-1.jpg" class="border max-500 center"></div>
-      <div class="d-1of2"><img src="/img/portfolio/persona-2.jpg" class="border max-500 center"></div>
+          <div class="d-1of2">
+            <a href="/img/portfolio/persona-1.jpg" class="swipebox center">
+                <img src="/img/portfolio/persona-1.jpg" class="border max-500 center">
+            </a>
+          </div>
+          <div class="d-1of2">
+            <a href="/img/portfolio/persona-2.jpg" class="swipebox center">
+                <img src="/img/portfolio/persona-2.jpg" class="border max-500 center">
+            </a>
+          </div>
         </div>
     <p>
 	  Feature selection is used to decide what to sketch and prototype. It is based on:
@@ -491,9 +516,23 @@ function hasScrolled()
 	  Wireframing helps people understand the design better for usability testing. I stay in low fidelity until it passes enough usability tests.
     </p>
     <div class="wireframes">
-      <div class=""><img src="/img/portfolio/wireframe-1.jpg" class="border max-500 center"></div>
-      <div class=""><img src="/img/portfolio/wireframe-2.jpg" class="border max-500 center"></div>
-      <div class=""><img src="/img/portfolio/wireframe-3.jpg" class="border max-500 center"></div>
+      <div class="">
+        <a href="/img/portfolio/wireframe-1.jpg" class="swipebox center" title="Home Page">
+            <img src="/img/portfolio/wireframe-1.jpg" class="border max-500 center">
+        </a>
+      </div>
+      <div class="">
+        <a href="/img/portfolio/wireframe-2.jpg" class="swipebox center" title="Product Page">
+            <img src="/img/portfolio/wireframe-2.jpg" class="border max-500 center">
+        </a>
+      </div>
+      <div class="">
+        <a href="/img/portfolio/wireframe-3.jpg" class="swipebox center" title="Products Page">
+            <img src="/img/portfolio/wireframe-3.jpg" class="border max-500 center">
+        </a>
+      </div>
+
+      
     </div>
 
     <div class="wrap-grid">

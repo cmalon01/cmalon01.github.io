@@ -50,6 +50,8 @@
 
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/js/jquery.swipebox.js"></script>
+
 
 <!-- <script src="/js/featherlight.min.js"></script> -->
 
@@ -64,6 +66,18 @@ var $contactbar;
 
 $(document).ready (function() {
   
+$(".swipebox:not(.swipebox-custom)").swipebox({hideBarsDelay : 1500});
+
+
+$( '#personasEspresso' ).click( function( e ) {
+  e.preventDefault();
+  $.swipebox(   [ 
+    { href:'/img/portfolio/persona-1.jpg'}, 
+    { href:'/img/portfolio/persona-2.jpg'}
+  ] );
+} );
+
+
  $header = $('header');
  $contactbar= $('#contact-bar');
 
@@ -333,10 +347,39 @@ function hasScrolled()
 	 Site Redesign
     </h3>    
     <p>I collaborated with a visual designer to ensure the site did not distract users too much from the content while still providing users ample opportunities to sign up. I re-factored the design for mobile.</p>
- 		<div class=""><img src="/img/portfolio/kavita-redesign-2.jpg" class="max-700 center"></div>
+ 		<div class="">
+           <a href="/img/portfolio/kavita-redesign-2.jpg" class="swipebox center"
+            title = "Site Redesign" >
+            <img src="/img/portfolio/kavita-redesign-2.jpg" class="max-700 center">
+            </a>
+        </div>
     </section>
  	
-    
+    <h3>Wireframing &amp; Visual Design</h3>
+
+    <div class="wireframes-2">
+        <div class="desktop">
+                        <h5 class="no-margin-top center">Desktop</h5>
+            <a href="/img/portfolio/kavita-mastery-wireframe-desktop.jpg" class="swipebox center"
+            title = "Wireframe: Desktop" >
+                
+                <img src="/img/portfolio/kavita-mastery-wireframe-desktop.jpg" class="max-full center border">
+            </a>
+               <h5 class="center">Desktop</h5>
+            <a href="/img/portfolio/kavita-mastery-wireframe-desktop-2.jpg" class="swipebox center" 
+             title = "Wireframe: Desktop" > 
+                <img src="/img/portfolio/kavita-mastery-wireframe-desktop-2.jpg" class="max-full center border">
+            </a>
+        </div>
+
+        <div class="mobile">
+            <h5 class="no-margin-top center">Mobile</h5>
+            <a href="/img/portfolio/kavita-mastery-wireframe-mobile.jpg" class="swipebox center"
+             title = "Wireframe: Mobile">
+                <img src="/img/portfolio/kavita-mastery-wireframe-mobile.jpg" class="max-full center border">
+            </a>
+        </div>
+    </div>
     </div>
     <section>
  	<div class="wrapper">
@@ -349,16 +392,29 @@ function hasScrolled()
     <blockquote class="gradient">By analyzing and improving the user flow for enrollment we were able to improve success of this step from 50% to 100%, getting users to the content faster.</blockquote>
     <div class="wrap-grid">
  		<div class="d-1of2">
-            <!-- <a href="#" data-featherlight="/img/portfolio/kavita-userflow1.jpg">-->
+            <a href="/img/portfolio/kavita-userflow1.jpg" class="swipebox center" title="Userflow :  Optin & Watch Video">
+
                 <img src="/img/portfolio/kavita-userflow1.jpg" class="max-full center">
-            <!-- </a> -->
+            </a>
         </div>
- 		<div class="d-1of2"><img src="/img/portfolio/kavita-userflow2.jpg" class="max-full center"></div>
+ 		<div class="d-1of2">
+        <a href="/img/portfolio/kavita-userflow2.jpg" class="swipebox center" title="Userflow : List Optin">
+        <img src="/img/portfolio/kavita-userflow2.jpg" class="max-full center">
+        </a>
+        </div>
 	</div>
 
     <div class="wrap-grid">
- 		<div class="d-1of2"><img src="/img/portfolio/kavita-userflow3.jpg" class="max-full center"></div>
- 		<div class="d-1of2"><img src="/img/portfolio/kavita-userflow4.jpg" class="max-full center"></div>
+ 		<div class="d-1of2">
+            <a href="/img/portfolio/kavita-userflow3.jpg" class="swipebox center" title="Userflow : Webinar/Q&A Signup">
+            <img src="/img/portfolio/kavita-userflow3.jpg" class="max-full center">
+            </a>
+        </div>
+ 		<div class="d-1of2">
+            <a href="/img/portfolio/kavita-userflow4.jpg" class="swipebox center" title="Userflow : Purchase & Enroll">
+            <img src="/img/portfolio/kavita-userflow4.jpg" class="max-full center">
+            </a>
+        </div>
 	</div>
 
  	</div>

@@ -50,6 +50,8 @@
 
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/js/jquery.swipebox.js"></script>
+
 
 <!-- <script src="/js/featherlight.min.js"></script> -->
 
@@ -64,6 +66,18 @@ var $contactbar;
 
 $(document).ready (function() {
   
+$(".swipebox:not(.swipebox-custom)").swipebox({hideBarsDelay : 1500});
+
+
+$( '#personasEspresso' ).click( function( e ) {
+  e.preventDefault();
+  $.swipebox(   [ 
+    { href:'/img/portfolio/persona-1.jpg'}, 
+    { href:'/img/portfolio/persona-2.jpg'}
+  ] );
+} );
+
+
  $header = $('header');
  $contactbar= $('#contact-bar');
 
@@ -284,11 +298,19 @@ function hasScrolled()
 		    <h4>
 			  Usability Testing
 		    </h4>
-		  	<div class=""><img src="/img/portfolio/globalfest-usability-1.jpg" class="max-500 center"></div>
+		  	<div class="">
+        <a href="/img/portfolio/globalfest-usability-1.jpg" class="swipebox center" title="">
+            <img src="/img/portfolio/globalfest-usability-1.jpg" class="max-500 center">
+          </a>
+        </div>
         <blockquote class="gradient">Users had a lot of trouble finding basic information on the site.</blockquote>
 	  	</div>
 	  	    	<div class="d-1of2">
-         <div class=""><img src="/img/portfolio/globalfest-original.jpg" class="max-full center"></div>
+         <div class="">
+           <a href="/img/portfolio/globalfest-original.jpg" class="swipebox center" title="">
+              <img src="/img/portfolio/globalfest-original.jpg" class="max-full center">
+           </a>
+          </div>
 	    </div>
   	</div>
   	</section>
@@ -302,14 +324,29 @@ function hasScrolled()
     </p>
        <div class="wrap-grid">
 	    <div class="d-1of2">  
-<div class=""><img src="/img/portfolio/globalfest-codesign.jpg" class="max-500 center"></div>
+<div class="">
+<a href="/img/portfolio/globalfest-codesign.jpg" class="swipebox center" title="">
+  <img src="/img/portfolio/globalfest-codesign.jpg" class="max-500 center">
+  </a>
+
+</div>
 	    </div>
 	    <div class="d-1of2">  
-<div class=""><img src="/img/portfolio/globalfest-codesign-2.jpg" class="max-full center"></div>
+  
+<div class="">
+<a href="/img/portfolio/globalfest-codesign-2.jpg" class="swipebox center" title="">
+<img src="/img/portfolio/globalfest-codesign-2.jpg" class="max-full center">
+</a>
+</div>
+
 	    </div>
 	   </div>
 
-    <div style="margin:1em 0;"><img src="/img/portfolio/globalfest-story.jpg" class="border max-full center"></div>
+    <div style="margin:1em 0;">
+    <a href="/img/portfolio/globalfest-story.jpg" class="swipebox center" title="">
+      <img src="/img/portfolio/globalfest-story.jpg" class="border max-full center">
+    </a>
+    </div>
     		
    	</section>	
 

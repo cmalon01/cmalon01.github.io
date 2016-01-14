@@ -13,7 +13,7 @@
 				removeBarsOnMobile : true,
 				hideCloseButtonOnMobile : false,
 				hideBarsDelay : 3000,
-				videoMaxWidth : 1140,
+				videoMaxWidth : 1240,
 				vimeoColor : 'cccccc',
 				beforeOpen: null,
 				afterOpen: null,
@@ -21,7 +21,7 @@
 				nextSlide: null,
 				prevSlide: null,
 				loopAtEnd: false,
-				autoplayVideos: false,
+				autoplayVideos: true,
 				queryStringData: {},
 				toggleClassOnLoad: ''
 			},

@@ -1361,7 +1361,7 @@ a.swipebox {
 .swipebox {
   position: relative; }
 
-.swipebox img:hover {
+.swipebox:hover img {
   position: relative;
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -1372,6 +1372,22 @@ a.swipebox {
   filter: grayscale(50%);
   -webkit-filter: brightness(50%);
   filter: brightness(50%); }
+
+.swipebox.video img {
+  -webkit-filter: brightness(1.01);
+  filter: brightness(1.01);
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%); }
+.swipebox.video::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: no-repeat center center url(../img/watch-overlay.png);
+  transition: background-color .5s;
+  z-index: 100; }
 
 .max-200 {
   width: 200px;

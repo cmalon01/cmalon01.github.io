@@ -1916,6 +1916,30 @@ p.caption {
       width: 31.76157%; }
       .portfolio .wireframes-2 .mobile:last-child {
         margin-right: 0; }
+  .portfolio .annotated-wireframes {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .portfolio .annotated-wireframes::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .portfolio .annotated-wireframes .wireframe {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .portfolio .annotated-wireframes .wireframe:last-child {
+        margin-right: 0; }
+    .portfolio .annotated-wireframes .annotations {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .portfolio .annotated-wireframes .annotations:last-child {
+        margin-right: 0; }
+      .portfolio .annotated-wireframes .annotations ol {
+        font-size: 1rem; }
   .portfolio .problem-exportation {
     position: relative;
     max-width: 68em;

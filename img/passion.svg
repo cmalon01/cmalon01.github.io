@@ -1,1 +1,22 @@
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g style="" display="inline"><path style="" d="m 29.740235,34.26642 c -10.772161,0 -17.886951,6.627887 -17.886951,16.570271 0,5.829373 2.829002,12.341798 9.316121,18.284437 L 49.09292,95.057203 76.991591,69.121128 c 6.487122,-5.941943 9.31612,-12.455064 9.31612,-18.284437 0,-9.942384 -7.109576,-16.570271 -17.886949,-16.570271 -10.03888,0 -13.451171,4.347583 -19.327842,10.632798 C 43.216993,38.614003 39.778371,34.26642 29.740235,34.26642 z" fill="#000000" fill-opacity="1" stroke="none"></path><path d="m 57.465743,0.21186661 17.88496,0.045641 -11.595744,16.26701339 11.202668,0 -26.92571,29.873778 9.630363,-20.63649 -10.416515,0 z" style="" fill="#000000" fill-opacity="1" stroke="none"></path></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="43px" height="54px" viewBox="0 0 43 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 250 Copy + passion</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons" sketch:type="MSArtboardGroup" transform="translate(-549.000000, -275.000000)">
+            <g id="Rectangle-250-Copy-+-passion" sketch:type="MSLayerGroup" transform="translate(512.000000, 257.000000)">
+                <g sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-250-Copy" x="0" y="0" width="117" height="90"></rect>
+                    <g id="passion" transform="translate(37.000000, 18.000000)" fill="#FFFFFF">
+                        <g id="Group">
+                            <path d="M10.6601825,19.3297754 C4.53255377,19.3297754 0.485381488,23.0685834 0.485381488,28.6771077 C0.485381488,31.965472 2.09462905,35.6391476 5.78475739,38.9914055 L21.6687506,53.6220119 L37.5386115,38.9914055 C41.2287416,35.6395403 42.8379869,31.965472 42.8379869,28.6771077 C42.8379869,23.0685834 38.7937805,19.3297754 32.663187,19.3297754 C26.9526774,19.3297754 25.0116321,21.7822581 21.6687506,25.327764 C18.3262923,21.7822581 16.3702689,19.3297754 10.6601825,19.3297754 L10.6601825,19.3297754 Z" id="Shape"></path>
+                            <path d="M26.4315415,0.119514498 L36.6052099,0.145260703 L30.0090948,9.32152467 L36.3816128,9.32152467 L21.0652104,26.1733994 L26.5433395,14.5323025 L20.6180162,14.5323025 L26.4315415,0.119514498 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

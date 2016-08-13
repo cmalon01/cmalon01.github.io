@@ -124,10 +124,10 @@ h3, .h3 {
 h4, .h4 {
   font-weight: 300;
   font-style: italic;
-  color: #515151;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin: 1em 0; }
+  color: #444444;
+  font-weight: 700;
+  margin: 1em 0;
+  margin-top: 1.25em; }
 
 a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
   display: b; }
@@ -1511,7 +1511,8 @@ blockquote {
 blockquote.gradient {
   background: -webkit-gradient(linear, left top, left bottom, from(#1FB7AF), to(#40D4CD));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px; }
 
 blockquote.small {
   font-size: 1.5em;
@@ -2244,6 +2245,25 @@ p.caption {
   h3,
   .h3 {
     page-break-after: avoid; } }
+.brutalist {
+  font-family: 'Consolas' !important;
+  background: #EAEEED !important; }
+  .brutalist img {
+    display: none !important; }
+  .brutalist * {
+    font-family: 'Consolas' !important;
+    font-style: normal !important; }
+  .brutalist * {
+    background: #EAEEED !important;
+    color: #2A2A2A !important; }
+  .brutalist h1, .brutalist .h1, .brutalist h2, .brutalist .h2, .brutalist h3, .brutalist .h3, .brutalist h4, .brutalist .h4, .brutalist h5, .brutalist .h5, .brutalist a {
+    color: #4DBCA3 !important; }
+  .brutalist a {
+    color: blue !important;
+    text-decoration: underline; }
+  .brutalist blockquote.gradient {
+    background: #EAEEED; }
+
 body {
   font-size: 100%; }
 
@@ -2368,10 +2388,10 @@ h3, .h3 {
 h4, .h4 {
   font-weight: 300;
   font-style: italic;
-  color: #515151;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin: 1em 0; }
+  color: #444444;
+  font-weight: 700;
+  margin: 1em 0;
+  margin-top: 1.25em; }
 
 a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
   display: b; }

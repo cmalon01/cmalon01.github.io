@@ -1288,8 +1288,10 @@ section {
       max-width: 200px;
       margin: 0 auto; }
 
-.page-content p, .page-content ul, .page-content ol {
-  font-weight: 300; }
+.page-content {
+  background: white; }
+  .page-content p, .page-content ul, .page-content ol {
+    font-weight: 300; }
 
 p {
   margin-left: auto;

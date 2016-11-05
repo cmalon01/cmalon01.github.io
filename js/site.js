@@ -7,42 +7,27 @@
 var $contactbar;
 
 
-
-function loadPage(that, event)
+window.onpopstate = function(event) 
 {
+  //alert("location: " + document.location.pathname + ", state: " + JSON.stringify(event.state));
+  
+  target_href = document.location.pathname;
 
-
-}
-
-
-function setupLinks(selector)
-{
-
-
-
-  if (selector == undefined)
-  {
-    selector = "a:not(.swipebox)";
-  }
-
- $(selector).click (function (event){
-
-   event.preventDefault();
- //alert("hiya");
-  var target_href = $(this).attr("href");
-  console.log("a clicked :" +  target_href);
-  if ( target_href.startsWith("/" ))
-  {
-   // alert("hi");
-   
-   // event.stopPropagation();
-
-    console.log("loading ajax page :" +  target_href);
-    //var currentNav = $(".site-nav .active a").attr("href");
-
-   // if (currentNav.length == undefined || !target_href.startsWith(currentNav.replace("index.html","")))
-    if(true)
+  ajaxPageLoadHandleNavigation(target_href);
+  
+    $(".page-inner").load(target_href + " .page-inner", function ()
     {
+        ajaxPageLoad(target_href);
+        //history.pushState(null, null, target_href);
+    });       
+
+};
+
+
+function ajaxPageLoadHandleNavigation(target_href)
+{
+
+  
       // we are not headed to the same pace
       if ($(".site-nav .active").length != 0)
       {
@@ -58,8 +43,7 @@ function setupLinks(selector)
             return false;
           }
         });
-    }
-    
+  
 
     // handle sub nav
       if (target_href.startsWith('/portfolio/') && target_href != "/portfolio/index.html")
@@ -81,54 +65,57 @@ function setupLinks(selector)
         $(".portfolio-nav").fadeOut();  
 
       }
-    
 
-//console.log("about to fade");
-  
- // $('.page-content').fadeTo(0,0, function() {
+}
+function ajaxPageLoad(target_href)
+{
 
-  //  $('.page-content').css("visibility", "hidden");   
-    
- 
-
-
-    $(".page-inner").load(target_href + " .page-inner", function ()
-    {
       window.scrollTo(0,0);
 
       $('title').text($(".page-inner").data("page-title"));
     
       setupLinks(".page-inner a:not(.swipebox)")
 
-
-      $('.page-content').css("visibility", "visible");   
-      
-
-      $('.page-content').fadeTo(0,100);
-
-    /*  $('.page-content').fadeIn('slow'), function ()
-      {
-       //      $('.page-content').css("width" , "auto");
-      }
-      */
-
-
       if (target_href.endsWith('contact.html'))
-      {
-
-        
-      (function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
-
+      {        
+        (function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
       }     
-           // handle main nav
-    
-        history.pushState(null, null, target_href);
-
-    });   
- 
-  // my own site URL
 
     
+}
+
+function setupLinks(selector)
+{
+
+
+
+  if (selector == undefined)
+  {
+    selector = "a:not(.swipebox)";
+  }
+
+ $(selector).click (function (event){
+
+  event.preventDefault();
+  var target_href = $(this).attr("href");
+  
+  var URLChanged = (document.location.pathname != target_href);
+  
+  console.log("a clicked :" +  target_href);
+  if ( target_href.startsWith("/" ))
+  {
+
+    console.log("loading ajax page :" +  target_href);
+    ajaxPageLoadHandleNavigation(target_href);
+    $(".page-inner").load(target_href + " .page-inner", function ()
+    {
+        ajaxPageLoad(target_href);
+        if (URLChanged)
+        {
+          // if they click on the same link agian, don't push it again
+          history.pushState(null, null, target_href);
+        }
+    });       
   }
   else
   {

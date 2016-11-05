@@ -13,30 +13,44 @@ function loadPage(that, event)
 
 
 }
-$(document).ready (function() 
+
+
+function setupLinks(selector)
 {
-  
 
- $("a").click (function (event){
 
-      event.preventDefault();
-    event.stopPropagation();
-  
- 
+
+  if (selector == undefined)
+  {
+    selector = "a:not(.swipebox)";
+  }
+
+ $(selector).click (function (event){
+
+   event.preventDefault();
+ //alert("hiya");
   var target_href = $(this).attr("href");
-  console.log("link clicked aha");
+  console.log("a clicked :" +  target_href);
   if ( target_href.startsWith("/" ))
   {
+   // alert("hi");
+   
+   // event.stopPropagation();
 
-    console.log("link clicked");
-    var currentNav = $(".site-nav .active a").attr("href");
+    console.log("loading ajax page :" +  target_href);
+    //var currentNav = $(".site-nav .active a").attr("href");
 
    // if (currentNav.length == undefined || !target_href.startsWith(currentNav.replace("index.html","")))
     if(true)
     {
       // we are not headed to the same pace
-      $(".site-nav .active").removeClass("active");
-
+      if ($(".site-nav .active").length != 0)
+      {
+        $(".site-nav .active").removeClass("active");
+      }
+  
+      
+      
       $( ".site-nav li a" ).each(function( index ) {
           if (target_href.startsWith($(this).attr("href").replace("index.html","")))
           {
@@ -52,24 +66,51 @@ $(document).ready (function()
       {
         $(".portfolio-nav").fadeIn();
       
+        $(".portfolio-nav li.active").removeClass("active");
+      
+        $( ".portfolio-nav li a" ).each(function( index ) {
+          if (target_href == $(this).attr("href"))
+          {
+            $(this).parent().addClass("active");
+            return false;
+          }
+        });
       }
       else
       {
         $(".portfolio-nav").fadeOut();  
 
       }
-
-  $('.page-content').fadeOut('slow', function() {
     
 
+//console.log("about to fade");
+  
+ // $('.page-content').fadeTo(0,0, function() {
+
+  //  $('.page-content').css("visibility", "hidden");   
+    
  
 
 
-    $(".page-content").load(target_href + " .page-inner", function ()
+    $(".page-inner").load(target_href + " .page-inner", function ()
     {
-      $('title').text($(".page-inner").data("page-title"));
-      $('.page-content').fadeIn('slow');
+      window.scrollTo(0,0);
 
+      $('title').text($(".page-inner").data("page-title"));
+    
+      setupLinks(".page-inner a:not(.swipebox)")
+
+
+      $('.page-content').css("visibility", "visible");   
+      
+
+      $('.page-content').fadeTo(0,100);
+
+    /*  $('.page-content').fadeIn('slow'), function ()
+      {
+       //      $('.page-content').css("width" , "auto");
+      }
+      */
 
 
       if (target_href.endsWith('contact.html'))
@@ -86,7 +127,6 @@ $(document).ready (function()
     });   
  
   // my own site URL
-  });
 
     
   }
@@ -96,6 +136,17 @@ $(document).ready (function()
   }
  });
  
+
+
+
+}
+
+$(document).ready (function() 
+{
+
+  setupLinks();
+
+
 $(".swipebox:not(.swipebox-custom)").swipebox({hideBarsDelay : 1500});
 
 
@@ -186,30 +237,6 @@ function hasScrolled()
 });
 
 
-<!-- Hotjar Tracking Code for http://coreyux.com -->
-
-
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:266373,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-
-
-
- // SCRIPT FOR GOOGLE ANALYITICS
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-67002037-1', 'auto');
-  ga('send', 'pageview');
-
-
 
 // SCRIPT FOR ANIMATING IN ICONS
 
@@ -223,7 +250,10 @@ ani_1_waiting = false;
 
 function animateLoop()
 {
+    if ($loopObjects[loopCounter] == undefined)  return;
+
     $($loopObjects[loopCounter]).addClass(effect);
+
     loopCounter = loopCounter + 1;
     if (loopCounter >= loopLength)
     {

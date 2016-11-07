@@ -6,7 +6,7 @@
  var $header;
 var $contactbar;
 
-
+/*
 window.onpopstate = function(event) 
 {
   //alert("location: " + document.location.pathname + ", state: " + JSON.stringify(event.state));
@@ -124,14 +124,14 @@ function setupLinks(selector)
  });
  
 
-
+*/
 
 }
 
 $(document).ready (function() 
 {
 
-  setupLinks();
+//  setupLinks();
 
 
 $(".swipebox:not(.swipebox-custom)").swipebox({hideBarsDelay : 1500});

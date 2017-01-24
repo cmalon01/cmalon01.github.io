@@ -124,9 +124,10 @@ function setupLinks(selector)
  });
  
 
-*/
+
 
 }
+*/
 
 $(document).ready (function() 
 {
@@ -304,13 +305,13 @@ function scrollAnimate()
 $( document ).ready(function() 
 {
    
-  if ($(".icon").length == 0)
+  if ($(".what-i-like .icon").length == 0)
   {
     return;
   }
 
-   $loopObjects = $(".icon");
-   $(".icon").css("visibility","hidden");
+   $loopObjects = $(".what-i-like .icon");
+   $(".what-i-like .icon").css("visibility","hidden");
   loopLength = $loopObjects.length;
 
 

@@ -20,7 +20,7 @@ body {
     /* equivalent to 22px */ } }
 @media (min-width: 56.25em) {
   body {
-    line-height: 1.6; } }
+    line-height: 1.5; } }
 h1, .h1 {
   font-size: 1.9em;
   /* 2x body copy size = 32px */
@@ -1557,10 +1557,12 @@ nav a, nav a:visited {
   border-bottom: 2px solid #1FB7AF; }
 
 .portfolio-nav {
-  padding: .5em 0;
+  padding: 0;
   border-top: 1px solid #DADADA;
   border-bottom: 1px solid #DADADA;
   background: #FBFBFB;
+  position: relative;
+  top: 1px;
   font-size: 1.5rem;
   overflow-x: auto; }
   .portfolio-nav li {
@@ -1570,9 +1572,13 @@ nav a, nav a:visited {
     color: #444444;
     font-weight: 600;
     text-transform: title;
-    text-align: center; }
+    text-align: center;
+    padding: 1em 0.5em; }
   .portfolio-nav li.active a {
     color: #FF7172; }
+  .portfolio-nav li:not(.active) a:hover {
+    color: #FF7172;
+    text-decoration: underline; }
   .portfolio-nav ul {
     min-width: 300px; }
 
@@ -2289,7 +2295,7 @@ body {
     /* equivalent to 22px */ } }
 @media (min-width: 56.25em) {
   body {
-    line-height: 1.6; } }
+    line-height: 1.5; } }
 h1, .h1 {
   font-size: 1.9em;
   /* 2x body copy size = 32px */

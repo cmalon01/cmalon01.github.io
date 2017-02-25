@@ -1767,7 +1767,8 @@ p.caption {
   padding: 1em;
   max-width: 200px; }
   .html-box pre {
-    color: white; }
+    color: white;
+    overflow: hidden; }
 
 /* ==========================================================================
    Media Queries

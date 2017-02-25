@@ -1690,7 +1690,9 @@ img.full-width {
     background: #FB6162;
     /* 131 African Field: */
     /* 108 Le Cocktail: */
-    background-image: linear-gradient(45deg, #C43A30 0%, #874DA2 100%); }
+    background-image: linear-gradient(45deg, #C43A30 0%, #874DA2 100%);
+    /* Path 2 Copy 2: */
+    background-image: linear-gradient(-130deg, #EA7776 0%, #F7A2A1 99%, #F8A2A1 100%); }
 
 .thumb img {
   -webkit-transition: opacity 0.25s, top 0.25s ease-in, box-shadow 0.25s;

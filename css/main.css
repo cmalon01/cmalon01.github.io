@@ -1673,15 +1673,24 @@ img.full-width {
   .para ul, .img-bg ul {
     list-style-type: disc; }
   .para.blue, .blue.img-bg {
-    background: #2CA1A3; }
+    background: #2CA1A3;
+    /* Path 2: */ }
   .para.light-blue, .light-blue.img-bg {
-    background: #38C4C7; }
+    background: #38C4C7;
+    background-image: linear-gradient(-130deg, #40EAEE 0%, #38C4C7 100%); }
+    .para.light-blue h1, .light-blue.img-bg h1, .para.light-blue .h1, .light-blue.img-bg .h1, .para.light-blue h2, .light-blue.img-bg h2, .para.light-blue .h2, .light-blue.img-bg .h2, .para.light-blue h3, .light-blue.img-bg h3, .para.light-blue .h3, .light-blue.img-bg .h3, .para.light-blue h4, .light-blue.img-bg h4, .para.light-blue .h4, .light-blue.img-bg .h4, .para.light-blue h5, .light-blue.img-bg h5, .para.light-blue .h5, .light-blue.img-bg .h5, .para.light-blue p, .light-blue.img-bg p, .para.light-blue ul, .light-blue.img-bg ul, .para.light-blue blockquote, .light-blue.img-bg blockquote, .para.light-blue a, .light-blue.img-bg a {
+      color: #3c3c3c; }
   .para.purple, .purple.img-bg {
-    background: #9930BB; }
+    background: #9930BB;
+    /* 090 Mars Party: */
+    background-image: linear-gradient(0deg, #9B23EA 0%, #5F72BD 100%); }
   .para.green, .green.img-bg {
     background: #96C421; }
   .para.light-red, .light-red.img-bg {
-    background: #FB6162; }
+    background: #FB6162;
+    /* 131 African Field: */
+    /* 108 Le Cocktail: */
+    background-image: linear-gradient(45deg, #C43A30 0%, #874DA2 100%); }
 
 .thumb img {
   -webkit-transition: opacity 0.25s, top 0.25s ease-in, box-shadow 0.25s;

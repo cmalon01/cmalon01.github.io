@@ -2135,7 +2135,9 @@ p.caption {
     position: relative; }
 
   .header-container .brand .logo {
-    max-width: 200px; }
+    max-width: 200px;
+    top: 10px;
+    position: relative; }
 
   /* ============
       WIDE: Main

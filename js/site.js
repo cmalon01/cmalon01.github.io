@@ -238,7 +238,6 @@ var owl = $('.owl-carousel').owlCarousel({
 
 
 owl.on('changed.owl.carousel', function(event) {
-  debugger;
   var target_url = event.currentTarget.baseURI.split("#")[1];
   updateCarouselHash ("#" + target_url);
 

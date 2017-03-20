@@ -222,9 +222,48 @@ function hasScrolled()
     
     lastScrollTop = st;
 }
+
+
+
+var owl = $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+    URLhashListener:true,
+    autoplayHoverPause:true,
+    startPosition: 'URLHash'
 });
 
 
+
+owl.on('changed.owl.carousel', function(event) {
+  debugger;
+  var target_url = event.currentTarget.baseURI.split("#")[1];
+  updateCarouselHash ("#" + target_url);
+
+});
+
+updateCarouselHash(window.location.hash);
+
+});
+
+function updateCarouselHash(hash)
+{
+  debugger;
+  $( ".btn-owl" ).each(function( index ) {
+    if ($(this).attr("href") ==  hash) 
+    { 
+      $(this).addClass("active");
+
+    }
+    else
+    {
+      $(this).removeClass("active");
+    }
+  });
+
+}
 
 // SCRIPT FOR ANIMATING IN ICONS
 

@@ -243,13 +243,13 @@ owl.on('changed.owl.carousel', function(event) {
 
 });
 
-updateCarouselHash(window.location.hash);
+if (window.location.hash != "") updateCarouselHash(window.location.hash);
 
 });
 
 function updateCarouselHash(hash)
 {
-  debugger;
+  
   $( ".btn-owl" ).each(function( index ) {
     if ($(this).attr("href") ==  hash) 
     { 

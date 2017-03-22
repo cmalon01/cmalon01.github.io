@@ -1,5 +1,37 @@
 @charset "UTF-8";
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "averta", "avenir", sans-serif;
+  color: #4A4A4A;
+  font-weight: normal; }
+  h1 a, .h1 a, h1 a:visited, .h1 a:visited, h2 a, .h2 a, h2 a:visited, .h2 a:visited, h3 a, .h3 a, h3 a:visited, .h3 a:visited, h4 a, .h4 a, h4 a:visited, .h4 a:visited {
+    color: inherit;
+    text-decoration: none; }
+  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
+    color: #1FB7AF; }
+
+h2, .h2 {
+  color: #464646; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
+  font-weight: normal; }
+
+h1, .h1, h2, .h2 {
+  font-weight: 200; }
+
+h3, .h3 {
+  font-weight: 300;
+  color: #FF7172;
+  margin: 0.75em 0; }
+
+h4, .h4 {
+  font-weight: 300;
+  font-style: italic;
+  color: #444444;
+  font-weight: 700;
+  margin: 1em 0;
+  margin-top: 1.25em; }
+
 body {
   font-size: 100%; }
 
@@ -64,7 +96,8 @@ h3, .h3 {
   h3, .h3 {
     font-size: 1.425em;
     /* 1.5x body copy size = 24px */
-    line-height: 1.25; } }
+    line-height: 1.25;
+    font-weight: 100; } }
 @media (min-width: 56.25em) {
   h3, .h3 {
     font-size: 1.6625em;
@@ -96,38 +129,6 @@ h1.no-margin-top, .no-margin-top.h1, h2.no-margin-top, .no-margin-top.h2, h3.no-
 
 h1.no-margin-bottom, .no-margin-bottom.h1, h2.no-margin-bottom, .no-margin-bottom.h2, h3.no-margin-bottom, .no-margin-bottom.h3, h4.no-margin-bottom, .no-margin-bottom.h4, h5.no-margin-bottom, .no-margin-bottom.h5, h6.no-margin-bottom {
   margin-bottom: 0; }
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: "averta", "avenir", sans-serif;
-  color: #4A4A4A;
-  font-weight: normal; }
-  h1 a, .h1 a, h1 a:visited, .h1 a:visited, h2 a, .h2 a, h2 a:visited, .h2 a:visited, h3 a, .h3 a, h3 a:visited, .h3 a:visited, h4 a, .h4 a, h4 a:visited, .h4 a:visited {
-    color: inherit;
-    text-decoration: none; }
-  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
-    color: #1FB7AF; }
-
-h2, .h2 {
-  color: #464646; }
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
-  font-weight: normal; }
-
-h1, .h1, h2, .h2 {
-  font-weight: 200; }
-
-h3, .h3 {
-  font-weight: 300;
-  color: #FF7172;
-  margin: 0.75em 0; }
-
-h4, .h4 {
-  font-weight: 300;
-  font-style: italic;
-  color: #444444;
-  font-weight: 700;
-  margin: 1em 0;
-  margin-top: 1.25em; }
 
 a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
   display: b; }
@@ -2483,6 +2484,38 @@ p.caption {
   .brutalist blockquote.gradient {
     background: #EAEEED; }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "averta", "avenir", sans-serif;
+  color: #4A4A4A;
+  font-weight: normal; }
+  h1 a, .h1 a, h1 a:visited, .h1 a:visited, h2 a, .h2 a, h2 a:visited, .h2 a:visited, h3 a, .h3 a, h3 a:visited, .h3 a:visited, h4 a, .h4 a, h4 a:visited, .h4 a:visited {
+    color: inherit;
+    text-decoration: none; }
+  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
+    color: #1FB7AF; }
+
+h2, .h2 {
+  color: #464646; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
+  font-weight: normal; }
+
+h1, .h1, h2, .h2 {
+  font-weight: 200; }
+
+h3, .h3 {
+  font-weight: 300;
+  color: #FF7172;
+  margin: 0.75em 0; }
+
+h4, .h4 {
+  font-weight: 300;
+  font-style: italic;
+  color: #444444;
+  font-weight: 700;
+  margin: 1em 0;
+  margin-top: 1.25em; }
+
 body {
   font-size: 100%; }
 
@@ -2547,7 +2580,8 @@ h3, .h3 {
   h3, .h3 {
     font-size: 1.425em;
     /* 1.5x body copy size = 24px */
-    line-height: 1.25; } }
+    line-height: 1.25;
+    font-weight: 100; } }
 @media (min-width: 56.25em) {
   h3, .h3 {
     font-size: 1.6625em;
@@ -2579,38 +2613,6 @@ h1.no-margin-top, .no-margin-top.h1, h2.no-margin-top, .no-margin-top.h2, h3.no-
 
 h1.no-margin-bottom, .no-margin-bottom.h1, h2.no-margin-bottom, .no-margin-bottom.h2, h3.no-margin-bottom, .no-margin-bottom.h3, h4.no-margin-bottom, .no-margin-bottom.h4, h5.no-margin-bottom, .no-margin-bottom.h5, h6.no-margin-bottom {
   margin-bottom: 0; }
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: "averta", "avenir", sans-serif;
-  color: #4A4A4A;
-  font-weight: normal; }
-  h1 a, .h1 a, h1 a:visited, .h1 a:visited, h2 a, .h2 a, h2 a:visited, .h2 a:visited, h3 a, .h3 a, h3 a:visited, .h3 a:visited, h4 a, .h4 a, h4 a:visited, .h4 a:visited {
-    color: inherit;
-    text-decoration: none; }
-  h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
-    color: #1FB7AF; }
-
-h2, .h2 {
-  color: #464646; }
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
-  font-weight: normal; }
-
-h1, .h1, h2, .h2 {
-  font-weight: 200; }
-
-h3, .h3 {
-  font-weight: 300;
-  color: #FF7172;
-  margin: 0.75em 0; }
-
-h4, .h4 {
-  font-weight: 300;
-  font-style: italic;
-  color: #444444;
-  font-weight: 700;
-  margin: 1em 0;
-  margin-top: 1.25em; }
 
 a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
   display: b; }

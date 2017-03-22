@@ -1714,7 +1714,7 @@ nav a, nav a:visited {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color: #6A6969;
+  color: #5d5d5d;
   font-weight: 400;
   font-size: .85rem;
   border-bottom: 2px solid transparent;
@@ -1962,7 +1962,7 @@ p.caption {
 .site-nav {
   margin: 0 auto;
   margin-top: .5em;
-  max-width: 200px; }
+  max-width: 250px; }
   .site-nav ul {
     display: block; }
   .site-nav li {
@@ -2018,6 +2018,12 @@ p.caption {
   /* ====================
       WIDE: CSS3 Effects
      ==================== */
+  .a-tad-bigger {
+    font-size: 1.25px; }
+
+  .portfolio-nav {
+    margin-top: .5em; }
+
   section {
     margin-bottom: 4rem; }
 
@@ -2293,6 +2299,8 @@ p.caption {
   .site-nav {
     margin-left: auto;
     margin-right: 0; }
+    .site-nav a {
+      letter-spacing: .5px; }
 
   /*
    

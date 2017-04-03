@@ -308,10 +308,10 @@ function animateFinishLoop()
       // all done stop waiting
     }
 }
-
+var animate_icon = false;
 function scrollAnimate()
 {
-    if ($(".icon:not(.no-animate)").length == 0)
+    if ($(".icon:not(.no-animate)").length == 0 || !animate_icon)
     {
        return;
     }
@@ -343,7 +343,7 @@ function scrollAnimate()
 $( document ).ready(function() 
 {
    
-  if ($(".what-i-like .icon:not(.no-animate)").length == 0)
+  if ($(".what-i-like .icon:not(.no-animate)").length == 0 || !animate_icon)
   {
     return;
   }

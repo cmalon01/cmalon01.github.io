@@ -181,18 +181,18 @@
             <div class="d-1of3">
                 
                 <h2 class="h3 center">Development</h2>
-                <img class="icon" src="/img/icon-dev.svg">
+                <img class="icon no-animate" src="/img/icon-dev.svg">
                 <p>I have been programming since I was <strong>11 years old</strong>.  Front end web development got me thinking about the end user.  creating and problem solving has always been my passion.</p>
             </div>
             <div class="d-1of3">
                 <h2 class="h3 center">Asking Why</h2>
-                <img class="icon" src="/img/icon-ask.svg">
+                <img class="icon no-animate" src="/img/icon-ask.svg">
                 <p>Out of curiosity, I began to ask my clients the hardest question of all :“Why?” Then we began to strategize on <strong>content, marketing and the user experience.</strong></p>
             </div>
             <div class="d-1of3">
                 
                 <h2 class="h3 center">UX Design</h2>
-                <img class="icon" src="/img/icon-ux.svg">
+                <img class="icon no-animate" src="/img/icon-ux.svg">
                 <p>After studying user experience design at General Assembly, I'm more passionate than ever <strong>designing experiences by considering the user goals, business goals and technical feasibility.</strong></p>
             </div>
         </div>
@@ -200,27 +200,29 @@
     </section>
     <div class="para light-blue">
         <div class="wrapper">
+        <div>
             <h2 class="center">It all began in middle school…</h2>
             <p>I got my first zenith computer and I learned how to program in QBASIC. I was fascinated by writing code.</p>
-            <p class="center"><img src="/img/qbasic.jpg"></p>
+            <p class="center"  data-aos="fade-left"><img src="/img/qbasic.jpg"></p>
+        </div>
         </div>
     </div>
     <div class="min-600-flex">
-        <div class=" wrapper">
+        <div class=" wrapper" >
             <p>Then in high school…<br>I learned Visual Basic, C++ and Java</p>
             <p>I was <em>supposed</em> to do computers for the rest of my life, so I went to NYU for Computer Engineering.</p>
         </div>
     </div>
     <div class="para purple">
-        <div class="wrapper">
+        <div class="wrapper" >
             <p>I learned about the computer from the electron to the high level OS.</p>
-            <p class="center"><img class="extra-margin-tb" src="/img/comp-eng.png"></p>
+            <p class="center"  data-aos="fade-left"><img class="extra-margin-tb" src="/img/comp-eng.png"></p>
         </div>
     </div>
     <div class="min-600-flex">
-        <div class=" wrapper">
+        <div class=" wrapper" >
             <p>My passion was stronger than ever. Parallel systems, computer architecture, seeing how the system worked from the atom to the operating system.</p>
-            <p>So I started to do research in Computer Science with a focus in Security.</p>
+            <p>I started to do research in Computer Science with a focus in Security.</p>
         </div>
     </div>
     <div class="para light-red">
@@ -228,26 +230,28 @@
             <p>I learned about the problems with security in hardware and software and the “evil users” always undoing security features.</p>
             <p class=""><img class="extra-margin-tb" src="/img/password.png"></p>
             <p>I did an internship at Intel working on software security for which I got  a <strong>patent</strong> for. At one of the talks I saw <strong>Genevive Bell</strong> talk.</p>
-            <p class="center"><strong>“the future of computing is experiences?”</strong></p>
-            <p class="center"><img class="extra-margin-tb" src="/img/futureofcomputing.png"></p>
-            <p class="">I couldn't believe it at the time. I saw computers as a means to end as a way to get the desired output from the input.</p>
-            <p class="">BUT.. the seed was planted.</p>
+            <p class="center" data-aos="fade-left"><strong>“the future of computing is experiences?”</strong></p>
+            <div data-aos="fade-left"><p class="center"  ><img class="extra-margin-tb" src="/img/futureofcomputing.png"></p>
+            <p class=""  >I couldn't believe it at the time. I saw computers as a means to end as a way to get the desired output from the input.</p>
+            <p class=""  >BUT.. the seed was planted.</p>
+            </div>
         </div>
     </div>
     <img class="full-width" src="/img/intel.jpg">
     <div class="min-600-flex">
         <div class="wrapper">
             <p class="center">I discovered what was <strong>missing beyond the atoms and operating systems...</strong></p>
-            <h2 class="center">The User</h2>
+            <h2 class="center" data-aos="fade-left">The User</h2>
         </div>
     </div>
     <div class="para purple">
         <div class="wrapper">
             
             <p>What was the purpose of everything engineers do?</p>
+            <div data-aos="fade-left">
             <p class="center"><img class="extra-margin-tb" src="/img/humans.png"></p>
             <p><strong>Answer:</strong> HUMANS (“the user”), making their lives better, solving a problem.</p>
-            
+            </div>
         </div>
         
     </div>
@@ -287,7 +291,17 @@
 <h2 class="center">Still reading?</h2>
 <h3 class="center">Reach out...send me a note I'd love to chat with you.</h3>
 
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
+<script>
+    AOS.init({
+      offset: 200,
+      duration: 700,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  </script>
 
 </div>
 

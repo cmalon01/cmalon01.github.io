@@ -311,7 +311,7 @@ function animateFinishLoop()
 
 function scrollAnimate()
 {
-    if ($(".icon").length == 0)
+    if ($(".icon:not(.no-animate)").length == 0)
     {
        return;
     }
@@ -343,7 +343,7 @@ function scrollAnimate()
 $( document ).ready(function() 
 {
    
-  if ($(".what-i-like .icon").length == 0)
+  if ($(".what-i-like .icon:not(.no-animate)").length == 0)
   {
     return;
   }

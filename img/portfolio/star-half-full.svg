@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="19px" viewBox="0 0 26 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#59EDEE" offset="0%"></stop>
+            <stop stop-color="#25B2B3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard-6" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-79.000000, -65.000000)">
+        <g id="Group-4" transform="translate(50.000000, 66.000000)">
+            <g id="Group-Copy" transform="translate(30.000000, 0.000000)">
+                <path d="M12.1387283,17.8180123 L12.0478192,17.9144385 L0.138728324,5.28260963 L4.32054651,1.88293825e-13 L12.0478192,1.88293825e-13 L12.1387283,1.88293825e-13 L12.1387283,17.8180123 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                <polygon id="Shape" stroke="#606060" stroke-width="0.5" points="19.7272727 0.0455026738 12 0.0455026738 4.27272727 0.0455026738 0.0909090909 5.3281123 12 17.9599412 23.9090909 5.3281123"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

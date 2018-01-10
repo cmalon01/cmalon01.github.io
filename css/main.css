@@ -2138,7 +2138,14 @@ a:hover {
    ========================================================================== */
 body {
   font-family: "averta", "avenir", sans-serif;
-  font-weight: 200; }
+  font-weight: 200;
+  /*
+      text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+  */ }
 
 .wrapper {
   width: 90%;
@@ -2361,6 +2368,12 @@ ul.cards.large {
     display: block;
     padding-top: 100%; }
 
+ul.no-style {
+  list-style: none;
+  padding-left: 0; }
+  ul.no-style li {
+    margin-bottom: 1.2em; }
+
 .interests .social-media-links {
   padding-bottom: 2em; }
 
@@ -2449,18 +2462,19 @@ nav a, nav a:visited {
 
 .portfolio-nav {
   padding: 0;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
   position: relative;
   top: 1px;
+  /*li:last-child
+  {
+      border-right:1px solid $portfolio-border; 
+  }*/
   font-size: 1.5rem;
   overflow-x: auto; }
   .portfolio-nav li {
     width: 25%;
-    float: left;
-    border-top: 1px solid #DADADA;
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA; }
-  .portfolio-nav li:last-child {
-    border-right: 1px solid #DADADA; }
+    float: left; }
   .portfolio-nav li a {
     color: #444444;
     font-weight: 600;
@@ -2637,6 +2651,37 @@ p.caption {
   text-align: center;
   margin-bottom: 3.5em; }
 
+.shadow-card {
+  /* Rectangle 3 Copy: */
+  box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 5px;
+  margin-bottom: 20px; }
+
+.ux-maturity .icon {
+  height: 86px;
+  width: auto; }
+.ux-maturity h4, .ux-maturity .h4 {
+  font-size: 22px;
+  color: #5AE4DD;
+  font-style: normal;
+  font-weight: bold; }
+.ux-maturity li {
+  font-size: 14px; }
+
+.star {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin: 0 2px;
+  background: no-repeat center center url(../img/portfolio/star-full.svg); }
+
+.star-empty {
+  background-image: url(../img/portfolio/star-empty.svg); }
+
+.star-half {
+  background-image: url(../img/portfolio/star-half-full.svg); }
+
 .img-bg {
   position: relative;
   background: no-repeat center bottom scroll;
@@ -2756,10 +2801,10 @@ p.caption {
       content: "";
       display: table; }
 
-  .wrap-grid ul {
+  .wrap-grid ul:not(.no-style) {
     padding-left: 1em;
     margin-right: 2em; }
-    .wrap-grid ul li {
+    .wrap-grid ul:not(.no-style) li {
       margin-bottom: 1em; }
 
   .d-1of2 {
@@ -2796,6 +2841,18 @@ p.caption {
     .d-1of3:nth-child(3n) {
       margin-right: 0; }
     .d-1of3:nth-child(3n+1) {
+      clear: left; }
+
+  .d-1of4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .d-1of4:last-child {
+      margin-right: 0; }
+    .d-1of4:nth-child(4n) {
+      margin-right: 0; }
+    .d-1of4:nth-child(4n+1) {
       clear: left; }
 
   .portfolio .wireframes {
@@ -3046,16 +3103,13 @@ p.caption {
           li a {width: 6.25em; }
       }
       */
-  .portfolio-nav {
-    border-top: 1px solid #DADADA;
-    border-bottom: 1px solid #DADADA; }
-    .portfolio-nav ul {
-      max-width: 500px; }
-    .portfolio-nav li {
-      border-top: none;
-      border-bottom: none; }
-    .portfolio-nav li a {
-      font-size: .8rem; }
+  .portfolio-nav ul {
+    max-width: 500px; }
+  .portfolio-nav li {
+    border-top: none;
+    border-bottom: none; }
+  .portfolio-nav li a {
+    font-size: .8rem; }
 
   .header-container .wrapper {
     position: relative; }
@@ -3090,7 +3144,13 @@ p.caption {
       width: 10em;
       top: 0;
       left: 0;
-      margin-top: 0; } }
+      margin-top: 0; }
+
+  .shadow-card {
+    /* Rectangle 3 Copy: */
+    box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 5px; } }
 /* 
 ==================================================================================================================
 1140+

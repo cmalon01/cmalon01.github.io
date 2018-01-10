@@ -3275,6 +3275,9 @@ p.caption {
   .brutalist blockquote.gradient {
     background: #EAEEED; }
 
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0s !important; } }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "averta", "avenir", sans-serif;
   color: #4A4A4A;

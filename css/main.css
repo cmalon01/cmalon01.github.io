@@ -2484,9 +2484,19 @@ nav a, nav a:visited {
     font-size: .75rem; }
   .portfolio-nav li.active a {
     color: #FF7172; }
+  .portfolio-nav li.active .svg-icon-fill {
+    fill: #FF7172; }
+  .portfolio-nav li svg {
+    height: 15px !important;
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 5px; }
   .portfolio-nav li:not(.active) a:hover {
     color: #FF7172;
     text-decoration: underline; }
+    .portfolio-nav li:not(.active) a:hover .svg-icon-fill {
+      fill: #FF7172; }
   .portfolio-nav ul {
     min-width: 300px; }
 
@@ -2625,12 +2635,13 @@ p.caption {
   margin-top: .5em;
   margin-bottom: 1.5em; }
 
-.portfolio .para:not(.img-bg), .portfolio .img-bg:not(.img-bg) {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  min-height: 500px;
-  margin-bottom: 1em; }
-
+/*.portfolio .para:not(.img-bg)
+{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height:500px;
+    margin-bottom:1em;
+}*/
 .icon {
   max-width: 90%;
   width: 7em;
@@ -2638,7 +2649,14 @@ p.caption {
   display: block; }
 
 .what-i-like p {
-  font-size: 1.2rem; }
+  font-size: 1rem;
+  line-height: 1.43;
+  text-align: justify;
+  color: #696969; }
+.what-i-like .icon {
+  height: 80px; }
+.what-i-like h3, .what-i-like .h3 {
+  font-size: 1.4rem; }
 .what-i-like em {
   color: #1CBDB6;
   font-style: normal;
@@ -2650,6 +2668,9 @@ p.caption {
 .value p {
   text-align: center;
   margin-bottom: 3.5em; }
+.value .icon {
+  height: 80px;
+  width: auto; }
 
 .shadow-card {
   /* Rectangle 3 Copy: */

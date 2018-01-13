@@ -342,6 +342,15 @@ function scrollAnimate()
 
 $( document ).ready(function() 
 {
+  // smooth scroll anchor links
+  $(document).on('click', 'a[href^="#"].scrollSmooth', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 100
+    }, 500);
+  });
+
    
   if ($(".what-i-like .icon:not(.no-animate)").length == 0 || !animate_icon)
   {

@@ -350,8 +350,43 @@ $( document ).ready(function()
         scrollTop: $($.attr(this, 'href')).offset().top - 100
     }, 500);
   });
+   window.dropdownHide = true;
 
-   
+   $(".dropdown-toggle").click (function (e)
+   {
+      $($(this).data("target")).fadeToggle();
+      $(".overlay").fadeToggle();
+      window.dropdownHide = false;
+      e.preventDefault();
+   });
+   $(".dropdown-toggle").click (function (e) {
+      window.dropdownHide = false;
+   })
+   $("body").click(function (e){
+    if (window.dropdownHide)
+    {     
+      $(".dropdown-content,.overlay").fadeOut();
+    }
+    else 
+    {
+      window.dropdownHide = true;
+    }
+   });
+   $(".dropdown-content").focusout (function (e)
+   { 
+      if( $(e.relatedTarget).parent().hasClass("dropdown-content"))
+      {
+
+      }
+      else
+      {
+          
+          $(this).fadeOut();
+          $(".overlay").fadeOut();
+      }
+      
+   });
+
   if ($(".what-i-like .icon:not(.no-animate)").length == 0 || !animate_icon)
   {
     return;

@@ -352,40 +352,22 @@ $( document ).ready(function()
   });
    window.dropdownHide = true;
 
-   $(".dropdown-toggle").click (function (e)
+   $(".modal-toggle").click (function (e)
    {
-      $($(this).data("target")).fadeToggle();
-      $(".overlay").fadeToggle();
-      window.dropdownHide = false;
+      window.toggleModal();
       e.preventDefault();
    });
-   $(".dropdown-toggle").click (function (e) {
-      window.dropdownHide = false;
-   })
-   $("body").click(function (e){
-    if (window.dropdownHide)
-    {     
-      $(".dropdown-content,.overlay").fadeOut();
-    }
-    else 
-    {
-      window.dropdownHide = true;
-    }
-   });
-   $(".dropdown-content").focusout (function (e)
-   { 
-      if( $(e.relatedTarget).parent().hasClass("dropdown-content"))
-      {
 
-      }
-      else
-      {
-          
-          $(this).fadeOut();
-          $(".overlay").fadeOut();
-      }
-      
+    $(".modal-content,.modal-overlay").click (function (e)
+   {
+      window.toggleModal();
    });
+
+
+   window.toggleModal = function ()
+   {
+      $(".modal-content,.modal-overlay").fadeToggle();
+   } 
 
   if ($(".what-i-like .icon:not(.no-animate)").length == 0 || !animate_icon)
   {

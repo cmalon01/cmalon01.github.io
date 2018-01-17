@@ -2677,10 +2677,11 @@ p.caption {
   display: block; }
 
 .what-i-like p {
-  font-size: 1rem;
-  line-height: 1.43;
+  font-size: 15px;
   text-align: justify;
-  color: #696969; }
+  color: #757575;
+  line-height: 1.4;
+  font-weight: 400; }
 .what-i-like .icon {
   height: 80px; }
 .what-i-like h3, .what-i-like .h3 {
@@ -2740,6 +2741,12 @@ p.caption {
     background-image: url(../img/hk.jpg); }
   .img-bg.hk-2 {
     background-image: url(../img/portfolio/h-competitive.jpg); }
+  .img-bg.bkk {
+    background-size: contain;
+    background-position: center top;
+    background-color: #38C4C7;
+    min-height: 600px;
+    background-image: url(../img/bkk-teach.jpg); }
   .img-bg.client-work {
     background-image: url(../img/h-client-work.jpg); }
   .img-bg.espresso {
@@ -2903,6 +2910,10 @@ p.caption {
       margin-right: 0; }
     .d-1of4:nth-child(4n+1) {
       clear: left; }
+
+  .d-extra-padding {
+    padding-left: 8px;
+    padding-right: 8px; }
 
   .portfolio .wireframes {
     max-width: 68em;

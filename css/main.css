@@ -2452,6 +2452,32 @@ blockquote.small {
 .btn-owl.active {
   border-bottom: 1px solid #3c3c3c; }
 
+.owl-inspirations img {
+  height: 200px;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+  width: auto !important;
+  text-align: center;
+  /* Bitmap: */
+  box-shadow: 0 2px 19px 0 rgba(185, 185, 185, 0.5);
+  position: relative;
+  top: 0;
+  transition: box-shadow 600ms, top 300ms; }
+
+.owl-inspirations a:hover img {
+  /* Bitmap Copy: */
+  top: -5px;
+  position: relative;
+  box-shadow: 0 17px 19px 0 rgba(185, 185, 185, 0.94); }
+
+.owl-inspirations a {
+  color: #989898;
+  font-size: 14px;
+  text-align: center;
+  display: block; }
+
 .caps {
   text-transform: uppercase; }
 
@@ -3210,7 +3236,11 @@ p.caption {
     /* Rectangle 3 Copy: */
     box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    padding: 5px; } }
+    padding: 5px; }
+
+  .owl-inspirations a {
+    margin-left: 20px;
+    margin-right: 20px; } }
 /* 
 ==================================================================================================================
 1140+

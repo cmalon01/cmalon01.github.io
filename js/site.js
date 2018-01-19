@@ -225,7 +225,7 @@ function hasScrolled()
 
 
 
-var owl = $('.owl-carousel').owlCarousel({
+var owl = $('.owl-carousel.owl-whatotherssay').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
@@ -235,6 +235,12 @@ var owl = $('.owl-carousel').owlCarousel({
     startPosition: 'URLHash'
 });
 
+$('.owl-carousel.owl-inspirations').owlCarousel({
+    loop: false,
+    margin:15,
+    nav:false,
+    autoWidth:true
+});
 
 
 owl.on('changed.owl.carousel', function(event) {

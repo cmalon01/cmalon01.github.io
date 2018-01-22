@@ -2476,7 +2476,8 @@ blockquote.small {
   color: #989898;
   font-size: 14px;
   text-align: center;
-  display: block; }
+  display: block;
+  width: 190px; }
 
 .caps {
   text-transform: uppercase; }
@@ -2581,8 +2582,12 @@ nav a, nav a:visited {
 /* ==========================================================================
     Story Page
    ========================================================================== */
-.story-page p, .story-page ul, .story-page ol {
-  font-size: 1.5em; }
+.story {
+  font-size: 1.1em; }
+  .story .para, .story .img-bg {
+    min-height: 99vh; }
+  .story .min-600-flex {
+    min-height: 99vh; }
 
 #contact-bar {
   display: none; }
@@ -2798,7 +2803,9 @@ p.caption {
   background: black;
   margin: 1em auto;
   padding: 1em;
-  max-width: 200px; }
+  display: inline-block;
+  text-align: left;
+  font-size: 1.2rem; }
   .html-box pre {
     color: white;
     overflow: hidden; }
@@ -2865,6 +2872,9 @@ p.caption {
   /* ====================
       WIDE: CSS3 Effects
      ==================== */
+  .story {
+    font-size: 1.4em; }
+
   .a-tad-bigger {
     font-size: 1.25px; }
 
@@ -3106,9 +3116,6 @@ p.caption {
   ul.icons li {
     width: 25%; }
 
-  .story p {
-    font-size: 1.1em; }
-
   #contact-bar {
     position: fixed;
     bottom: -51px;
@@ -3236,11 +3243,7 @@ p.caption {
     /* Rectangle 3 Copy: */
     box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    padding: 5px; }
-
-  .owl-inspirations a {
-    margin-left: 20px;
-    margin-right: 20px; } }
+    padding: 5px; } }
 /* 
 ==================================================================================================================
 1140+

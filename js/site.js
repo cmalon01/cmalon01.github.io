@@ -237,8 +237,9 @@ var owl = $('.owl-carousel.owl-whatotherssay').owlCarousel({
 
 $('.owl-carousel.owl-inspirations').owlCarousel({
     loop: false,
-    margin:15,
     nav:false,
+    items:6,
+    margin:0,
     autoWidth:true
 });
 
@@ -246,7 +247,6 @@ $('.owl-carousel.owl-inspirations').owlCarousel({
 owl.on('changed.owl.carousel', function(event) {
   var target_url = event.currentTarget.baseURI.split("#")[1];
   updateCarouselHash ("#" + target_url);
-
 });
 
 if (window.location.hash != "") updateCarouselHash(window.location.hash);

@@ -19,6 +19,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
 h1, .h1, h2, .h2 {
   font-weight: 200; }
 
+strong {
+  font-weight: 500; }
+
 h3, .h3 {
   font-weight: 300;
   color: #FF7172;
@@ -97,7 +100,7 @@ h3, .h3 {
     font-size: 1.425em;
     /* 1.5x body copy size = 24px */
     line-height: 1.25;
-    font-weight: 100; } }
+    font-weight: 300; } }
 @media (min-width: 56.25em) {
   h3, .h3 {
     font-size: 1.6625em;
@@ -136,16 +139,15 @@ a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
 span.cyan {
   color: #1FB7AF; }
 
-/* 
-.page-title
+/*.page-title
 {
-  font-weight: 800;
-  color:$text-color;
-  letter-spacing: 2px;
-}
-*/
-strong {
-  font-weight: 500; }
+  color: #656565;
+  font-size:16px !important;
+  font-weight: 600;
+  margin-top: 3em;
+}*/
+.page-title {
+  color: #686c6f; }
 
 /*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
 html.swipebox-html.swipebox-touch {
@@ -2947,6 +2949,18 @@ p.caption {
     .d-1of4:nth-child(4n+1) {
       clear: left; }
 
+  .d-3of4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    .d-3of4:last-child {
+      margin-right: 0; }
+    .d-3of4:nth-child(4n) {
+      margin-right: 0; }
+    .d-3of4:nth-child(4n+1) {
+      clear: left; }
+
   .d-extra-padding {
     padding-left: 8px;
     padding-right: 8px; }
@@ -3390,6 +3404,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
 h1, .h1, h2, .h2 {
   font-weight: 200; }
 
+strong {
+  font-weight: 500; }
+
 h3, .h3 {
   font-weight: 300;
   color: #FF7172;
@@ -3468,7 +3485,7 @@ h3, .h3 {
     font-size: 1.425em;
     /* 1.5x body copy size = 24px */
     line-height: 1.25;
-    font-weight: 100; } }
+    font-weight: 300; } }
 @media (min-width: 56.25em) {
   h3, .h3 {
     font-size: 1.6625em;
@@ -3507,13 +3524,12 @@ a h1, a .h1, a h2, a .h2, a h3, a .h3, a h4, a .h4, a h5, a .h5 {
 span.cyan {
   color: #1FB7AF; }
 
-/* 
-.page-title
+/*.page-title
 {
-  font-weight: 800;
-  color:$text-color;
-  letter-spacing: 2px;
-}
-*/
-strong {
-  font-weight: 500; }
+  color: #656565;
+  font-size:16px !important;
+  font-weight: 600;
+  margin-top: 3em;
+}*/
+.page-title {
+  color: #686c6f; }

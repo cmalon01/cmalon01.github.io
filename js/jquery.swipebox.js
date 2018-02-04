@@ -781,7 +781,7 @@
 						'autoplay' : ( plugin.settings.autoplayVideos ? '1' : '0' ),
 						'v' : ''
 					});
-					iframe = '<iframe width="560" height="315" src="//' + youtubeUrl[1] + '/embed/' + youtubeUrl[2] + '?' + qs + '" frameborder="0" allowfullscreen></iframe>';
+					iframe = '<iframe width="560" height="315" src="{{ site.url }}//' + youtubeUrl[1] + '/embed/' + youtubeUrl[2] + '?' + qs + '" frameborder="0" allowfullscreen></iframe>';
 
 				} else if ( vimeoUrl ) {
 					qs = ui.parseUri( url, {
@@ -790,7 +790,7 @@
 						'portrait' : '0',
 						'color': plugin.settings.vimeoColor
 					});
-					iframe = '<iframe width="560" height="315"  src="//player.vimeo.com/video/' + vimeoUrl[1] + '?' + qs + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+					iframe = '<iframe width="560" height="315"  src="{{ site.url }}//player.vimeo.com/video/' + vimeoUrl[1] + '?' + qs + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
 
 				} else {
 					iframe = '<iframe width="560" height="315" src="' + url + '" frameborder="0" allowfullscreen></iframe>';

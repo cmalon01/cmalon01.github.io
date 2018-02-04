@@ -148,7 +148,7 @@ $( '#personasEspresso' ).click( function( e ) {
 
 
  $header = $('header');
- $contactbar= $('#contact-bar');
+ //$contactbar= $('#contact-bar');
 
 var didScroll;
 var lastScrollTop = 0;
@@ -183,7 +183,7 @@ function hasScrolled()
     if ($("body").height() < 1300)
     {
         $header.removeClass('nav-up').removeClass('nav-down');
-        $contactbar.removeClass('up');
+        //$contactbar.removeClass('up');
         $header.addClass('stay-there');
         stayThere = true;
         //alert('ya');
@@ -205,19 +205,19 @@ function hasScrolled()
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $header.removeClass('nav-down').addClass('nav-up');
-        $contactbar.removeClass('up');
+       // $contactbar.removeClass('up');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $header.removeClass('nav-up').addClass('nav-down');
-            $contactbar.addClass('up');
+           // $contactbar.addClass('up');
         }
     }
 
     if (st == 0)
     {
         $header.removeClass('nav-down');
-        $contactbar.removeClass('up');
+        //$contactbar.removeClass('up');
     }
     
     lastScrollTop = st;
@@ -345,9 +345,28 @@ function scrollAnimate()
          ani_1_inside = false;
       }
 }
+function cardsSameHeight(resizeWindow)
+{
+    if (resizeWindow) 
+    {
+      $(".ux-process-cards .shadow-card").height("auto");
+    }
+    var maxHeight = 0;
 
+    $(".ux-process-cards .shadow-card").each(function(){
+       if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    });
+
+    $(".ux-process-cards .shadow-card").height(maxHeight);
+}
 $( document ).ready(function() 
 {
+  
+  cardsSameHeight();
+  $( window ).resize(function() {
+    cardsSameHeight(true);
+  });
+
   // smooth scroll anchor links
   $(document).on('click', 'a[href^="#"].scrollSmooth', function (event) {
     event.preventDefault();

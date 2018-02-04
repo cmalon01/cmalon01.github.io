@@ -2700,10 +2700,9 @@ img.full-width {
   transition: opacity 0.25s, top 0.25s ease-in, box-shadow 0.25s;
   position: relative;
   top: 0;
-  /* Bitmap: */
-  box-shadow: 0px 1px 2px 0px rgba(109, 109, 109, 0.5);
+  box-shadow: 1px 1px 6px 0px rgba(109, 109, 109, 0.5);
   display: block;
-  border-radius: 1px; }
+  border-radius: 4px; }
 
 .thumb:hover img {
   top: 0;

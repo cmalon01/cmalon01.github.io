@@ -2790,9 +2790,9 @@ p.caption {
   .ux-process-cards > div {
     position: relative; }
   .ux-process-cards .step-number {
-    background: #444444;
+    background: #6d6d6d;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: normal;
     width: 23px;
     color: #ffffff; }
 

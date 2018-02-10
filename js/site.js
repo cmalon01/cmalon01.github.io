@@ -214,7 +214,7 @@ function hasScrolled()
         }
     }
 
-    if (st == 0)
+    if (st <  200) // put nav back 
     {
         $header.removeClass('nav-down');
         //$contactbar.removeClass('up');
@@ -383,7 +383,7 @@ $( document ).ready(function()
       e.preventDefault();
    });
 
-    $(".modal-content,.modal-overlay").click (function (e)
+    $(".modal-content, .modal-overlay").click (function (e)
    {
       window.toggleModal();
    });
@@ -391,7 +391,21 @@ $( document ).ready(function()
 
    window.toggleModal = function ()
    {
-      $(".modal-content,.modal-overlay").fadeToggle();
+      if ($(".modal-content").css("display") == "block")
+      {
+        // hide them
+         $(".modal-content,.modal-overlay").removeClass("in");
+         setTimeout(function(){ $(".modal-content, .modal-overlay").css("display","none");}, 550);
+      }
+      else
+      {
+       
+        //show it
+        $(".modal-content,.modal-overlay").css("display","block");
+         setTimeout(function(){ $(".modal-content,.modal-overlay").addClass("in");}, 200);
+         
+      }
+      
    } 
 
   if ($(".what-i-like .icon:not(.no-animate)").length == 0 || !animate_icon)

@@ -2560,18 +2560,26 @@ ul.no-style {
 .modal-content {
   display: none;
   position: fixed;
-  max-width: 700px;
   width: 100%;
   margin: 0px auto;
   left: 0;
   right: 0;
-  top: 20vh;
+  top: 0;
+  bottom: 0;
+  background-color: #3FCACD;
   padding: 30px;
-  /* Rectangle 3: */
-  box-shadow: 4px 4px 21px 0 rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-  background: #fff;
-  z-index: 9999; }
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms cubic-bezier(0.49, -0.32, 0.34, 1.29);
+  transform: scale(0.5); }
+  .modal-content p, .modal-content a {
+    color: #444444 !important; }
+  .modal-content hr {
+    border-color: #444444; }
+
+.modal-content.in {
+  opacity: 1;
+  transform: scale(1); }
 
 .modal-overlay {
   display: none;
@@ -2583,7 +2591,12 @@ ul.no-style {
   /* Rectangle: */
   /* Rectangle: */
   background: rgba(0, 0, 0, 0.73);
-  z-index: 9998; }
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 400ms; }
+
+.modal-overlay.in {
+  opacity: 1; }
 
 .interests .social-media-links {
   padding-bottom: 2em; }
@@ -2630,7 +2643,8 @@ blockquote.small {
   border-bottom: 1px solid transparent; }
 
 .btn-owl.active {
-  border-bottom: 1px solid #3c3c3c; }
+  border: 1px solid #1FB7AF;
+  border-radius: 2px; }
 
 .owl-inspirations img {
   height: 200px;
@@ -2661,6 +2675,23 @@ blockquote.small {
 
 .caps {
   text-transform: uppercase; }
+
+.owl-whatotherssay p {
+  font-weight: 700; }
+.owl-whatotherssay strong {
+  font-weight: 700; }
+
+.hanging-quote {
+  padding-left: 20px; }
+  .hanging-quote:before {
+    content: '“';
+    float: left;
+    left: 0;
+    width: 20px;
+    top: 0;
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 10px; }
 
 /* ==============
     MOBILE: Menu
@@ -3130,6 +3161,9 @@ p.caption {
 ==================================================================================================================
 */
 @media only screen and (min-width: 768px) {
+  .page-title {
+    text-align: center; }
+
   .what-i-like-home-page {
     margin-top: 3em; }
     .what-i-like-home-page h2, .what-i-like-home-page .h2 {
@@ -3563,6 +3597,8 @@ p.caption {
     align-items: center;
     margin-bottom: 130px;
     margin-top: 20px; }
+  .related-posts.related-posts-across .post:last-child {
+    margin-bottom: 0; }
   .related-posts.related-posts-across .desc:first-child {
     margin-top: 0 !important; }
   .related-posts.related-posts-across .desc h2, .related-posts.related-posts-across .desc .h2 {
@@ -3584,6 +3620,14 @@ p.caption {
     /* 1140px - 10% for margins */
     margin-left: auto;
     margin-right: auto; }
+
+  .text-block-wrapper {
+    max-width: 921px;
+    margin: 5em auto;
+    margin-bottom: 4.5em; }
+
+  .text-block-wrapper.no-margin {
+    margin: 0 auto; }
 
   blockquote.big {
     font-size: 3em; }

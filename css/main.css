@@ -3497,7 +3497,8 @@ p.caption {
     display: flex;
     align-items: center;
     margin-bottom: 130px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    flex-direction: row-reverse; }
   .related-posts.related-posts-across .post:last-child {
     margin-bottom: 0; }
   .related-posts.related-posts-across .desc:first-child {
@@ -3511,7 +3512,8 @@ p.caption {
     width: 40%;
     flex-shrink: 0; }
   .related-posts.related-posts-across .desc {
-    padding-left: 50px; }
+    padding-right: 50px;
+    flex-grow: 1; }
 
   section {
     margin-bottom: 5rem; }

@@ -3069,13 +3069,19 @@ p.caption {
     margin-bottom: 2em; }
 
   .mobile-center {
-    text-align: center !important; } }
+    text-align: center !important; }
+
+  .hidden-mobile {
+    display: none; } }
 /* 
 ==================================================================================================================
 768+
 ==================================================================================================================
 */
 @media only screen and (min-width: 768px) {
+  .hidden-dekstop {
+    display: none; }
+
   .page-title {
     text-align: center; }
 
@@ -3573,6 +3579,9 @@ p.caption {
    ========================================================================== */
 .center {
   text-align: center; }
+
+.no-wrap {
+  white-space: nowrap; }
 
 .hidden {
   display: none !important;

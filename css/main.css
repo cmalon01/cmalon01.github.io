@@ -3088,7 +3088,10 @@ p.caption {
   .what-i-like-home-page {
     margin-top: 3em; }
     .what-i-like-home-page h2, .what-i-like-home-page .h2 {
-      text-align: center; }
+      text-align: center;
+      white-space: nowrap; }
+    .what-i-like-home-page p {
+      font-size: 12px; }
 
   /* ====================
       WIDE: CSS3 Effects
@@ -3489,16 +3492,8 @@ p.caption {
     max-width: 500px; }
 
   .home .para, .home .img-bg {
-    padding: 4em 0; } }
-/* 
-==================================================================================================================
-1140+
-==================================================================================================================
-*/
-@media only screen and (min-width: 1140px) {
-  /* ===============
-      
-     =============== */
+    padding: 4em 0; }
+
   .related-posts.related-posts-across .post {
     display: flex;
     align-items: center;
@@ -3511,12 +3506,27 @@ p.caption {
     margin-top: 0 !important; }
   .related-posts.related-posts-across .desc h2, .related-posts.related-posts-across .desc .h2 {
     margin-bottom: 16px;
-    margin-top: 0 !important; }
+    margin-top: 0 !important;
+    line-height: 1.1; }
   .related-posts.related-posts-across .desc:last-child {
     margin-bottom: 0 !important; }
   .related-posts.related-posts-across a.thumb {
-    width: 40%;
+    width: 50%;
     flex-shrink: 0; }
+  .related-posts.related-posts-across .desc {
+    padding-right: 30px;
+    flex-grow: 1; } }
+/* 
+==================================================================================================================
+1140+
+==================================================================================================================
+*/
+@media only screen and (min-width: 1140px) {
+  /* ===============
+      
+     =============== */
+  .related-posts.related-posts-across a.thumb {
+    width: 40%; }
   .related-posts.related-posts-across .desc {
     padding-right: 50px;
     flex-grow: 1; }

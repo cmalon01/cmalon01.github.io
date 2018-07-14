@@ -38,7 +38,7 @@ The Information above must always remain unedited and in your CSS.
     font-style: italic;
 
 }
-
+*/
 
 
 
@@ -70,7 +70,7 @@ The Information above must always remain unedited and in your CSS.
     font-style: italic;
 
 }
-*/
+
 
 
 
@@ -139,7 +139,7 @@ The Information above must always remain unedited and in your CSS.
 }
 
 
-/*
+
 @font-face {
     font-family: 'averta';
     src: url('averta-semibold-webfont.eot');
@@ -168,7 +168,7 @@ The Information above must always remain unedited and in your CSS.
     font-style: italic;
 
 }
-*/
+
 
 
 
@@ -203,7 +203,7 @@ The Information above must always remain unedited and in your CSS.
 
 
 
-/*
+
 @font-face {
     font-family: 'averta';
     src: url('averta-extrabold-webfont.eot');
@@ -232,7 +232,7 @@ The Information above must always remain unedited and in your CSS.
     font-style: italic;
 
 }
-*/
+
 
 
 
@@ -264,6 +264,8 @@ The Information above must always remain unedited and in your CSS.
     font-style: italic;
 
 }
+
+
 
 
 

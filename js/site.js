@@ -423,13 +423,3 @@ $( document ).ready(function()
  });
 
 
-  AOS.init({
-      offset: 200,
-      duration: 700,
-      easing: 'ease-in-sine',
-      delay: 20,
-      once: true
-    });
-
-
-

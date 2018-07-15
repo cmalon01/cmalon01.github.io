@@ -2507,6 +2507,10 @@ ul.icons {
     float: left;
     padding: .5em 0; }
 
+.flex-center {
+  display: flex !important;
+  align-items: center; }
+
 a.swipebox {
   display: block; }
 
@@ -3117,20 +3121,6 @@ p.caption {
     .site-nav li.contact {
       width: -4%; }
 
-/*
-    .site-nav li:first-child 
-    {
-
-        a 
-        {
-        margin-left: 0;
-        }
-    }
-
-    .site-nav li:last-child a {
-        margin-right: 0;
-    }
-*/
 /* 
 
 ==================================================================================================================
@@ -3153,6 +3143,9 @@ p.caption {
     margin-left: -9px;
     margin-right: -9px; }
 
+  .related-posts-across .post .desc {
+    text-align: center; }
+
   .portfolio-nav .wrapper {
     width: 100%;
     margin: 0; }
@@ -3165,13 +3158,59 @@ p.caption {
     margin-left: -15px; }
 
   .what-i-like-home-page h2 {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+
+  .what-i-like-home-page.what-i-like-mobile-across .wrap-grid {
+    width: 320vw;
+    max-width: 1300px; }
+
+  .what-i-like-home-page.what-i-like-mobile-across {
+    overflow: scroll; }
+
+  .what-i-like-home-page.what-i-like-mobile-across .d-1of3 {
+    /* Rectangle: */
+    background: #FFFFFF;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.21);
+    border-radius: 6px;
+    padding: 10px;
+    height: 210px;
+    margin-bottom: 5px;
+    padding-top: 4px;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-right: 12px; }
+    .what-i-like-home-page.what-i-like-mobile-across .d-1of3:last-child {
+      margin-right: 0; }
+    .what-i-like-home-page.what-i-like-mobile-across .d-1of3:nth-child(4n) {
+      margin-right: 0; }
+    .what-i-like-home-page.what-i-like-mobile-across .d-1of3:nth-child(4n+1) {
+      clear: left; }
+
+  .what-i-like-home-page.what-i-like-mobile-across {
+    margin-top: 12px; }
+    .what-i-like-home-page.what-i-like-mobile-across .icon {
+      height: 38px;
+      display: block;
+      margin-left: -2px;
+      margin-bottom: 12px; }
+    .what-i-like-home-page.what-i-like-mobile-across h2 {
+      padding: 0;
+      font-size: 15px; }
+    .what-i-like-home-page.what-i-like-mobile-across p {
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 18px; } }
 /* 
 ==================================================================================================================
 768+
 ==================================================================================================================
 */
 @media only screen and (min-width: 768px) {
+  .mobile-only {
+    display: none !important; }
+
   .what-i-like-home-page h2 {
     left: -22px; }
 

@@ -230,17 +230,56 @@ var owl = $('.owl-carousel.owl-whatotherssay').owlCarousel({
     margin:10,
     nav:false,
     items:1,
-    URLhashListener:true,
     autoplayHoverPause:true,
-    startPosition: 'URLHash'
 });
 
 $('.owl-carousel.owl-inspirations').owlCarousel({
     loop: false,
+    nav:false,  
+    margin:0,    
+    responsive:{
+        0:{
+            autoWidth:false,
+            items:2.2,
+            nav:false
+        },
+        600:{
+            items:3.2,
+            nav:false,
+            autoWidth:false
+        },
+        1000:{
+            items:6,
+            autoWidth:true,
+            nav:false,
+            loop:false
+        }
+    }
+    
+});
+
+    
+    $('.owl-carousel.owl-about-me').owlCarousel({
+    loop: false,
     nav:false,
-    items:6,
-    margin:0,
-    autoWidth:true
+    responsiveClass:true, 
+    responsive:{
+        0:{
+            items:1.2,
+            nav:false
+        },
+        600:{
+            items:1.2,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:false,
+            loop:false
+        }
+    }
+           
+        
 });
 
 

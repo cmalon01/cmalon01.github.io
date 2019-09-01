@@ -1442,23 +1442,27 @@ stretchRight
   100% {
     -webkit-transform: scaleX(1); } }
 /**
- * Owl Carousel v2.2.1
- * Copyright 2013-2017 David Deutsch
- * Licensed under  ()
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
-.owl-carousel, .owl-carousel .owl-item {
-  -webkit-tap-highlight-color: transparent;
-  position: relative; }
-
+/*
+ *  Owl Carousel - Core
+ */
 .owl-carousel {
   display: none;
   width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
   z-index: 1; }
 
 .owl-carousel .owl-stage {
   position: relative;
   -ms-touch-action: pan-Y;
-  -moz-backface-visibility: hidden; }
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */ }
 
 .owl-carousel .owl-stage:after {
   content: ".";
@@ -1471,9 +1475,11 @@ stretchRight
 .owl-carousel .owl-stage-outer {
   position: relative;
   overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0); }
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px); }
 
-.owl-carousel .owl-item, .owl-carousel .owl-wrapper {
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -1482,29 +1488,42 @@ stretchRight
   -ms-transform: translate3d(0, 0, 0); }
 
 .owl-carousel .owl-item {
+  position: relative;
   min-height: 1px;
   float: left;
   -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none; }
 
 .owl-carousel .owl-item img {
   display: block;
   width: 100%; }
 
-.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
   display: none; }
 
-.no-js .owl-carousel, .owl-carousel.owl-loaded {
-  display: block; }
-
-.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit; }
+
+.owl-carousel.owl-loaded {
+  display: block; }
 
 .owl-carousel.owl-loading {
   opacity: 0;
@@ -1517,6 +1536,8 @@ stretchRight
   visibility: hidden; }
 
 .owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1532,8 +1553,15 @@ stretchRight
 .owl-carousel.owl-rtl .owl-item {
   float: right; }
 
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
 .owl-carousel .animated {
-  animation-duration: 1s;
+  animation-duration: 1000ms;
   animation-fill-mode: both; }
 
 .owl-carousel .owl-animated-in {
@@ -1550,16 +1578,34 @@ stretchRight
     opacity: 1; }
   100% {
     opacity: 0; } }
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
 .owl-height {
-  transition: height .5s ease-in-out; }
+  transition: height 500ms ease-in-out; }
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item {
+  /**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */ }
 
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
-  transition: opacity .4s ease; }
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
+  max-height: 0; }
 
 .owl-carousel .owl-item img.owl-lazy {
   transform-style: preserve-3d; }
 
+/*
+ * 	Owl Carousel - Video Plugin
+ */
 .owl-carousel .owl-video-wrapper {
   position: relative;
   height: 100%;
@@ -1573,17 +1619,18 @@ stretchRight
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url(owl.video.play.png) no-repeat;
+  background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
-  transition: transform .1s ease; }
+  transition: transform 100ms ease; }
 
 .owl-carousel .owl-video-play-icon:hover {
   -ms-transform: scale(1.3, 1.3);
   transform: scale(1.3, 1.3); }
 
-.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn {
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
   display: none; }
 
 .owl-carousel .owl-video-tn {
@@ -1592,7 +1639,7 @@ stretchRight
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  transition: opacity .4s ease; }
+  transition: opacity 400ms ease; }
 
 .owl-carousel .owl-video-frame {
   position: relative;
@@ -2715,6 +2762,9 @@ ul.no-style li {
   margin: 1em auto;
   float: none; }
 
+.no-wrap {
+  white-space: nowrap; }
+
 blockquote {
   font-family: "averta", "avenir", sans-serif;
   font-size: 2em;
@@ -2749,6 +2799,10 @@ blockquote.small {
 .btn-owl.active {
   border: 1px solid #1FB7AF;
   border-radius: 2px; }
+
+.owl-about-me img {
+  width: 35px;
+  height: 35px; }
 
 .owl-inspirations img {
   height: 200px;
@@ -3136,12 +3190,21 @@ p.caption {
      ======================== */
   .oldie .site-nav a {
     margin: 0 0.7%; } }
+.page-inner.home {
+  overflow: hidden; }
+
 @media only screen and (max-width: 767px) {
+  .wrapper-mobile-fluid {
+    padding: 0; }
+
   .thumb {
     margin-top: 2rem;
     display: block;
     margin-left: -9px;
     margin-right: -9px; }
+
+  .desktop-only {
+    display: none !important; }
 
   .related-posts-across .post .desc {
     text-align: center; }
@@ -3150,58 +3213,56 @@ p.caption {
     width: 100%;
     margin: 0; }
 
-  .what-i-like-home-page {
-    padding-left: 15px;
-    padding-right: 15px; }
+    /*
+    .what-i-like-home-page{padding-left:15px; padding-right:15px;}
+    .what-i-like-home-page .icon {margin-left:-15px;}
+    .what-i-like-home-page h2 {margin-bottom:0;}
 
-  .what-i-like-home-page .icon {
-    margin-left: -15px; }
+    .what-i-like-home-page.what-i-like-mobile-across .wrap-grid {width: 80vw * 4; max-width:1300px;}
+
+    .what-i-like-home-page.what-i-like-mobile-across {overflow:scroll;}
+    .what-i-like-home-page.what-i-like-mobile-across .d-1of3{
+        background: #FFFFFF;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,0.21);
+            border-radius: 6px;
+        padding:10px; height:210px; margin-bottom:5px;
+        padding-top:4px;
+        @include span-columns(12 / 4);
+        @include omega(4n);
+        margin-right:12px;
+    }
+    .what-i-like-home-page.what-i-like-mobile-across
+    {
+        margin-top:12px;
+        .icon{height:38px; display:block; margin-left:-2px; margin-bottom:12px;}
+        h2{padding:0; font-size:15px;}
+        p{margin-top:6px; font-size:12px; line-height:18px;}
+    }
+
+    .owl-about-me .item > div
+    {
+        background: #FFFFFF;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,0.21);
+            border-radius: 6px;
+        padding:10px; height:210px; margin-bottom:5px;
+   
+    }
+    */
+  .owl-about-me .item > div {
+    margin-right: 42px; }
+
+  .what-i-like-home-page {
+    padding-left: 15px; }
+
+  .what-i-like-home-page .owl-carousel .owl-item .icon {
+    margin-left: 0;
+    display: block !important;
+    width: auto !important;
+    margin-left: -10px; }
 
   .what-i-like-home-page h2 {
-    margin-bottom: 0; }
-
-  .what-i-like-home-page.what-i-like-mobile-across .wrap-grid {
-    width: 320vw;
-    max-width: 1300px; }
-
-  .what-i-like-home-page.what-i-like-mobile-across {
-    overflow: scroll; }
-
-  .what-i-like-home-page.what-i-like-mobile-across .d-1of3 {
-    /* Rectangle: */
-    background: #FFFFFF;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.21);
-    border-radius: 6px;
-    padding: 10px;
-    height: 210px;
-    margin-bottom: 5px;
-    padding-top: 4px;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    margin-right: 12px; }
-    .what-i-like-home-page.what-i-like-mobile-across .d-1of3:last-child {
-      margin-right: 0; }
-    .what-i-like-home-page.what-i-like-mobile-across .d-1of3:nth-child(4n) {
-      margin-right: 0; }
-    .what-i-like-home-page.what-i-like-mobile-across .d-1of3:nth-child(4n+1) {
-      clear: left; }
-
-  .what-i-like-home-page.what-i-like-mobile-across {
-    margin-top: 12px; }
-    .what-i-like-home-page.what-i-like-mobile-across .icon {
-      height: 38px;
-      display: block;
-      margin-left: -2px;
-      margin-bottom: 12px; }
-    .what-i-like-home-page.what-i-like-mobile-across h2 {
-      padding: 0;
-      font-size: 15px; }
-    .what-i-like-home-page.what-i-like-mobile-across p {
-      margin-top: 6px;
-      font-size: 12px;
-      line-height: 18px; } }
+    margin-bottom: 0;
+    padding: 0; } }
 /* 
 ==================================================================================================================
 768+

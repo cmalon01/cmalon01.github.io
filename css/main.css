@@ -3798,6 +3798,11 @@ justify-content: center;
     .related-posts.related-posts-across .desc .h2 a {
       font-weight: 300; }
 
+  .related-posts.related-posts-across p {
+    max-width: 520px;
+    margin-left: 0;
+    margin-right: 0; }
+
   .related-posts.related-posts-across .desc:last-child {
     margin-bottom: 0 !important; }
 

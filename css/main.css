@@ -3288,10 +3288,15 @@ p.caption {
 
   .site-nav {
     float: left;
-    width: 47%; }
+    width: 47%;
+    margin-top: 4px; }
     .site-nav li {
       width: auto;
       padding: 0 5%; }
+    .site-nav li.contact {
+      width: auto;
+      padding: 0;
+      padding-left: 10%; }
 
     /*
     .what-i-like-home-page{padding-left:15px; padding-right:15px;}

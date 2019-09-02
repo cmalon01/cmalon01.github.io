@@ -229,30 +229,28 @@ var owl = $('.owl-carousel.owl-whatotherssay').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
+    dots: false,
     items:1,
     autoplayHoverPause:true,
 });
 
 $('.owl-carousel.owl-inspirations').owlCarousel({
-    loop: false,
+    loop: true,
     nav:false,  
+    dots: false,
     margin:0,    
     responsive:{
         0:{
-            autoWidth:false,
+            
             items:2.2,
-            nav:false
         },
         600:{
             items:3.2,
-            nav:false,
-            autoWidth:false
+            
         },
         1000:{
-            items:6,
-            autoWidth:true,
-            nav:false,
-            loop:false
+            items:6.3,
+                            
         }
     }
     
@@ -260,22 +258,23 @@ $('.owl-carousel.owl-inspirations').owlCarousel({
 
     
     $('.owl-carousel.owl-about-me').owlCarousel({
-    loop: false,
-    nav:false,
+        nav: true,
+        navText: ['&#x27;next&#x27;','<img src="/img/carousel_next.svg">'],
+        loop: true,
+        dots: false,
     responsiveClass:true, 
     responsive:{
         0:{
-            items:1.2,
-            nav:false
+            items:1.15,
+          
         },
         600:{
             items:1.2,
-            nav:false
+            
         },
         1000:{
             items:4,
-            nav:false,
-            loop:false
+
         }
     }
            

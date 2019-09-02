@@ -3270,6 +3270,29 @@ p.caption {
     width: 100%;
     margin: 0; }
 
+  .header-container .brand {
+    width: 53%;
+    margin: 0;
+    float: left; }
+    .header-container .brand a {
+      display: block;
+      width: 90%;
+      margin: 0px;
+      padding-left: 5%; }
+      .header-container .brand a img {
+        width: 100%; }
+
+  .header-container .wrapper {
+    display: flex;
+    align-items: center; }
+
+  .site-nav {
+    float: left;
+    width: 47%; }
+    .site-nav li {
+      width: auto;
+      padding: 0 5%; }
+
     /*
     .what-i-like-home-page{padding-left:15px; padding-right:15px;}
     .what-i-like-home-page .icon {margin-left:-15px;}

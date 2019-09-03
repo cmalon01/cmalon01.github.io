@@ -3181,7 +3181,7 @@ p.caption {
   padding: 30px;
   z-index: 9999;
   opacity: 0;
-  transition: opacity 500ms, transform 500ms cubic-bezier(0.49, -0.32, 0.34, 1.29);
+  transition: opacity 200ms, transform 200ms cubic-bezier(0.49, -0.32, 0.34, 1.29);
   transform: scale(0.5); }
 
 .modal-content p,
@@ -3856,6 +3856,9 @@ justify-content: center;
 
   .text-block-wrapper.no-margin {
     margin: 0 auto; }
+
+  .text-block-wrapper.no-margin-bottom {
+    margin-bottom: 1em; }
 
   blockquote.big {
     font-size: 3em; }

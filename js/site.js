@@ -250,6 +250,12 @@ $('.owl-carousel.owl-inspirations').owlCarousel({
         },
         1000:{
             items:6.3,
+            autoWidth : true,
+            nav:true,
+            slideBy: 4,
+            loop:false,
+            mouseDrag: true,
+            navText: ['&larr;','&rarr;']
                             
         }
     }

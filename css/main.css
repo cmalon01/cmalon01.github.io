@@ -2901,7 +2901,6 @@ nav a:visited {
   font-weight: bold;
   color: #5d5d5d;
   font-weight: 400;
-  text-transform: uppercase;
   font-size: .75rem;
   border-bottom: 2px solid transparent;
   transition: border, color .5s; }

@@ -2788,8 +2788,7 @@ ul.no-style li {
 
 blockquote {
   font-family: "averta", "avenir", sans-serif;
-  font-size: 2em;
-  letter-spacing: .09em;
+  font-size: 1.75em;
   font-weight: 700;
   color: #1FB7AF;
   line-height: 150%;
@@ -3439,6 +3438,12 @@ justify-content: center;
 
   .what-i-like-home-page h2 {
     left: -10px; }
+    .what-i-like-home-page h2.more-left {
+      left: -27px; }
+
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px; }
 
  /* ====================
  WIDE: CSS3 Effects

@@ -2578,6 +2578,16 @@ ul.icons {
   max-height: 320px;
   text-align: center; }
 
+.stats h4 {
+  font-size: 40px;
+  line-height: 1; }
+  .stats h4 small {
+    font-size: .5em;
+    line-height: 1.2em;
+    display: inline-block;
+    margin-top: 1em;
+    font-weight: 400; }
+
 .gray-well {
   padding: 30px 40px;
   margin: 10px 0;

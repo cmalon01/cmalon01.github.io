@@ -1346,9 +1346,13 @@ blockquote.gradient { background: -webkit-gradient(linear, left top, left bottom
 
 blockquote.small { font-size: 1.5em; text-align: left; color: #464646; letter-spacing: .08em; font-weight: 300; }
 
-.btn-owl { padding: 5px 10px; white-space: nowrap; margin-bottom: 5px; display: inline-block; border-bottom: 1px solid transparent; }
+.btn-owl { padding: 5px 10px; white-space: nowrap; margin-bottom: 5px; display: inline-block; border-bottom: 1px solid transparent; border: 1px solid transparent; }
 
 .btn-owl.active { border: 1px solid #1FB7AF; border-radius: 2px; }
+
+.owl-whatotherssay .owl-item p { margin-top: 5px; margin-bottom: 0; }
+
+.owl-whatotherssay-selector { margin-top: 12px; }
 
 .owl-about-me img { width: 35px; height: 35px; }
 

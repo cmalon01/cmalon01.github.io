@@ -403,9 +403,27 @@ function cardsSameHeight(resizeWindow)
 
     $(".ux-process-cards .shadow-card").height(maxHeight);
 }
+
+function decrypt()
+{
+
+
+     if(!window.corey_decrypt)
+     {
+        return;
+     }
+
+        const queryString = window.location.search;
+
+        var simpleCrypto = new SimpleCrypto(queryString);
+    
+        const decipherText = simpleCrypto.decrypt('48d2bbb063df3d5d9fed5b2aaf8cd0ac529bfb8f45bf172f32e5ab824c238229qmEjbBknGd7gP3lIBpxprP9IDUR3Df3xaZGUs7noqprxlqhiNBN88hv8N+cSOxi/0NFGYJzQHBRInBSikxXoTETn0nOhSnC28FpWN+GHMhMzlvU8ATuXx9X1ToMCDGIxCBBab2AWs0QS5wc5jUCO0g3KzpIBrPklNWFwdeCTG3VGoj8viPemBsKhftFWz+4wcznA9z5QpxJnYnLi4y3JTA==74453ae48562c039439b3298260e96e9d2c564232df5dd82242f4ac76a115849');
+        $("#figma").attr("src",decipherText);
+   
+}
 $( document ).ready(function() 
 {
-  
+  decrypt();
   cardsSameHeight();
   $( window ).resize(function() {
     cardsSameHeight(true);
@@ -463,6 +481,7 @@ $( document ).ready(function()
 
 
   scrollAnimate();
+
 
  });
 

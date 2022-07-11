@@ -416,13 +416,64 @@ function decrypt()
         const queryString = window.location.search;
 
         var simpleCrypto = new SimpleCrypto(queryString);
-    
-        const decipherText = simpleCrypto.decrypt('48d2bbb063df3d5d9fed5b2aaf8cd0ac529bfb8f45bf172f32e5ab824c238229qmEjbBknGd7gP3lIBpxprP9IDUR3Df3xaZGUs7noqprxlqhiNBN88hv8N+cSOxi/0NFGYJzQHBRInBSikxXoTETn0nOhSnC28FpWN+GHMhMzlvU8ATuXx9X1ToMCDGIxCBBab2AWs0QS5wc5jUCO0g3KzpIBrPklNWFwdeCTG3VGoj8viPemBsKhftFWz+4wcznA9z5QpxJnYnLi4y3JTA==74453ae48562c039439b3298260e96e9d2c564232df5dd82242f4ac76a115849');
-        $("#figma").attr("src",decipherText);
+        var decipherText = "";
+        try
+        {
+              decipherText = simpleCrypto.decrypt('48d2bbb063df3d5d9fed5b2aaf8cd0ac529bfb8f45bf172f32e5ab824c238229qmEjbBknGd7gP3lIBpxprP9IDUR3Df3xaZGUs7noqprxlqhiNBN88hv8N+cSOxi/0NFGYJzQHBRInBSikxXoTETn0nOhSnC28FpWN+GHMhMzlvU8ATuXx9X1ToMCDGIxCBBab2AWs0QS5wc5jUCO0g3KzpIBrPklNWFwdeCTG3VGoj8viPemBsKhftFWz+4wcznA9z5QpxJnYnLi4y3JTA==74453ae48562c039439b3298260e96e9d2c564232df5dd82242f4ac76a115849');
+              
+              $("#figma").attr("src",decipherText);
+              $(".figma-container").fadeIn();
+        }
+        catch(err)
+        { 
+            $(".welcome-container").fadeIn();
+            //$(".figma-container-hide-bar, #figma").remove();
+            //$(".figma-container").append("<p class='center'>Link expired. Please request a new link from <a href='mailto:corey@coreyux.com'>corey@coreyux.com</a>.</p>");
+            
+      
+        }
    
 }
+
+function copyEmailToClipboard()
+{
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+    {
+        navigator.clipboard.writeText("corey@coreyux.com");
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+  
+}
+
 $( document ).ready(function() 
 {
+    $("[data-copy-email]").click(function(e){
+        //$("#copied-result").html("");
+        $(".copied-result").fadeIn();
+
+        if (copyEmailToClipboard())
+        {
+            $(".copied-result:visible").html("Email Copied");
+        }
+        else
+        {
+            $(".copied-result:visible").html("Error copying corey@coreyux.com to clipboard.");
+        }
+        
+        
+        setTimeout(function(){
+                $(".copied-result").fadeOut();
+        }, 5000); //wait for atleast  5 seconds before clearing  state
+
+
+        e.preventDefault();
+        return false;
+    });
+
   decrypt();
   cardsSameHeight();
   $( window ).resize(function() {
@@ -445,10 +496,10 @@ $( document ).ready(function()
       e.preventDefault();
    });
 
-    $(".modal-content, .modal-overlay").click (function (e)
+    /*$(".modal-content, .modal-overlay").click (function (e)
    {
       window.toggleModal();
-   });
+   });*/
 
 
    window.toggleModal = function ()

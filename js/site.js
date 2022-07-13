@@ -404,7 +404,7 @@ function cardsSameHeight(resizeWindow)
     $(".ux-process-cards .shadow-card").height(maxHeight);
 }
 
-function decrypt()
+function decryptEmbed()
 {
 
 
@@ -414,24 +414,43 @@ function decrypt()
      }
 
         const queryString = window.location.search;
+        var privateKey = decodeURI(queryString);
+        var data = "";
 
-        var simpleCrypto = new SimpleCrypto(decodeURI(queryString));
-        var decipherText = "";
-        try
+        try { data = decrypt(privateKey,"48d2bbb063df3d5d9fed5b2aaf8cd0ac529bfb8f45bf172f32e5ab824c238229qmEjbBknGd7gP3lIBpxprP9IDUR3Df3xaZGUs7noqprxlqhiNBN88hv8N+cSOxi/0NFGYJzQHBRInBSikxXoTETn0nOhSnC28FpWN+GHMhMzlvU8ATuXx9X1ToMCDGIxCBBab2AWs0QS5wc5jUCO0g3KzpIBrPklNWFwdeCTG3VGoj8viPemBsKhftFWz+4wcznA9z5QpxJnYnLi4y3JTA==74453ae48562c039439b3298260e96e9d2c564232df5dd82242f4ac76a115849"); }
+        catch (e) {};
+
+        try { data = decrypt(privateKey,"d179c9bb2ae41d5a53e47f634fd05582d1c83b2fd18fb79fd51bf1c15fe18a8eGJR6ry82c4JjGK6/2AKy7aTm7AEXkP5qtJ9P7uPZeUBywMUA/a/SQOR8aawTxq0qlnotWwknXWrvnLDs5yU4pfHE6K7FtrROxNy7emitCg0Xy9eCJHaBH0f787eQpVDEEbFPtFcxNnFdHwM8qvsLtQUMN8LUuVS0ljQ5o++lDGdhKNzNmVjRpb0cldJXF2SSMYBDvD6EvITpk+FCniBGYw==45688b5d63a3850007a3ee238da2c30a15b8c8d8e00d85dee26b7f88a25b23cf"); }
+        catch (e) {};
+
+        console.log("done");
+        if (data == "")
         {
-              decipherText = simpleCrypto.decrypt('48d2bbb063df3d5d9fed5b2aaf8cd0ac529bfb8f45bf172f32e5ab824c238229qmEjbBknGd7gP3lIBpxprP9IDUR3Df3xaZGUs7noqprxlqhiNBN88hv8N+cSOxi/0NFGYJzQHBRInBSikxXoTETn0nOhSnC28FpWN+GHMhMzlvU8ATuXx9X1ToMCDGIxCBBab2AWs0QS5wc5jUCO0g3KzpIBrPklNWFwdeCTG3VGoj8viPemBsKhftFWz+4wcznA9z5QpxJnYnLi4y3JTA==74453ae48562c039439b3298260e96e9d2c564232df5dd82242f4ac76a115849');
-              
-              $("#figma").attr("src",decipherText);
-              $(".figma-container").fadeIn();
-        }
-        catch(err)
-        { 
             $(".welcome-container").fadeIn();
-            //$(".figma-container-hide-bar, #figma").remove();
-            //$(".figma-container").append("<p class='center'>Link expired. Please request a new link from <a href='mailto:corey@coreyux.com'>corey@coreyux.com</a>.</p>");
-                  
+        }
+        else
+        {
+             $("#figma").attr("src",data);
+             $(".figma-container").fadeIn();
         }
    
+}
+function encrypt(privateKey,data)
+{
+    var simpleCrypto = new SimpleCrypto(decodeURI(privateKey));
+    console.log("Key: " + decodeURI(privateKey));
+    var cryptoText = simpleCrypto.encrypt(data);
+    console.log("Data: " + cryptoText);
+    return cryptoText;
+}
+
+function decrypt(privateKey,data)
+{
+    var simpleCrypto = new SimpleCrypto(decodeURI(privateKey));
+    console.log("Key: " + decodeURI(privateKey));
+    var plainText = simpleCrypto.decrypt(data);
+    console.log("Data: " + plainText);
+    return plainText;
 }
 
 function copyEmailToClipboard()
@@ -473,7 +492,7 @@ $( document ).ready(function()
         return false;
     });
 
-  decrypt();
+  decryptEmbed();
   cardsSameHeight();
   $( window ).resize(function() {
     cardsSameHeight(true);

@@ -415,7 +415,7 @@ function decrypt()
 
         const queryString = window.location.search;
 
-        var simpleCrypto = new SimpleCrypto(queryString);
+        var simpleCrypto = new SimpleCrypto(decodeURI(queryString));
         var decipherText = "";
         try
         {
@@ -429,8 +429,7 @@ function decrypt()
             $(".welcome-container").fadeIn();
             //$(".figma-container-hide-bar, #figma").remove();
             //$(".figma-container").append("<p class='center'>Link expired. Please request a new link from <a href='mailto:corey@coreyux.com'>corey@coreyux.com</a>.</p>");
-            
-      
+                  
         }
    
 }

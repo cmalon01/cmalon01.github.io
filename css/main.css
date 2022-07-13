@@ -1228,6 +1228,8 @@ a.button-white:hover { background: white; color: black; }
 
 a.button-cyan { background: #fff; color: #37BFC2; border-color: #37BFC2; padding: .5em 2em; margin: 0; }
 
+input.button-cyan[type='submit'] { background: #fff; color: #37BFC2; border-color: #37BFC2; border-style: solid; font-weight: 500; margin: 0; }
+
 .side-header { position: relative; }
 
 .side-header ul { padding-left: 0; line-height: 1.2; }

@@ -299,7 +299,7 @@ if (window.location.hash != "") updateCarouselHash(window.location.hash);
 
 function updateCarouselHash(hash)
 {
-  
+
   $( ".btn-owl" ).each(function( index ) {
     if ($(this).attr("href") ==  hash) 
     { 
@@ -467,8 +467,29 @@ function copyEmailToClipboard()
   
 }
 
+function setupPortfolioResize()
+{
+     if(!window.corey_decrypt)
+     {
+        return;
+     }
+     var totalHeight = $("header").outerHeight() + $(".figma-container-hide-bar").outerHeight() + 50;
+
+
+     $( window ).resize(function() {
+        $("#figma").height( $(window).height() - totalHeight);
+     });
+
+     $("#figma").height( $(window).height() - totalHeight);
+}
 $( document ).ready(function() 
 {
+    //private portfolio functions
+  decryptEmbed();
+  setupPortfolioResize();
+
+
+
     $("[data-copy-email]").click(function(e){
         //$("#copied-result").html("");
         $(".copied-result").fadeIn();
@@ -492,7 +513,7 @@ $( document ).ready(function()
         return false;
     });
 
-  decryptEmbed();
+
   cardsSameHeight();
   $( window ).resize(function() {
     cardsSameHeight(true);

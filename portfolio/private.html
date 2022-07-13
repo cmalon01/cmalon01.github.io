@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="/css/averta/stylesheet.css">
 
 
-  <link rel="stylesheet" href="/css/main.css?time=1657734116">
+  <link rel="stylesheet" href="/css/main.css?time=1657738561">
   <link rel="canonical" href="http://coreyux.com/portfolio/private.html">
   <link rel="alternate" type="application/rss+xml" title="Corey Malone - User Experience Designer" href="http://coreyux.com/feed.xml" />
 
@@ -195,7 +195,9 @@
        
 <div class="figma-container" style="display:none;">
     <iframe id="figma" style="border: 1px solid rgba(0, 0, 0, 0.1); width:100%;height:80vh;" src=""></iframe>
+    <div class="figma-contatainer-name-bar">Private Portfolio<br><small>Please zoom in to view projects</small></div>
     <div class="figma-container-hide-bar"><p class="center" style="margin:5px auto;font-size: 14px;">If you have any trouble accessing this please contact me at <a href="mailto:corey@coreyux.com">corey@coreyux.com</a></p></div>
+
 </div>
 <div class="welcome-container" style="display:none;">
     <h1 class="page-title">
@@ -203,8 +205,14 @@
         </h1>
 
     <img src="/img/portfolio/thumb-private.jpg" class="max-700 center">
-    <p class='center'>Contact me at corey@coreyux.com to request an up-to-date access link.</p>
-    <p class="center"><a class="button-cyan" href='mailto:corey@coreyux.com'>Request Link</a>
+    <form class="center" id="privatePortfolioForm" method="get" action="/portfolio/private.html" style="margin-top:25px;">
+        <label for="key">Access Code:</label>
+        <input type="text" id="key" name="key" required>
+        <input type="submit" class="button-cyan">
+    </form>
+    <hr style="margin: 60px;">
+    <p class='center'>Contact me at corey@coreyux.com to request access.</p>
+    <p class="center"><a class="button-cyan" href='mailto:corey@coreyux.com'>Email Me</a>
     <p class="center"><a class="button-cyan" data-copy-email href="#">Copy Email to Clipboard</a></p>
     <p class="center copied-result"></p>
 
@@ -214,7 +222,7 @@
 <style>
     .figma-container{  position: relative; }
     .figma-container-hide-bar {height: 50px;width: 100%; position: absolute; background-color: #fff; bottom:0;left: 0;}
-
+    .figma-contatainer-name-bar { position: absolute; background-color: #E5E5E5; left: 10px; top: 10px; padding: 10px;}
 </style>
 
 
@@ -354,7 +362,7 @@
 
 
     <p class="center"><small style="font-size:13px; line-height: 1.1;">Designed and coded by me. Font is <a href="https://thedesignersfoundry.com/averta">Averta</a>. Most icons modified from <a href="https://thenounproject.com/">The Noun Project</a><br>Awesome animation script is <a href="https://github.com/michalsnik/aos">AOS</a>.<br> Compiled Using <a href="https://jekyllrb.com/">Jekyll</a> to provide a lighting fast experience.
-    	<br>Last Updated: 2022-07-13 13:41:55 -0400
+    	<br>Last Updated: 2022-07-13 14:56:00 -0400
     </small></p>
                
             </footer>
@@ -385,7 +393,7 @@
     });
   </script>
 
-<script src= "/js/site.js?time=1657734116"></script>
+<script src= "/js/site.js?time=1657738561"></script>
 
      
 
